@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "moregear",
+	"version": "${version}",
+	"name": "More Gear",
+	"description": "This mod adds several new sets of armor and tools as well as a few new special foods and craftable froglights because I felt like it.",
+	"authors": [
+		"Robysaurus"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/moregear/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dog.robysaurus.moregear.MoreGear"
+		],
+		"client": [
+			"dog.robysaurus.moregear.MoreGearClient"
+		],
+		"fabric-datagen": [
+			"dog.robysaurus.moregear.MoreGearDataGenerator"
+		]
+	},
+	"mixins": [
+		"moregear.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
