@@ -1,5 +1,7 @@
 package dog.robysaurus.moregear;
 
+import dog.robysaurus.moregear.item.ModItemGroups;
+import dog.robysaurus.moregear.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,7 +13,7 @@ public class MoreGear implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }
