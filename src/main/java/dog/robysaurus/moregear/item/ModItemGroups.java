@@ -17,6 +17,26 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModItems.TITANIUM);
                         entries.add(ModItems.TITANIUM_HELMET);
+                        entries.add(ModItems.TITANIUM_CHESTPLATE);
+                        entries.add(ModItems.TITANIUM_LEGGINGS);
+                        entries.add(ModItems.TITANIUM_BOOTS);
+                        entries.add(ModItems.ECHO_HELMET);
+                        entries.add(ModItems.ECHO_CHESTPLATE);
+                        entries.add(ModItems.ECHO_LEGGINGS);
+                        entries.add(ModItems.ECHO_BOOTS);
+                        entries.add(ModItems.EMERALD_HELMET);
+                        entries.add(ModItems.EMERALD_CHESTPLATE);
+                        entries.add(ModItems.EMERALD_LEGGINGS);
+                        entries.add(ModItems.EMERALD_BOOTS);
+                        entries.add(ModItems.AMETHYST_HELMET);
+                        entries.add(ModItems.AMETHYST_CHESTPLATE);
+                        entries.add(ModItems.AMETHYST_LEGGINGS);
+                        entries.add(ModItems.AMETHYST_BOOTS);
+                        entries.add(ModItems.COPPER_HELMET);
+                        entries.add(ModItems.COPPER_CHESTPLATE);
+                        entries.add(ModItems.COPPER_LEGGINGS);
+                        entries.add(ModItems.COPPER_BOOTS);
+
                     }).build());
     public static void registerItemGroups(){
         MoreGear.LOGGER.info("Registering Mod Item Groups for "+MoreGear.MOD_ID);

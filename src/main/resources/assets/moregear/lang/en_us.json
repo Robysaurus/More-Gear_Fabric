@@ -1,5 +1,24 @@
 {
   "item.moregear.rawtitanium": "Raw Titanium",
   "item.moregear.titanium": "Titanium",
-  "item.moregear.titaniumhelmet": "Titanium Helmet"
+  "item.moregear.titaniumhelmet": "Titanium Helmet",
+  "item.moregear.titaniumchestplate": "Titanium Chestplate",
+  "item.moregear.titaniumleggings": "Titanium Leggings",
+  "item.moregear.titaniumboots": "Titanium Boots",
+  "item.moregear.echohelmet": "Echo Helmet",
+  "item.moregear.echochestplate": "Echo Chestplate",
+  "item.moregear.echoleggings": "Echo Leggings",
+  "item.moregear.echoboots": "Echo Boots",
+  "item.moregear.emeraldhelmet": "Emerald Helmet",
+  "item.moregear.emeraldchestplate": "Emerald Chestplate",
+  "item.moregear.emeraldleggings": "Emerald Leggings",
+  "item.moregear.emeraldboots": "Emerald Boots",
+  "item.moregear.amethysthelmet": "Amethyst Helmet",
+  "item.moregear.amethystchestplate": "Amethyst Chestplate",
+  "item.moregear.amethystleggings": "Amethyst Leggings",
+  "item.moregear.amethystboots": "Amethyst Helmet",
+  "item.moregear.copperhelmet": "Copper Helmet",
+  "item.moregear.copperchestplate": "Copper Chestplate",
+  "item.moregear.copperleggings": "Copper Leggings",
+  "item.moregear.copperboots": "Copper Boots"
 }
