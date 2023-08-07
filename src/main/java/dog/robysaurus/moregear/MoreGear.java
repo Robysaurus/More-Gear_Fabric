@@ -1,5 +1,6 @@
 package dog.robysaurus.moregear;
 
+import dog.robysaurus.moregear.block.ModBlocks;
 import dog.robysaurus.moregear.item.ModItemGroups;
 import dog.robysaurus.moregear.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -15,5 +16,6 @@ public class MoreGear implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

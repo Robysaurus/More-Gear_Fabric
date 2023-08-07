@@ -28,7 +28,6 @@ public class ModArmorItem extends ArmorItem {
                 }
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 

@@ -39,12 +39,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 4);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, 0.05f, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
-    TITANIUM("titanium", 50, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), map -> {
+    TITANIUM("titanium", 200, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 5);
         map.put(ArmorItem.Type.LEGGINGS, 9);
         map.put(ArmorItem.Type.CHESTPLATE, 11);
         map.put(ArmorItem.Type.HELMET, 5);
     }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    @SuppressWarnings("deprecation")
     public static final StringIdentifiable.Codec<ArmorMaterials> CODEC;
     private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY;
     private final String name;
@@ -54,6 +55,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
+    @SuppressWarnings("deprecation")
     private final Lazy<Ingredient> repairIngredientSupplier;
 
     private ModArmorMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
@@ -64,6 +66,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
         this.equipSound = equipSound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
+        //noinspection deprecation
         this.repairIngredientSupplier = new Lazy<Ingredient>(repairIngredientSupplier);
     }
 
@@ -110,10 +113,15 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     static {
         CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
+        //noinspection rawtypes,unchecked
         BASE_DURABILITY = Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+            //noinspection unchecked
             map.put(ArmorItem.Type.BOOTS, 15);
+            //noinspection unchecked
             map.put(ArmorItem.Type.LEGGINGS, 15);
+            //noinspection unchecked
             map.put(ArmorItem.Type.CHESTPLATE, 15);
+            //noinspection unchecked
             map.put(ArmorItem.Type.HELMET, 15);
         });
     }

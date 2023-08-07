@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "moregear:titaniumhelmet",
+    "moregear:titaniumchestplate",
+    "moregear:titaniumleggings",
+    "moregear:titaniumboots",
+
+    "moregear:echohelmet",
+    "moregear:echochestplate",
+    "moregear:echoleggings",
+    "moregear:echoboots",
+
+    "moregear:emeraldhelmet",
+    "moregear:emeraldchestplate",
+    "moregear:emeraldleggings",
+    "moregear:emeraldboots",
+
+    "moregear:amethysthelmet",
+    "moregear:amethystchestplate",
+    "moregear:amethystleggings",
+    "moregear:amethystboots",
+
+    "moregear:copperhelmet",
+    "moregear:copperchestplate",
+    "moregear:copperleggings",
+    "moregear:copperboots"
+  ]
+}
