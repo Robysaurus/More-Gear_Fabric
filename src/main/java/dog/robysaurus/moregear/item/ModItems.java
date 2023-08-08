@@ -1,6 +1,8 @@
 package dog.robysaurus.moregear.item;
 
 import dog.robysaurus.moregear.MoreGear;
+import dog.robysaurus.moregear.item.custom.EffectSwordItem;
+import dog.robysaurus.moregear.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;

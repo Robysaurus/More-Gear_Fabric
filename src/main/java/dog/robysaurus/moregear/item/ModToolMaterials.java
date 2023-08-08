@@ -13,7 +13,7 @@ public enum ModToolMaterials implements ToolMaterial {
     AMETHYST(MiningLevels.IRON, 350, 6.5f, 2.0f, 20, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
     EMERALD(MiningLevels.DIAMOND, 1400, 7.5f, 2.5f, 10, () -> Ingredient.ofItems(Items.EMERALD)),
     ECHO(MiningLevels.DIAMOND, 2000, 8.5f, 3.5f, 15, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
-    TITANIUM(MiningLevels.NETHERITE, 5000, 20.0f, 5.0f, 50, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    TITANIUM(MiningLevels.NETHERITE, 5000, 70.0f, 5.0f, 50, () -> Ingredient.ofItems(ModItems.TITANIUM));
 
     private final int miningLevel;
     private final int itemDurability;
@@ -22,7 +22,7 @@ public enum ModToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Lazy<Ingredient> repairIngredient;
 
-    private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
