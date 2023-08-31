@@ -9,5 +9,7 @@ public class ModOreGeneration {
     public static void generateOres(){
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
             GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.TITANIUMORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+            GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.RUBYORE_PLACED_KEY);
     }
 }

@@ -6,8 +6,10 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
@@ -18,10 +20,17 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> TITANIUM_KEY = registerKey("titaniumore_key");
+    public static final RegistryKey<ConfiguredFeature<?,?>> RUBY_KEY = registerKey("rubyore_key");
     public static void bootstrap(Registerable<ConfiguredFeature<?,?>> context){
         RuleTest endStoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+        RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+
         List<OreFeatureConfig.Target> titaniumOre =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, ModBlocks.TITANIUM_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> rubyOre =
+                List.of(OreFeatureConfig.createTarget(netherReplaceables, ModBlocks.RUBY_ORE.getDefaultState()));
+
+        register(context, RUBY_KEY, Feature.ORE, new OreFeatureConfig(rubyOre, 5));
         register(context, TITANIUM_KEY, Feature.ORE, new OreFeatureConfig(titaniumOre, 3));
     }
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name){

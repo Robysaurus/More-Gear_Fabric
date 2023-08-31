@@ -17,11 +17,14 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> TITANIUMORE_PLACED_KEY = registerKey("titaniumore_placed_key");
+    public static final RegistryKey<PlacedFeature> RUBYORE_PLACED_KEY = registerKey("rubyore_placed_key");
     public static void bootstrap(Registerable<PlacedFeature> context){
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, TITANIUMORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TITANIUM_KEY),
                 modifiersWithCount(2, HeightRangePlacementModifier.uniform(YOffset.fixed(50), YOffset.fixed(70))));
+        register(context, RUBYORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBY_KEY),
+                modifiersWithCount(4, HeightRangePlacementModifier.trapezoid(YOffset.fixed(30), YOffset.fixed(50))));
     }
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MoreGear.MOD_ID, name));

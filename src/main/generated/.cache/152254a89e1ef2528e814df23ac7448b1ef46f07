@@ -1,5 +1,21 @@
-// 1.20.1	2023-08-07T17:28:57.3379049	More Gear/Recipes
+// 1.20.1	2023-08-09T13:18:11.2699482	More Gear/Recipes
+475a3a5f3520d63f8f0d64b5641eceb4f1f06ca8 data\moregear\recipes\opalblock.json
+731644985ec2c6958dfd6e3a0cd0e3263e678881 data\moregear\recipes\sapphireblock.json
+ee0fe59ea2d7f6d2482bc5ba0cf131bcb893014d data\moregear\recipes\titaniumblock.json
+76b293d074ccb11a30bb92ce60e80647cdfce7be data\moregear\recipes\opal.json
+f39aafb3f4d8fc3bb448abecac9a5ea564e9e677 data\moregear\advancements\recipes\building_blocks\rubyblock.json
+644f2b73e155397fb21bb81e43a1bbe08b611505 data\moregear\recipes\topaz.json
+97dd70467b9f8a6d4da13bd40b74ee6c85a5f28f data\moregear\advancements\recipes\building_blocks\sapphireblock.json
+a1b4c41891e6d3e675d996deadea4d005e1c461d data\moregear\recipes\ruby.json
+9ad22a8065a79072bbe561b8a40787578d39f512 data\moregear\recipes\sapphire.json
+3a58521c0b5dc7e6940e38fa7e091e88927d2897 data\moregear\advancements\recipes\misc\ruby.json
+b48f802708d22b1ffa82952f1675303ea269a58d data\moregear\advancements\recipes\building_blocks\opalblock.json
 53a00a42a8198a596edf24e649f75f735acedb2a data\moregear\recipes\titanium.json
-1f4e4f95b0daaec54431ce1ed2dead71f4a11c99 data\moregear\recipes\titaniumblock.json
+aebc4e44c0e92b087d00cac6751ade6500d8254d data\moregear\advancements\recipes\building_blocks\topazblock.json
+8051cf4eccaa622d72e9c6a3e9df4e1db1cc36e3 data\moregear\advancements\recipes\misc\topaz.json
+8b0840891da81447b411b57e15ae417f8dd5cf46 data\moregear\advancements\recipes\misc\sapphire.json
+15500f1952b3b30025c5bb604bb339d7fcc1eeb7 data\moregear\recipes\rubyblock.json
+83abfd58a788faa72d0cac4665af267a0c380cd4 data\moregear\advancements\recipes\misc\opal.json
+05b67346941e1922bd7002ac556d48d47816aa69 data\moregear\advancements\recipes\building_blocks\titaniumblock.json
+03db997b29bdce2227665d0e02da2404459ae3ae data\moregear\recipes\topazblock.json
 649c4417971d14b887a95efdbdaf9d0141eb38fc data\moregear\advancements\recipes\misc\titanium.json
-05b67346941e1922bd7002ac556d48d47816aa69 data\moregear\advancements\recipes\misc\titaniumblock.json
