@@ -63,12 +63,12 @@ public enum ModArmorMaterials implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.TOPAZ)),
-    TITANIUM("titanium", 200, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), map -> {
-        map.put(ArmorItem.Type.BOOTS, 5);
-        map.put(ArmorItem.Type.LEGGINGS, 9);
-        map.put(ArmorItem.Type.CHESTPLATE, 11);
-        map.put(ArmorItem.Type.HELMET, 5);
-    }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    TITANIUM("titanium", 1000, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 22);
+        map.put(ArmorItem.Type.LEGGINGS, 26);
+        map.put(ArmorItem.Type.CHESTPLATE, 30);
+        map.put(ArmorItem.Type.HELMET, 22);
+    }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
     @SuppressWarnings("deprecation")
     public static final StringIdentifiable.Codec<ArmorMaterials> CODEC;
     private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY;
@@ -96,6 +96,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     @Override
     public int getDurability(ArmorItem.Type type) {
+        if(this==TITANIUM) {
+            return 10 * this.durabilityMultiplier;
+        }
         return BASE_DURABILITY.get(type) * this.durabilityMultiplier;
     }
 
@@ -140,13 +143,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
         //noinspection rawtypes,unchecked
         BASE_DURABILITY = Util.make(new EnumMap(ArmorItem.Type.class), map -> {
             //noinspection unchecked
-            map.put(ArmorItem.Type.BOOTS, 15);
+            map.put(ArmorItem.Type.BOOTS, 13);
             //noinspection unchecked
             map.put(ArmorItem.Type.LEGGINGS, 15);
             //noinspection unchecked
-            map.put(ArmorItem.Type.CHESTPLATE, 15);
+            map.put(ArmorItem.Type.CHESTPLATE, 16);
             //noinspection unchecked
-            map.put(ArmorItem.Type.HELMET, 15);
+            map.put(ArmorItem.Type.HELMET, 11);
         });
     }
 }

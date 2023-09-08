@@ -17,7 +17,7 @@ public enum ModToolMaterials implements ToolMaterial {
     RUBY(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.RUBY)),
     SAPPHIRE(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
     TOPAZ(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.TOPAZ)),
-    TITANIUM(5, 5000, 70.0f, 5.0f, 50, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    TITANIUM(10, 10000, 100.0f, 55.0f, 50, () -> Ingredient.ofItems(ModItems.TITANIUM));
 
     private final int miningLevel;
     private final int itemDurability;

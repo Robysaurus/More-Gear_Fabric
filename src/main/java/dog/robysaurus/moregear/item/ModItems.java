@@ -44,15 +44,15 @@ public class ModItems {
     public static final Item TITANIUM_BOOTS = registerItem("titaniumboots",
             new ModArmorItem(ModArmorMaterials.TITANIUM, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.EPIC).fireproof()));
     public static final Item TITANIUM_SWORD = registerItem("titaniumsword",
-            new EffectSwordItem(ModToolMaterials.TITANIUM, ModArmorMaterials.TITANIUM, 11, 4f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+            new EffectSwordItem(ModToolMaterials.TITANIUM, ModArmorMaterials.TITANIUM, 14, 4f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_AXE = registerItem("titaniumaxe",
-            new AxeItem(ModToolMaterials.TITANIUM, 14f, 2f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+            new AxeItem(ModToolMaterials.TITANIUM, 19f, 2f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_PICKAXE = registerItem("titaniumpickaxe",
-            new PickaxeItem(ModToolMaterials.TITANIUM, 4, 2f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+            new PickaxeItem(ModToolMaterials.TITANIUM, 9, 2f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_SHOVEL = registerItem("titaniumshovel",
-            new ShovelItem(ModToolMaterials.TITANIUM, 1.5f, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+            new ShovelItem(ModToolMaterials.TITANIUM, 4f, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_HOE = registerItem("titaniumhoe",
-            new HoeItem(ModToolMaterials.TITANIUM, 1, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+            new HoeItem(ModToolMaterials.TITANIUM, 4, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TOPAZ_HELMET = registerItem("topazhelmet",
             new ModArmorItem(ModArmorMaterials.TOPAZ, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item TOPAZ_CHESTPLATE = registerItem("topazchestplate",
