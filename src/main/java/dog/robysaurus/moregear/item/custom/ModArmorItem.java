@@ -36,6 +36,7 @@ public class ModArmorItem extends ArmorItem{
                     evaluateArmorEffects(player);
                 }else{
                     player.removeStatusEffect(StatusEffects.HEALTH_BOOST);
+                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
                 }
             }
         }
@@ -49,34 +50,42 @@ public class ModArmorItem extends ArmorItem{
             }
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 3, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.TOPAZ, player)){
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 2, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, true));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 0, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 200, 0, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.SAPPHIRE, player)){
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 1, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 2, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 0, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.RUBY, player)){
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.OPAL, player)){
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 100, 0, true, false, true));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 100, 0, true, false, true));
+            if(!player.hasStatusEffect(StatusEffects.NIGHT_VISION)){
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, -1, 0, true, false, true));
+            }
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 100, 2, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 100, 2, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.ECHO, player)){
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, true));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 100, 0, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 1, true, false, true));
+            if(!player.hasStatusEffect(StatusEffects.NIGHT_VISION)){
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, -1, 0, true, false, true));
+            }
         }else if(hasCorrectArmorOn(ModArmorMaterials.EMERALD, player)){
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 100, 2, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 100, 1, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.AMETHYST, player)){
             if(!player.hasStatusEffect(StatusEffects.REGENERATION)){
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0, true, false, true));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0, true, false, true));
             }
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 100, 0, true, false, true));
         }else{
             player.removeStatusEffect(StatusEffects.HEALTH_BOOST);
+            player.removeStatusEffect(StatusEffects.NIGHT_VISION);
         }
     }
 
@@ -104,7 +113,9 @@ public class ModArmorItem extends ArmorItem{
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(this.material== ModArmorMaterials.TITANIUM){
             MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);
-            tempTooltip.append(Text.literal("Resistance IV, Fire Resistance, and Health Boost V").formatted(Formatting.GOLD, Formatting.BOLD));
+            tempTooltip.append(Text.literal("Resistance IV, Fire Resistance,").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("Strength II, and Health Boost V").formatted(Formatting.GOLD, Formatting.BOLD);
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("when full set of armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
@@ -116,7 +127,9 @@ public class ModArmorItem extends ArmorItem{
             tooltip.add(tempTooltip);
         }else if(this.material==ModArmorMaterials.SAPPHIRE){
             MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);
-            tempTooltip.append(Text.literal("Resistance III and Speed II").formatted(Formatting.GOLD, Formatting.BOLD));
+            tempTooltip.append(Text.literal("Resistance III, Fire Resistance,").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("Strength I, and Speed III").formatted(Formatting.GOLD, Formatting.BOLD);
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("when full set of armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
@@ -136,7 +149,7 @@ public class ModArmorItem extends ArmorItem{
             tooltip.add(tempTooltip);
         }else if(this.material==ModArmorMaterials.ECHO){
             MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);
-            tempTooltip.append(Text.literal("Resistance III and Night Vision").formatted(Formatting.GOLD, Formatting.BOLD));
+            tempTooltip.append(Text.literal("Resistance II and Night Vision").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("when full set of armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
