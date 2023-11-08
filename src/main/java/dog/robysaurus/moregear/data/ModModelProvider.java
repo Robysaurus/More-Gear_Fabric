@@ -18,6 +18,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYPHITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYPHITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TOPAZ_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TOPAZ_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_ORE);
@@ -32,6 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_TITANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.TITANIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.UNREFINED_HYPHITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HYPHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_TOPAZ, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOPAZ, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_SAPPHIRE, Models.GENERATED);
@@ -49,6 +53,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TITANIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_HOE, Models.HANDHELD);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.HYPHITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.HYPHITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.HYPHITE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.HYPHITE_BOOTS);
+        itemModelGenerator.register(ModItems.HYPHITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.HYPHITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.HYPHITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.HYPHITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.HYPHITE_HOE, Models.HANDHELD);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.TOPAZ_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.TOPAZ_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.TOPAZ_LEGGINGS);

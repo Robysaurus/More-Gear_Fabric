@@ -18,6 +18,10 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item TITANIUM = registerItem("titanium",
             new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item UNREFINED_HYPHITE = registerItem("unrefinedhyphite",
+            new Item(new FabricItemSettings()));
+    public static final Item HYPHITE = registerItem("hyphite",
+            new Item(new FabricItemSettings()));
     public static final Item RAW_TOPAZ = registerItem("rawtopaz",
             new Item(new FabricItemSettings()));
     public static final Item TOPAZ = registerItem("topaz",
@@ -53,6 +57,24 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.TITANIUM, 4f, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_HOE = registerItem("titaniumhoe",
             new HoeItem(ModToolMaterials.TITANIUM, 4, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+    public static final Item HYPHITE_HELMET = registerItem("hyphitehelmet",
+            new ArmorItem(ModArmorMaterials.HYPHITE, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_CHESTPLATE = registerItem("hyphitechestplate",
+            new ArmorItem(ModArmorMaterials.HYPHITE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_LEGGINGS = registerItem("hyphiteleggings",
+            new ArmorItem(ModArmorMaterials.HYPHITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_BOOTS = registerItem("hyphiteboots",
+            new ArmorItem(ModArmorMaterials.HYPHITE, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_SWORD = registerItem("hyphitesword",
+            new SwordItem(ModToolMaterials.HYPHITE, 3, -2f, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_AXE = registerItem("hyphiteaxe",
+            new AxeItem(ModToolMaterials.HYPHITE, 8f, -2.5f, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_PICKAXE = registerItem("hyphitepickaxe",
+            new PickaxeItem(ModToolMaterials.HYPHITE, 1, -2f, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_SHOVEL = registerItem("hyphiteshovel",
+            new ShovelItem(ModToolMaterials.HYPHITE, 1.5f, -2.5f, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HYPHITE_HOE = registerItem("hyphitehoe",
+            new HoeItem(ModToolMaterials.HYPHITE, -3, 0.0f, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item TOPAZ_HELMET = registerItem("topazhelmet",
             new ModArmorItem(ModArmorMaterials.TOPAZ, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item TOPAZ_CHESTPLATE = registerItem("topazchestplate",

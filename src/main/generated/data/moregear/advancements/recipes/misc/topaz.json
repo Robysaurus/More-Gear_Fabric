@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_topazblock",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_topazblock"
     ]
   ],
   "rewards": {

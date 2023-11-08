@@ -18,7 +18,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     OPAL("opal", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.OPAL)),
     RUBY("ruby", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.RUBY)),
     SAPPHIRE("sapphire", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
-    TOPAZ("topaz", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.TOPAZ)),
+    TOPAZ("topaz", 37, new int[] {3,8,6,3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.TOPAZ)),
+    HYPHITE("hyphite", 37, new int[] {4,9,8,4}, 18, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.HYPHITE)),
     TITANIUM("titanium", 1000, new int[] {22,30,26,22}, 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
     private final String name;
     private final int durabilityMultiplier;
