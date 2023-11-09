@@ -1,4 +1,4 @@
-// 1.20.2	2023-11-07T20:28:08.809511	More Gear/Model Definitions
+// 1.20.2	2023-11-08T18:31:34.6317297	More Gear/Model Definitions
 3017e27482b421dbd6595221554030b5b658e698 assets\moregear\models\item\echoboots.json
 29b0dd9d8008c82dcc54e076e8a61be0e80e70b6 assets\moregear\models\item\copperchestplate_copper_trim.json
 36c32c9f34b56e5e6c6274117957e00ae4ed46ba assets\moregear\models\item\emeraldaxe.json
@@ -219,8 +219,8 @@ f280076677b046dbc2a650d9ed6cb08a6aebc7a0 assets\moregear\models\item\copperchest
 d24e98ac89ce75b8cd64ba67b27a01932644650a assets\moregear\models\item\amethystaxe.json
 00922fd7530e66ee2d8600acf3d2f9b17415ea9e assets\moregear\models\item\topazboots_quartz_trim.json
 3a9ed5360738f5fc54d16ead55994c2c82982797 assets\moregear\models\item\hyphitehelmet.json
-2ca2aa14213fae2fad23236c2c77f216148364c2 assets\moregear\models\item\emeraldboots_iron_trim.json
 7e66cf3c0d73094d6b17ad1191f59339f3d39c75 assets\moregear\models\item\hyphitehelmet_copper_trim.json
+2ca2aa14213fae2fad23236c2c77f216148364c2 assets\moregear\models\item\emeraldboots_iron_trim.json
 6acfedb762db0217d0f6b19d67b44ebb2fed50f4 assets\moregear\models\item\rubyhelmet_quartz_trim.json
 d32bdb6e98c3ae29a8d37e3a63104a10d84e1ba8 assets\moregear\models\item\copperleggings_netherite_trim.json
 e3b7c38767cfc8a334b304777f7111df2b405e06 assets\moregear\models\item\sapphirehelmet_gold_trim.json

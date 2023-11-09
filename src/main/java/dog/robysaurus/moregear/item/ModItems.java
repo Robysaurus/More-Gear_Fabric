@@ -219,6 +219,8 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.COPPER, 1.25f, -2.5f, new FabricItemSettings()));
     public static final Item COPPER_HOE = registerItem("copperhoe",
             new HoeItem(ModToolMaterials.COPPER, -2, -1f, new FabricItemSettings()));
+    public static final Item COPPER_SHIELD = registerItem("coppershield",
+            new ShieldItem(new FabricItemSettings().maxDamage(200)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name), item);

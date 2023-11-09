@@ -1,4 +1,4 @@
-// 1.20.2	2023-11-07T20:28:08.8244711	More Gear/Recipes
+// 1.20.2	2023-11-08T18:31:34.6526733	More Gear/Recipes
 731644985ec2c6958dfd6e3a0cd0e3263e678881 data\moregear\recipes\sapphireblock.json
 ee0fe59ea2d7f6d2482bc5ba0cf131bcb893014d data\moregear\recipes\titaniumblock.json
 64633b467c5a96d1573374311e75491400a55bd9 data\moregear\advancements\recipes\building_blocks\rubyblock.json
@@ -11,8 +11,8 @@ ee0fe59ea2d7f6d2482bc5ba0cf131bcb893014d data\moregear\recipes\titaniumblock.jso
 bfdb50d25dde74c2093e739612ef702c9a58f783 data\moregear\advancements\recipes\misc\sapphire.json
 a1bb85a633abc705e3cab2be748fae1633c528cb data\moregear\advancements\recipes\misc\opal.json
 c6e5c94d9b2c0e5c8735232fb9a1416c011dbb18 data\moregear\advancements\recipes\building_blocks\titaniumblock.json
-03db997b29bdce2227665d0e02da2404459ae3ae data\moregear\recipes\topazblock.json
 ee7cd6fee1ceb8834194c9fddb0b8d503bf64304 data\moregear\advancements\recipes\misc\titanium.json
+03db997b29bdce2227665d0e02da2404459ae3ae data\moregear\recipes\topazblock.json
 ccd99ce1a10b8ebdd692b7e2f702c47947e71b18 data\moregear\advancements\recipes\misc\hyphite.json
 475a3a5f3520d63f8f0d64b5641eceb4f1f06ca8 data\moregear\recipes\opalblock.json
 76b293d074ccb11a30bb92ce60e80647cdfce7be data\moregear\recipes\opal.json
