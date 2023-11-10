@@ -105,6 +105,15 @@ public class ModItemGroups {
                         entries.add(ModItems.COPPER_CHESTPLATE);
                         entries.add(ModItems.COPPER_LEGGINGS);
                         entries.add(ModItems.COPPER_BOOTS);
+                        entries.add(ModItems.TITANIUM_SHIELD);
+                        entries.add(ModItems.HYPHITE_SHIELD);
+                        entries.add(ModItems.SAPPHIRE_SHIELD);
+                        entries.add(ModItems.RUBY_SHIELD);
+                        entries.add(ModItems.TOPAZ_SHIELD);
+                        entries.add(ModItems.OPAL_SHIELD);
+                        entries.add(ModItems.ECHO_SHIELD);
+                        entries.add(ModItems.EMERALD_SHIELD);
+                        entries.add(ModItems.AMETHYST_SHIELD);
                         entries.add(ModItems.COPPER_SHIELD);
                         entries.add(ModItems.TITANIUM);
                         entries.add(ModItems.RAW_TITANIUM);

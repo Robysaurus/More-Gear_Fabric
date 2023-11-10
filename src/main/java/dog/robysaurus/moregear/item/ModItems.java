@@ -221,6 +221,24 @@ public class ModItems {
             new HoeItem(ModToolMaterials.COPPER, -2, -1f, new FabricItemSettings()));
     public static final Item COPPER_SHIELD = registerItem("coppershield",
             new ShieldItem(new FabricItemSettings().maxDamage(200)));
+    public static final Item AMETHYST_SHIELD = registerItem("amethystshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(350)));
+    public static final Item EMERALD_SHIELD = registerItem("emeraldshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(1400)));
+    public static final Item ECHO_SHIELD = registerItem("echoshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(2000)));
+    public static final Item OPAL_SHIELD = registerItem("opalshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(2031)));
+    public static final Item TOPAZ_SHIELD = registerItem("topazshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(2031)));
+    public static final Item RUBY_SHIELD = registerItem("rubyshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(2031)));
+    public static final Item SAPPHIRE_SHIELD = registerItem("sapphireshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(2031)));
+    public static final Item HYPHITE_SHIELD = registerItem("hyphiteshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(3000)));
+    public static final Item TITANIUM_SHIELD = registerItem("titaniumshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(10000).fireproof()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name), item);

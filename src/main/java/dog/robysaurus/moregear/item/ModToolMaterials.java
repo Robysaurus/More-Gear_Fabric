@@ -8,10 +8,10 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    COPPER(MiningLevels.IRON, 200, 5.5f, 1.5f, 12, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
-    AMETHYST(MiningLevels.IRON, 350, 6.5f, 2.0f, 20, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
-    EMERALD(MiningLevels.DIAMOND, 1400, 7.5f, 2.5f, 10, () -> Ingredient.ofItems(Items.EMERALD)),
-    ECHO(MiningLevels.DIAMOND, 2000, 8.5f, 3.5f, 15, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
+    COPPER(MiningLevels.IRON, 200, 5.5f, 1.5f, 7, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    AMETHYST(MiningLevels.IRON, 350, 6.5f, 2.0f, 12, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
+    EMERALD(MiningLevels.DIAMOND, 1400, 7.5f, 2.5f, 17, () -> Ingredient.ofItems(Items.EMERALD)),
+    ECHO(MiningLevels.DIAMOND, 2000, 8.5f, 3.5f, 20, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
     OPAL(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.OPAL)),
     RUBY(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.RUBY)),
     SAPPHIRE(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),

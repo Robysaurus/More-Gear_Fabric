@@ -11,7 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    COPPER("copper", 12, new int[] {2,5,4,2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    COPPER("copper", 12, new int[] {2,5,4,2}, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
     AMETHYST("amethyst", 17, new int[] {2,6,5,2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD   , 0.0f, 0.0f, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
     EMERALD("emerald", 28, new int[] {2,7,6,2}, 17, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.7f, 0.0f, () -> Ingredient.ofItems(Items.EMERALD)),
     ECHO("echo", 36, new int[] {3,7,6,3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5f, 0.05f, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
