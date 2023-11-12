@@ -20,11 +20,15 @@ public class ModBlocks {
     public static final Block TITANIUM_BLOCK = registerBlock("titaniumblock",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(40f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.999f)), Rarity.RARE, true);
     public static final Block TITANIUM_ORE = registerBlock("titaniumore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(30f,1000f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(20,20)), Rarity.UNCOMMON, true);
+            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1200f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(20,20)), Rarity.UNCOMMON, true);
+    public static final Block PHENON_BLOCK = registerBlock("phenonblock",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(34f,975f).sounds(BlockSoundGroup.METAL)), Rarity.RARE, true);
+    public static final Block UNREFINED_PHENON_BLOCK = registerBlock("unrefinedphenonblock",
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).requiresTool().strength(25f,850f)), Rarity.UNCOMMON, true);
     public static final Block HYPHITE_BLOCK = registerBlock("hyphiteblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(32.5f,925f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, false);
     public static final Block HYPHITE_ORE = registerBlock("hyphiteore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(22.5f,775f), UniformIntProvider.create(6,12)), Rarity.COMMON, false);
+            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool().strength(22.5f,775f), UniformIntProvider.create(6,12)), Rarity.COMMON, false);
     public static final Block TOPAZ_BLOCK = registerBlock("topazblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(30f,900f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, false);
     public static final Block TOPAZ_ORE = registerBlock("topazore",

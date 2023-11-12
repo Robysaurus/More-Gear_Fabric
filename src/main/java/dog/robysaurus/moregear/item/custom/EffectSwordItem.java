@@ -46,6 +46,7 @@ public class EffectSwordItem extends SwordItem {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 4));
         }else if(armorMaterial== ModArmorMaterials.OPAL && toolMaterial== ModToolMaterials.OPAL){
             if(target instanceof BlazeEntity){
+                target.onDeath(target.getRecentDamageSource());
                 target.kill();
             }
         }else if(armorMaterial==ModArmorMaterials.ECHO && toolMaterial==ModToolMaterials.ECHO){

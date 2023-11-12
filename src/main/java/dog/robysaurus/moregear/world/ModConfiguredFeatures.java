@@ -11,15 +11,15 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> TITANIUM_KEY = registerKey("titaniumore_key");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PHENON_GEODE_KEY = registerKey("phenon_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> HYPHITE_KEY = registerKey("hyphiteore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> OPAL_KEY = registerKey("opalore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> RUBY_KEY = registerKey("rubyore_key");
@@ -50,6 +50,18 @@ public class ModConfiguredFeatures {
         register(context, TOPAZ_KEY, Feature.ORE, new OreFeatureConfig(topazOre, 4));
         register(context, TITANIUM_KEY, Feature.ORE, new OreFeatureConfig(titaniumOre, 3));
         register(context, HYPHITE_KEY, Feature.ORE, new OreFeatureConfig(hyphiteOre, 4));
+
+        register(context, PHENON_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                BlockStateProvider.of(ModBlocks.RUBY_ORE),
+                BlockStateProvider.of(ModBlocks.UNREFINED_PHENON_BLOCK),
+                BlockStateProvider.of(Blocks.ANCIENT_DEBRIS),
+                BlockStateProvider.of(Blocks.NETHER_GOLD_ORE),
+                List.of(ModBlocks.RUBY_ORE.getDefaultState(), ModBlocks.UNREFINED_PHENON_BLOCK.getDefaultState()),
+                BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                new GeodeLayerThicknessConfig(0.75f, 0.35f, 0.5f, 1f),
+                new GeodeCrackConfig(0.75D, 0.75D, 1),
+                0.5D, 0.375D, true, UniformIntProvider.create(3,6), UniformIntProvider.create(1,4), UniformIntProvider.create(1,2),
+                -18, 18, 0.05D, 1));
     }
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name){
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MoreGear.MOD_ID, name));

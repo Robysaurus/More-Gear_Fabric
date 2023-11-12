@@ -6,15 +6,15 @@
     "moregear:titaniumleggings",
     "moregear:titaniumboots",
 
-    "moregear:topazhelmet",
-    "moregear:topazchestplate",
-    "moregear:topazleggings",
-    "moregear:topazboots",
-
     "moregear:hyphitehelmet",
     "moregear:hyphitechestplate",
     "moregear:hyphiteleggings",
     "moregear:hyphiteboots",
+
+    "moregear:phenonhelmet",
+    "moregear:phenonchestplate",
+    "moregear:phenonleggings",
+    "moregear:phenonboots",
 
     "moregear:sapphirehelmet",
     "moregear:sapphirechestplate",
@@ -25,6 +25,11 @@
     "moregear:rubychestplate",
     "moregear:rubyleggings",
     "moregear:rubyboots",
+
+    "moregear:topazhelmet",
+    "moregear:topazchestplate",
+    "moregear:topazleggings",
+    "moregear:topazboots",
 
     "moregear:opalhelmet",
     "moregear:opalchestplate",

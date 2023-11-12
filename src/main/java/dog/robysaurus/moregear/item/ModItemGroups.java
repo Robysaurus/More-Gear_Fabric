@@ -24,6 +24,15 @@ public class ModItemGroups {
                         entries.add(ModItems.TITANIUM_CHESTPLATE);
                         entries.add(ModItems.TITANIUM_LEGGINGS);
                         entries.add(ModItems.TITANIUM_BOOTS);
+                        entries.add(ModItems.PHENON_SWORD);
+                        entries.add(ModItems.PHENON_AXE);
+                        entries.add(ModItems.PHENON_PICKAXE);
+                        entries.add(ModItems.PHENON_SHOVEL);
+                        entries.add(ModItems.PHENON_HOE);
+                        entries.add(ModItems.PHENON_HELMET);
+                        entries.add(ModItems.PHENON_CHESTPLATE);
+                        entries.add(ModItems.PHENON_LEGGINGS);
+                        entries.add(ModItems.PHENON_BOOTS);
                         entries.add(ModItems.HYPHITE_SWORD);
                         entries.add(ModItems.HYPHITE_AXE);
                         entries.add(ModItems.HYPHITE_PICKAXE);
@@ -106,6 +115,7 @@ public class ModItemGroups {
                         entries.add(ModItems.COPPER_LEGGINGS);
                         entries.add(ModItems.COPPER_BOOTS);
                         entries.add(ModItems.TITANIUM_SHIELD);
+                        entries.add(ModItems.PHENON_SHIELD);
                         entries.add(ModItems.HYPHITE_SHIELD);
                         entries.add(ModItems.SAPPHIRE_SHIELD);
                         entries.add(ModItems.RUBY_SHIELD);
@@ -119,6 +129,10 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
                         entries.add(ModBlocks.TITANIUM_BLOCK);
+                        entries.add(ModItems.PHENON);
+                        entries.add(ModItems.PHENON_SCRAP);
+                        entries.add(ModBlocks.UNREFINED_PHENON_BLOCK);
+                        entries.add(ModBlocks.PHENON_BLOCK);
                         entries.add(ModItems.HYPHITE);
                         entries.add(ModItems.UNREFINED_HYPHITE);
                         entries.add(ModBlocks.HYPHITE_ORE);

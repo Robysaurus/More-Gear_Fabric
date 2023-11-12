@@ -15,6 +15,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     public void generate(RecipeExporter exporter) {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.TITANIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TITANIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.HYPHITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HYPHITE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.PHENON, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PHENON_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.TOPAZ, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOPAZ_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.SAPPHIRE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SAPPHIRE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RUBY, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK);

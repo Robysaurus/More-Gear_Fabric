@@ -19,8 +19,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
     RUBY("ruby", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.RUBY)),
     SAPPHIRE("sapphire", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
     TOPAZ("topaz", 37, new int[] {3,8,6,3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.TOPAZ)),
-    HYPHITE("hyphite", 37, new int[] {4,9,8,4}, 18, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.HYPHITE)),
-    TITANIUM("titanium", 1000, new int[] {22,30,26,22}, 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    HYPHITE("hyphite", 1000, new int[] {4,9,8,4}, 18, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.HYPHITE)),
+    PHENON("phenon", 2500, new int[] {5,11,9,5}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.75f, 0.175f, () -> Ingredient.ofItems(ModItems.PHENON)),
+    TITANIUM("titanium", 10000, new int[] {22,30,26,22}, 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
@@ -46,7 +47,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
     @Override
     public int getDurability(ArmorItem.Type type) {
         if(this==TITANIUM){
-            return 10 * this.durabilityMultiplier;
+            return 10000;
+        }else if(this==PHENON){
+            return 2500;
+        }else if(this==HYPHITE){
+            return 1000;
         }
         return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;
     }

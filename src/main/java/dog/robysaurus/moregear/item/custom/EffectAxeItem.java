@@ -5,6 +5,9 @@ import dog.robysaurus.moregear.item.ModToolMaterials;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.BlazeEntity;
+import net.minecraft.entity.mob.DrownedEntity;
+import net.minecraft.entity.mob.GuardianEntity;
+import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.text.MutableText;
@@ -40,10 +43,16 @@ public class EffectAxeItem extends AxeItem {
 
 
     private void evaluateEffectToDeal(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
-        if(armorMaterial== ModArmorMaterials.RUBY && toolMaterial== ModToolMaterials.RUBY){
-            target.setOnFireFor(5);
-        }else if(armorMaterial== ModArmorMaterials.OPAL && toolMaterial== ModToolMaterials.OPAL){
+        if(armorMaterial==ModArmorMaterials.RUBY && toolMaterial==ModToolMaterials.RUBY){
+            target.setOnFireFor(7);
+        }else if(armorMaterial==ModArmorMaterials.OPAL && toolMaterial==ModToolMaterials.OPAL){
             if(target instanceof BlazeEntity){
+                target.onDeath(target.getRecentDamageSource());
+                target.kill();
+            }
+        }else if(armorMaterial==ModArmorMaterials.PHENON && toolMaterial==ModToolMaterials.PHENON){
+            if(target instanceof DrownedEntity || target instanceof GuardianEntity || target instanceof FishEntity || target instanceof DolphinEntity || target instanceof SquidEntity || target instanceof TurtleEntity || target instanceof AxolotlEntity){
+                target.onDeath(target.getRecentDamageSource());
                 target.kill();
             }
         }
@@ -82,6 +91,12 @@ public class EffectAxeItem extends AxeItem {
             tempTooltip.append(Text.literal("kills blazes").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("when full opal armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        }else if(this.toolMaterial==ModToolMaterials.PHENON){
+            MutableText tempTooltip = Text.literal("Instantly ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("kills all water mobs").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("when full phenon armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }
         super.appendTooltip(stack, world, tooltip, context);

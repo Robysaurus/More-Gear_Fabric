@@ -17,6 +17,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> TITANIUMORE_PLACED_KEY = registerKey("titaniumore_placed_key");
+    public static final RegistryKey<PlacedFeature> PHENON_GEODE_PLACED_KEY = registerKey("phenon_geode_placed_key");
     public static final RegistryKey<PlacedFeature> HYPHITEORE_PLACED_KEY = registerKey("hyphiteore_placed_key");
     public static final RegistryKey<PlacedFeature> OPALORE_PLACED_KEY = registerKey("opalore_placed_key");
     public static final RegistryKey<PlacedFeature> RUBYORE_PLACED_KEY = registerKey("rubyore_placed_key");
@@ -37,6 +38,9 @@ public class ModPlacedFeatures {
                 modifiersWithCount(3, HeightRangePlacementModifier.uniform(YOffset.fixed(55), YOffset.fixed(70))));
         register(context, TOPAZORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TOPAZ_KEY),
                 modifiersWithCount(3, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(-15))));
+
+        register(context, PHENON_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PHENON_GEODE_KEY),
+                RarityFilterPlacementModifier.of(30), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.fixed(5), YOffset.fixed(35)), BiomePlacementModifier.of());
     }
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MoreGear.MOD_ID, name));

@@ -51,10 +51,13 @@ public class ModArmorItem extends ArmorItem{
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 3, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, true));
+        }else if(hasCorrectArmorOn(ModArmorMaterials.PHENON, player)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 0, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.TOPAZ, player)){
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 2, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, true));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 200, 0, true, false, true));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 0, true, false, true));
         }else if(hasCorrectArmorOn(ModArmorMaterials.SAPPHIRE, player)){
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 2, true, false, true));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, true));
@@ -116,6 +119,12 @@ public class ModArmorItem extends ArmorItem{
             tempTooltip.append(Text.literal("Resistance IV, Fire Resistance,").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("Strength II, and Health Boost V").formatted(Formatting.GOLD, Formatting.BOLD);
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("when full set of armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        }else if(this.material==ModArmorMaterials.PHENON){
+            MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("Fire Resistance and Saturation I").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("when full set of armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);

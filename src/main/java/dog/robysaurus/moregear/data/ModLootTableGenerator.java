@@ -9,11 +9,12 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     public ModLootTableGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
-
     @Override
     public void generate() {
         addDrop(ModBlocks.TITANIUM_ORE, oreDrops(ModBlocks.TITANIUM_ORE, ModItems.RAW_TITANIUM));
         addDrop(ModBlocks.TITANIUM_BLOCK, ModBlocks.TITANIUM_BLOCK);
+        addDrop(ModBlocks.UNREFINED_PHENON_BLOCK, ModBlocks.UNREFINED_PHENON_BLOCK);
+        addDrop(ModBlocks.PHENON_BLOCK, ModBlocks.PHENON_BLOCK);
         addDrop(ModBlocks.HYPHITE_ORE, oreDrops(ModBlocks.HYPHITE_ORE, ModItems.UNREFINED_HYPHITE));
         addDrop(ModBlocks.HYPHITE_BLOCK, ModBlocks.HYPHITE_BLOCK);
         addDrop(ModBlocks.TOPAZ_ORE, oreDrops(ModBlocks.TOPAZ_ORE, ModItems.RAW_TOPAZ));

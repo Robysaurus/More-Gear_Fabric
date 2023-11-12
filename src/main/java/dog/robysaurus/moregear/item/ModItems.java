@@ -18,6 +18,10 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item TITANIUM = registerItem("titanium",
             new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_SCRAP = registerItem("phenonscrap",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item PHENON = registerItem("phenon",
+            new Item(new FabricItemSettings().fireproof()));
     public static final Item UNREFINED_HYPHITE = registerItem("unrefinedhyphite",
             new Item(new FabricItemSettings()));
     public static final Item HYPHITE = registerItem("hyphite",
@@ -57,6 +61,24 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.TITANIUM, 4f, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_HOE = registerItem("titaniumhoe",
             new HoeItem(ModToolMaterials.TITANIUM, 4, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+    public static final Item PHENON_HELMET = registerItem("phenonhelmet",
+            new ModArmorItem(ModArmorMaterials.PHENON, ModArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_CHESTPLATE = registerItem("phenonchestplate",
+            new ModArmorItem(ModArmorMaterials.PHENON, ModArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_LEGGINGS = registerItem("phenonleggings",
+            new ModArmorItem(ModArmorMaterials.PHENON, ModArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_BOOTS = registerItem("phenonboots",
+            new ModArmorItem(ModArmorMaterials.PHENON, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_SWORD = registerItem("phenonsword",
+            new SwordItem(ModToolMaterials.PHENON, 3, -2f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_AXE = registerItem("phenonaxe",
+            new EffectAxeItem(ModToolMaterials.PHENON, ModArmorMaterials.PHENON, 8f, -2.5f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_PICKAXE = registerItem("phenonpickaxe",
+            new PickaxeItem(ModToolMaterials.PHENON, 1, -2f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_SHOVEL = registerItem("phenonshovel",
+            new ShovelItem(ModToolMaterials.PHENON, 1.5f, -2.5f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PHENON_HOE = registerItem("phenonhoe",
+            new HoeItem(ModToolMaterials.PHENON, -3, 0.0f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item HYPHITE_HELMET = registerItem("hyphitehelmet",
             new ArmorItem(ModArmorMaterials.HYPHITE, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item HYPHITE_CHESTPLATE = registerItem("hyphitechestplate",
@@ -112,23 +134,23 @@ public class ModItems {
     public static final Item SAPPHIRE_HOE = registerItem("sapphirehoe",
             new HoeItem(ModToolMaterials.SAPPHIRE, -4, 0.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item RUBY_HELMET = registerItem("rubyhelmet",
-            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_CHESTPLATE = registerItem("rubychestplate",
-            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_LEGGINGS = registerItem("rubyleggings",
-            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_BOOTS = registerItem("rubyboots",
-            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_SWORD = registerItem("rubysword",
-            new SwordItem(ModToolMaterials.RUBY,3, -2.4f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new SwordItem(ModToolMaterials.RUBY,3, -2.4f, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_AXE = registerItem("rubyaxe",
-            new EffectAxeItem(ModToolMaterials.RUBY, ModArmorMaterials.RUBY, 5.0f, -3.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new EffectAxeItem(ModToolMaterials.RUBY, ModArmorMaterials.RUBY, 5.0f, -3.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_PICKAXE = registerItem("rubypickaxe",
-            new PickaxeItem(ModToolMaterials.RUBY, 1, -2.8f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new PickaxeItem(ModToolMaterials.RUBY, 1, -2.8f, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_SHOVEL = registerItem("rubyshovel",
-            new ShovelItem(ModToolMaterials.RUBY, 1.5f, -3.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ShovelItem(ModToolMaterials.RUBY, 1.5f, -3.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item RUBY_HOE = registerItem("rubyhoe",
-            new HoeItem(ModToolMaterials.RUBY, -4, 0.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new HoeItem(ModToolMaterials.RUBY, -4, 0.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item OPAL_HELMET = registerItem("opalhelmet",
             new ModArmorItem(ModArmorMaterials.OPAL, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item OPAL_CHESTPLATE = registerItem("opalchestplate",
@@ -166,23 +188,23 @@ public class ModItems {
     public static final Item ECHO_HOE = registerItem("echohoe",
             new HoeItem(ModToolMaterials.ECHO, -2, -1f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item EMERALD_HELMET = registerItem("emeraldhelmet",
-            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item EMERALD_CHESTPLATE = registerItem("emeraldchestplate",
-            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item EMERALD_LEGGINGS = registerItem("emeraldleggings",
-            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item EMERALD_BOOTS = registerItem("emeraldboots",
-            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ModArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.BOOTS, new FabricItemSettings()));
     public static final Item EMERALD_SWORD = registerItem("emeraldsword",
-            new SwordItem(ModToolMaterials.EMERALD,3, -2.4f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new SwordItem(ModToolMaterials.EMERALD,3, -2.4f, new FabricItemSettings()));
     public static final Item EMERALD_AXE = registerItem("emeraldaxe",
-            new AxeItem(ModToolMaterials.EMERALD, 6f, -3f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new AxeItem(ModToolMaterials.EMERALD, 6f, -3f, new FabricItemSettings()));
     public static final Item EMERALD_PICKAXE = registerItem("emeraldpickaxe",
-            new PickaxeItem(ModToolMaterials.EMERALD, 1, -2.8f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new PickaxeItem(ModToolMaterials.EMERALD, 1, -2.8f, new FabricItemSettings()));
     public static final Item EMERALD_SHOVEL = registerItem("emeraldshovel",
-            new ShovelItem(ModToolMaterials.EMERALD, 1.25f, -2.75f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new ShovelItem(ModToolMaterials.EMERALD, 1.25f, -2.75f, new FabricItemSettings()));
     public static final Item EMERALD_HOE = registerItem("emeraldhoe",
-            new HoeItem(ModToolMaterials.EMERALD, -2, -1f, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+            new HoeItem(ModToolMaterials.EMERALD, -2, -1f, new FabricItemSettings()));
     public static final Item AMETHYST_HELMET = registerItem("amethysthelmet",
             new ModArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item AMETHYST_CHESTPLATE = registerItem("amethystchestplate",
@@ -232,11 +254,13 @@ public class ModItems {
     public static final Item TOPAZ_SHIELD = registerItem("topazshield",
             new ShieldItem(new FabricItemSettings().maxDamage(2031)));
     public static final Item RUBY_SHIELD = registerItem("rubyshield",
-            new ShieldItem(new FabricItemSettings().maxDamage(2031)));
+            new ShieldItem(new FabricItemSettings().maxDamage(2031).fireproof()));
     public static final Item SAPPHIRE_SHIELD = registerItem("sapphireshield",
             new ShieldItem(new FabricItemSettings().maxDamage(2031)));
     public static final Item HYPHITE_SHIELD = registerItem("hyphiteshield",
             new ShieldItem(new FabricItemSettings().maxDamage(3000)));
+    public static final Item PHENON_SHIELD = registerItem("phenonshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(4250).fireproof()));
     public static final Item TITANIUM_SHIELD = registerItem("titaniumshield",
             new ShieldItem(new FabricItemSettings().maxDamage(10000).fireproof()));
 

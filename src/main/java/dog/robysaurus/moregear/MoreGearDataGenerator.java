@@ -1,9 +1,6 @@
 package dog.robysaurus.moregear;
 
-import dog.robysaurus.moregear.data.ModLootTableGenerator;
-import dog.robysaurus.moregear.data.ModModelProvider;
-import dog.robysaurus.moregear.data.ModRecipeGenerator;
-import dog.robysaurus.moregear.data.ModWorldGenerator;
+import dog.robysaurus.moregear.data.*;
 import dog.robysaurus.moregear.world.ModConfiguredFeatures;
 import dog.robysaurus.moregear.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -18,6 +15,7 @@ public class MoreGearDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableGenerator::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeGenerator::new);
+		pack.addProvider(ModLangGenerator::new);
 		pack.addProvider(ModWorldGenerator::new);
 	}
 
