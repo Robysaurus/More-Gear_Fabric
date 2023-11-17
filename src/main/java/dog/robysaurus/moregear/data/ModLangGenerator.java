@@ -14,6 +14,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.TITANIUM, "Titanium Ingot");
         translationBuilder.add(ModItems.RAW_TITANIUM, "Raw Titanium");
+        translationBuilder.add(ModItems.ENDIUM, "Endium Ingot");
+        translationBuilder.add(ModItems.ENDIUM_SCRAP, "Endium Scrap");
         translationBuilder.add(ModItems.PHENON, "Phenon Ingot");
         translationBuilder.add(ModItems.PHENON_SCRAP, "Phenon Scrap");
         translationBuilder.add(ModItems.HYPHITE, "Refined Hyphite");
@@ -36,6 +38,16 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TITANIUM_SHOVEL, "Titanium Shovel");
         translationBuilder.add(ModItems.TITANIUM_HOE, "Titanium Hoe");
         translationBuilder.add(ModItems.TITANIUM_SHIELD, "Titanium Shield");
+        translationBuilder.add(ModItems.ENDIUM_HELMET, "Endium Helmet");
+        translationBuilder.add(ModItems.ENDIUM_CHESTPLATE, "Endium Chestplate");
+        translationBuilder.add(ModItems.ENDIUM_LEGGINGS, "Endium Leggings");
+        translationBuilder.add(ModItems.ENDIUM_BOOTS, "Endium Boots");
+        translationBuilder.add(ModItems.ENDIUM_SWORD, "Endium Sword");
+        translationBuilder.add(ModItems.ENDIUM_AXE, "Endium Axe");
+        translationBuilder.add(ModItems.ENDIUM_PICKAXE, "Endium Pickaxe");
+        translationBuilder.add(ModItems.ENDIUM_SHOVEL, "Endium Shovel");
+        translationBuilder.add(ModItems.ENDIUM_HOE, "Endium Hoe");
+        translationBuilder.add(ModItems.ENDIUM_SHIELD, "Endium Shield");
         translationBuilder.add(ModItems.PHENON_HELMET, "Phenon Helmet");
         translationBuilder.add(ModItems.PHENON_CHESTPLATE, "Phenon Chestplate");
         translationBuilder.add(ModItems.PHENON_LEGGINGS, "Phenon Leggings");
@@ -139,6 +151,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
         //Blocks
         translationBuilder.add(ModBlocks.TITANIUM_BLOCK, "Block of Titanium");
         translationBuilder.add(ModBlocks.TITANIUM_ORE, "Titanium Ore");
+        translationBuilder.add(ModBlocks.ENDIUM_BLOCK, "Block of Endium");
+        translationBuilder.add(ModBlocks.ANCIENT_ENDIUM, "Ancient Endium");
         translationBuilder.add(ModBlocks.PHENON_BLOCK, "Block of Phenon");
         translationBuilder.add(ModBlocks.UNREFINED_PHENON_BLOCK, "Unrefined Phenon");
         translationBuilder.add(ModBlocks.HYPHITE_BLOCK, "Block of Hyphite");

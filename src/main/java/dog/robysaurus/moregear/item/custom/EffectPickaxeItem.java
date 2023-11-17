@@ -1,12 +1,13 @@
 package dog.robysaurus.moregear.item.custom;
 
+import com.google.common.collect.Iterables;
 import dog.robysaurus.moregear.item.ModArmorMaterials;
 import dog.robysaurus.moregear.item.ModToolMaterials;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
@@ -27,42 +28,39 @@ public class EffectPickaxeItem extends PickaxeItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if(entity instanceof PlayerEntity){
-            PlayerEntity player = ((PlayerEntity) entity);
-            if(hasFullSuitOfArmorOn(player)){
-                if(hasCorrectArmorOn(armorMaterial, player)) {
-                    evaluateEffectToGrant(player, toolMaterial, armorMaterial);
-                }
+        if(entity instanceof LivingEntity lEntity){
+            if(hasCorrectArmorOn(armorMaterial, lEntity)) {
+                evaluateEffectToGrant(lEntity, toolMaterial, armorMaterial);
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-    private void evaluateEffectToGrant(PlayerEntity player, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
+    private void evaluateEffectToGrant(LivingEntity entity, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
         if(armorMaterial==ModArmorMaterials.TOPAZ && toolMaterial==ModToolMaterials.TOPAZ){
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 4));
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 4));
         }
-
     }
 
-    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack breastplate = player.getInventory().getArmorStack(2);
-        ItemStack helmet = player.getInventory().getArmorStack(3);
+    private boolean hasCorrectArmorOn(ArmorMaterial material, LivingEntity entity) {
+        ItemStack[] stacks = Iterables.toArray(entity.getArmorItems(), ItemStack.class);
+        if(stacks.length!=4) {
+            return false;
+        }
+        ItemStack boots = stacks[3];
+        ItemStack leggings = stacks[2];
+        ItemStack breastplate = stacks[1];
+        ItemStack helmet = stacks[0];
         boolean wearingElytra = breastplate.getItem()==Items.ELYTRA;
-
-        return !helmet.isEmpty() && !breastplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty() && !wearingElytra;
-    }
-
-    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
-
-        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
-                leggings.getMaterial() == material && boots.getMaterial() == material;
+        if (!helmet.isEmpty() && !breastplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty() && !wearingElytra) {
+            ArmorItem Boots = ((ArmorItem) boots.getItem());
+            ArmorItem Leggings = ((ArmorItem) leggings.getItem());
+            ArmorItem Breastplate = ((ArmorItem) breastplate.getItem());
+            ArmorItem Helmet = ((ArmorItem) helmet.getItem());
+            return Helmet.getMaterial() == material && Breastplate.getMaterial() == material &&
+                    Leggings.getMaterial() == material && Boots.getMaterial() == material;
+        }
+        return false;
     }
 
     @Override

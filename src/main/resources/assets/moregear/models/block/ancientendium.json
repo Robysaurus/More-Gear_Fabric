@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moregear:block/ancientendium_top",
+    "side": "moregear:block/ancientendium_side"
+  }
+}

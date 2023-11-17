@@ -1,8 +1,10 @@
-// 1.20.2	2023-11-11T20:45:54.9515869	More Gear/Block Loot Tables
+// 1.20.2	2023-11-14T23:27:09.9426834	More Gear/Block Loot Tables
 b626aaac8274760916815ce20e52cd78e1c4fb4c data\moregear\loot_tables\blocks\hyphiteblock.json
 9727092765affcd7ad8dab65627d94c29ad747af data\moregear\loot_tables\blocks\titaniumore.json
 b0e7b33e4ba8a625bf7a05434168681557ae6d9b data\moregear\loot_tables\blocks\titaniumblock.json
+efecee981cea3940da6f194dd69927feb1a2ac25 data\moregear\loot_tables\blocks\endiumblock.json
 96da9859c7c663cfae8299f5120de9bd264522d9 data\moregear\loot_tables\blocks\opalore.json
+d85e64233de46434502dd30ea0e06365a905214f data\moregear\loot_tables\blocks\ancientendium.json
 fe249136e77ffd3cf8c0931796becbe7e1ffb87d data\moregear\loot_tables\blocks\sapphireblock.json
 e9a641f58b0a4535034975d80afcdee9c84eddce data\moregear\loot_tables\blocks\topazblock.json
 1c6e38081a7e43d7b74e7b14ae0a1b409cef0447 data\moregear\loot_tables\blocks\opalblock.json

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:reinforced_deepslate"
+    "moregear:endiumblock",
+    "moregear:ancientendium"
   ]
 }

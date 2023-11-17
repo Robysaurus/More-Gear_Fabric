@@ -17,7 +17,6 @@ public class MoreGear implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
 		ModWorldGeneration.generateModWorldGen();
 	}
 }

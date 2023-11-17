@@ -30,6 +30,8 @@ public class ModModelPredicateProvider {
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.PHENON_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+        ModelPredicateProviderRegistry.register(ModItems.ENDIUM_SHIELD, new Identifier("blocking"),
+                (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.TITANIUM_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
     }

@@ -18,6 +18,10 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item TITANIUM = registerItem("titanium",
             new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_SCRAP = registerItem("endiumscrap",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item ENDIUM = registerItem("endium",
+            new Item(new FabricItemSettings().fireproof()));
     public static final Item PHENON_SCRAP = registerItem("phenonscrap",
             new Item(new FabricItemSettings().fireproof()));
     public static final Item PHENON = registerItem("phenon",
@@ -61,6 +65,24 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.TITANIUM, 4f, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_HOE = registerItem("titaniumhoe",
             new HoeItem(ModToolMaterials.TITANIUM, 4, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+    public static final Item ENDIUM_HELMET = registerItem("endiumhelmet",
+            new ModArmorItem(ModArmorMaterials.ENDIUM, ModArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_CHESTPLATE = registerItem("endiumchestplate",
+            new ModArmorItem(ModArmorMaterials.ENDIUM, ModArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_LEGGINGS = registerItem("endiumleggings",
+            new ModArmorItem(ModArmorMaterials.ENDIUM, ModArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_BOOTS = registerItem("endiumboots",
+            new ModArmorItem(ModArmorMaterials.ENDIUM, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_SWORD = registerItem("endiumsword",
+            new EffectSwordItem(ModToolMaterials.ENDIUM, ModArmorMaterials.ENDIUM, 9, -2f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_AXE = registerItem("endiumaxe",
+            new AxeItem(ModToolMaterials.ENDIUM, 13f, -2.5f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_PICKAXE = registerItem("endiumpickaxe",
+            new PickaxeItem(ModToolMaterials.ENDIUM, 1, -2f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_SHOVEL = registerItem("endiumshovel",
+            new ShovelItem(ModToolMaterials.ENDIUM, 1.5f, -2.5f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_HOE = registerItem("endiumhoe",
+            new HoeItem(ModToolMaterials.ENDIUM, -3, 0.0f, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item PHENON_HELMET = registerItem("phenonhelmet",
             new ModArmorItem(ModArmorMaterials.PHENON, ModArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item PHENON_CHESTPLATE = registerItem("phenonchestplate",
@@ -261,6 +283,8 @@ public class ModItems {
             new ShieldItem(new FabricItemSettings().maxDamage(3000)));
     public static final Item PHENON_SHIELD = registerItem("phenonshield",
             new ShieldItem(new FabricItemSettings().maxDamage(4250).fireproof()));
+    public static final Item ENDIUM_SHIELD = registerItem("endiumshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(6000).fireproof()));
     public static final Item TITANIUM_SHIELD = registerItem("titaniumshield",
             new ShieldItem(new FabricItemSettings().maxDamage(10000).fireproof()));
 

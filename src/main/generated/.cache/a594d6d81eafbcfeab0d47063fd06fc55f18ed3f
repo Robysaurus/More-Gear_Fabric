@@ -1,7 +1,9 @@
-// 1.20.2	2023-11-11T20:45:54.9595656	More Gear/moregear
+// 1.20.2	2023-11-14T23:27:09.9556484	More Gear/moregear
 450840eadeeb76d9a9636e67e358113816e327f2 data\moregear\worldgen\placed_feature\topazore_placed_key.json
+16b7f0b61ac317402b10f91a4488054dcf53f1bb data\moregear\worldgen\configured_feature\endium_geode_key.json
 99fd85dac26e160cfe792af4cad08547c67e65d3 data\moregear\worldgen\placed_feature\rubyore_placed_key.json
 d58003dad699ef55bb967d2cce5af1fcff6e3aed data\moregear\worldgen\configured_feature\rubyore_key.json
+8ad6e4f6512e56da194279fe5a5a94f4461d15dc data\moregear\worldgen\placed_feature\endium_geode_placed_key.json
 7541763f2ffbca3d8a7cf7037f2e7963b4d0c7f2 data\moregear\worldgen\placed_feature\sapphireore_placed_key.json
 08f4985270bffcf5116330c18750dea0445bcbd0 data\moregear\worldgen\configured_feature\topazore_key.json
 54a70f466ec6c629b4123d7630d04757fea9b141 data\moregear\worldgen\configured_feature\titaniumore_key.json

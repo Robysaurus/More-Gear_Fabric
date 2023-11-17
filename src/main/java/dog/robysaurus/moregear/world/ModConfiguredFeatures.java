@@ -19,6 +19,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> TITANIUM_KEY = registerKey("titaniumore_key");
+    public static final RegistryKey<ConfiguredFeature<?,?>> ENDIUM_GEODE_KEY = registerKey("endium_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> PHENON_GEODE_KEY = registerKey("phenon_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> HYPHITE_KEY = registerKey("hyphiteore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> OPAL_KEY = registerKey("opalore_key");
@@ -62,6 +63,17 @@ public class ModConfiguredFeatures {
                 new GeodeCrackConfig(0.75D, 0.75D, 1),
                 0.5D, 0.375D, true, UniformIntProvider.create(3,6), UniformIntProvider.create(1,4), UniformIntProvider.create(1,2),
                 -18, 18, 0.05D, 1));
+        register(context, ENDIUM_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                BlockStateProvider.of(ModBlocks.ANCIENT_ENDIUM),
+                BlockStateProvider.of(ModBlocks.HYPHITE_BLOCK),
+                BlockStateProvider.of(ModBlocks.SAPPHIRE_ORE),
+                BlockStateProvider.of(Blocks.OBSIDIAN),
+                List.of(ModBlocks.HYPHITE_BLOCK.getDefaultState(), ModBlocks.SAPPHIRE_ORE.getDefaultState(), ModBlocks.ANCIENT_ENDIUM.getDefaultState()),
+                BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                new GeodeLayerThicknessConfig(0.5f, 0.2f, 0.3f, 0.75f),
+                new GeodeCrackConfig(0.0D, 0.0D, 0),
+                1.0D, 1.0D, true, UniformIntProvider.create(1,4), UniformIntProvider.create(1,3), UniformIntProvider.create(1,1),
+                -10, 10, 0.025, 0));
     }
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name){
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MoreGear.MOD_ID, name));

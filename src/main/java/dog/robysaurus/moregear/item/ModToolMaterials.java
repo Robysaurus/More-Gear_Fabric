@@ -8,7 +8,7 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    COPPER(MiningLevels.IRON, 200, 5.5f, 1.5f, 7, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    COPPER(MiningLevels.STONE, 200, 5.5f, 1.5f, 7, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
     AMETHYST(MiningLevels.IRON, 350, 6.5f, 2.0f, 12, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
     EMERALD(MiningLevels.DIAMOND, 1400, 7.5f, 2.5f, 17, () -> Ingredient.ofItems(Items.EMERALD)),
     ECHO(MiningLevels.DIAMOND, 2000, 8.5f, 3.5f, 20, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
@@ -16,8 +16,9 @@ public enum ModToolMaterials implements ToolMaterial {
     RUBY(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.RUBY)),
     SAPPHIRE(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
     TOPAZ(MiningLevels.NETHERITE, 2031, 20.0f, 4.0f, 20, () -> Ingredient.ofItems(ModItems.TOPAZ)),
-    HYPHITE(MiningLevels.NETHERITE, 3000, 15.0f, 6.0f, 18, () -> Ingredient.ofItems(ModItems.HYPHITE)),
-    PHENON(MiningLevels.NETHERITE, 4250, 20.0f, 8.0f, 20, () -> Ingredient.ofItems(ModItems.PHENON)),
+    HYPHITE(5, 3000, 15.0f, 6.0f, 18, () -> Ingredient.ofItems(ModItems.HYPHITE)),
+    PHENON(5, 4250, 20.0f, 15.0f, 20, () -> Ingredient.ofItems(ModItems.PHENON)),
+    ENDIUM(6, 6000, 35.0f, 20.0f, 27, () -> Ingredient.ofItems(ModItems.ENDIUM)),
     TITANIUM(10, 10000, 100.0f, 55.0f, 50, () -> Ingredient.ofItems(ModItems.TITANIUM));
 
     private final int miningLevel;
