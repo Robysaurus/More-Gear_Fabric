@@ -39,7 +39,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     )
     public void disableShield(ItemCooldownManager itemCooldownManager, Item item, int duration) {
         Item activeItem = this.activeItemStack.getItem();
-        if (activeItem instanceof ShieldItem && item == Items.SHIELD) {
+        if (activeItem instanceof ShieldItem || item == Items.SHIELD) {
             itemCooldownManager.set(activeItem, duration);
         } else {
             itemCooldownManager.set(item, duration);

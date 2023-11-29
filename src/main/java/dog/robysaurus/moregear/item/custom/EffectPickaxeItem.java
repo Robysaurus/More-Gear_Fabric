@@ -38,7 +38,7 @@ public class EffectPickaxeItem extends PickaxeItem {
 
     private void evaluateEffectToGrant(LivingEntity entity, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
         if(armorMaterial==ModArmorMaterials.TOPAZ && toolMaterial==ModToolMaterials.TOPAZ){
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 4));
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 4, true, false, false));
         }
     }
 
@@ -69,7 +69,7 @@ public class EffectPickaxeItem extends PickaxeItem {
             MutableText tempTooltip = Text.literal("Grants you ").formatted(Formatting.AQUA);
             tempTooltip.append(Text.literal("Haste V").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
-            tempTooltip = Text.literal("when full topaz armor is worn.").formatted(Formatting.AQUA);
+            tempTooltip = Text.literal("when full Topaz armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }
         super.appendTooltip(stack, world, tooltip, context);

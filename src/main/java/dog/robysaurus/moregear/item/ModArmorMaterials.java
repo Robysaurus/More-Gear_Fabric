@@ -20,9 +20,10 @@ public enum ModArmorMaterials implements ArmorMaterial {
     SAPPHIRE("sapphire", 37, new int[] {3,8,6,3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
     TOPAZ("topaz", 37, new int[] {3,8,6,3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.ofItems(ModItems.TOPAZ)),
     HYPHITE("hyphite", 1000, new int[] {4,9,8,4}, 18, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.HYPHITE)),
-    PHENON("phenon", 2500, new int[] {5,11,9,5}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.75f, 0.175f, () -> Ingredient.ofItems(ModItems.PHENON)),
-    ENDIUM("endium", 4000, new int[] {7,14,12,7}, 27, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0f, 0.2f, () -> Ingredient.ofItems(ModItems.ENDIUM)),
-    TITANIUM("titanium", 10000, new int[] {22,30,26,22}, 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.25f, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    PHENON("phenon", 2500, new int[] {6,11,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.75f, 0.165f, () -> Ingredient.ofItems(ModItems.PHENON)),
+    ENDIUM("endium", 4000, new int[] {9,14,12,6}, 27, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0f, 0.18f, () -> Ingredient.ofItems(ModItems.ENDIUM)),
+    MYTHRIL("mythril", 6000, new int[] {14, 19, 17, 14}, 31, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.25f, 0.195f, () -> Ingredient.ofItems(ModItems.MYTHRIL)),
+    TITANIUM("titanium", 10000, new int[] {22,30,26,22}, 40, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.23f, () -> Ingredient.ofItems(ModItems.TITANIUM));
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
@@ -47,7 +48,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     @Override
     public int getDurability(ArmorItem.Type type) {
-        if(this==TITANIUM || this==ENDIUM || this==PHENON || this==HYPHITE){
+        if(this==TITANIUM || this==MYTHRIL || this==ENDIUM || this==PHENON || this==HYPHITE){
             return this.durabilityMultiplier;
         }
         return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;

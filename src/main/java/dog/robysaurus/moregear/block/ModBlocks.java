@@ -18,9 +18,13 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
     public static final Block TITANIUM_BLOCK = registerBlock("titaniumblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(45f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.99f)), Rarity.RARE, true);
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(45f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.95f)), Rarity.RARE, true);
     public static final Block TITANIUM_ORE = registerBlock("titaniumore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1200f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(20,20)), Rarity.UNCOMMON, true);
+    public static final Block MYTHRIL_BLOCK = registerBlock("mythrilblock",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(39f,1150f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
+    public static final Block MYTHRIL_ORE = registerBlock("mythrilore",
+            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(30f,1050f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(12,17)), Rarity.UNCOMMON, true);
     public static final Block ENDIUM_BLOCK = registerBlock("endiumblock",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool().strength(36f,1050f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block ANCIENT_ENDIUM = registerBlock("ancientendium",
@@ -54,13 +58,12 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, new Identifier(MoreGear.MOD_ID, name), block);
     }
     private static Item registerBlockItem(String name, Block block, Rarity rarity, boolean fireproof){
-        if(fireproof){
+        if(fireproof) {
             return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name),
                     new BlockItem(block, new FabricItemSettings().rarity(rarity).fireproof()));
-        }else{
-            return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name),
-                    new BlockItem(block, new FabricItemSettings().rarity(rarity)));
         }
+        return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().rarity(rarity)));
     }
     public static void registerModBlocks(){
         MoreGear.LOGGER.info("Registering Mod Blocks for "+MoreGear.MOD_ID);

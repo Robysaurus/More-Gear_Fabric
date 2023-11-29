@@ -14,6 +14,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.TITANIUM, "Titanium Ingot");
         translationBuilder.add(ModItems.RAW_TITANIUM, "Raw Titanium");
+        translationBuilder.add(ModItems.MYTHRIL, "Mythril Ingot");
+        translationBuilder.add(ModItems.RAW_MYTHRIL, "Raw Mythril");
         translationBuilder.add(ModItems.ENDIUM, "Endium Ingot");
         translationBuilder.add(ModItems.ENDIUM_SCRAP, "Endium Scrap");
         translationBuilder.add(ModItems.PHENON, "Phenon Ingot");
@@ -38,6 +40,16 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TITANIUM_SHOVEL, "Titanium Shovel");
         translationBuilder.add(ModItems.TITANIUM_HOE, "Titanium Hoe");
         translationBuilder.add(ModItems.TITANIUM_SHIELD, "Titanium Shield");
+        translationBuilder.add(ModItems.MYTHRIL_HELMET, "Mythril Helmet");
+        translationBuilder.add(ModItems.MYTHRIL_CHESTPLATE, "Mythril Chestplate");
+        translationBuilder.add(ModItems.MYTHRIL_LEGGINGS, "Mythril Leggings");
+        translationBuilder.add(ModItems.MYTHRIL_BOOTS, "Mythril Boots");
+        translationBuilder.add(ModItems.MYTHRIL_SWORD, "Mythril Sword");
+        translationBuilder.add(ModItems.MYTHRIL_AXE, "Mythril Axe");
+        translationBuilder.add(ModItems.MYTHRIL_PICKAXE, "Mythril Pickaxe");
+        translationBuilder.add(ModItems.MYTHRIL_SHOVEL, "Mythril Shovel");
+        translationBuilder.add(ModItems.MYTHRIL_HOE, "Mythril Hoe");
+        translationBuilder.add(ModItems.MYTHRIL_SHIELD, "Mythril Shield");
         translationBuilder.add(ModItems.ENDIUM_HELMET, "Endium Helmet");
         translationBuilder.add(ModItems.ENDIUM_CHESTPLATE, "Endium Chestplate");
         translationBuilder.add(ModItems.ENDIUM_LEGGINGS, "Endium Leggings");
@@ -151,6 +163,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
         //Blocks
         translationBuilder.add(ModBlocks.TITANIUM_BLOCK, "Block of Titanium");
         translationBuilder.add(ModBlocks.TITANIUM_ORE, "Titanium Ore");
+        translationBuilder.add(ModBlocks.MYTHRIL_BLOCK, "Block of Mythril");
+        translationBuilder.add(ModBlocks.MYTHRIL_ORE, "Mythril Ore");
         translationBuilder.add(ModBlocks.ENDIUM_BLOCK, "Block of Endium");
         translationBuilder.add(ModBlocks.ANCIENT_ENDIUM, "Ancient Endium");
         translationBuilder.add(ModBlocks.PHENON_BLOCK, "Block of Phenon");

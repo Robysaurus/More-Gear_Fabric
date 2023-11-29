@@ -19,6 +19,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> TITANIUM_KEY = registerKey("titaniumore_key");
+    public static final RegistryKey<ConfiguredFeature<?,?>> MYTHRIL_KEY = registerKey("mythrilore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> ENDIUM_GEODE_KEY = registerKey("endium_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> PHENON_GEODE_KEY = registerKey("phenon_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> HYPHITE_KEY = registerKey("hyphiteore_key");
@@ -34,6 +35,8 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> titaniumOre =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, ModBlocks.TITANIUM_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> mythrilOre =
+                List.of(OreFeatureConfig.createTarget(endStoneReplaceables, ModBlocks.MYTHRIL_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> hyphiteOre =
                 List.of(OreFeatureConfig.createTarget(netherReplaceables, ModBlocks.HYPHITE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> opalOre =
@@ -45,12 +48,13 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> topazOre =
                 List.of(OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.TOPAZ_ORE.getDefaultState()));
 
+        register(context, OPAL_KEY, Feature.ORE, new OreFeatureConfig(opalOre, 5));
+        register(context, TOPAZ_KEY, Feature.ORE, new OreFeatureConfig(topazOre, 5));
         register(context, RUBY_KEY, Feature.ORE, new OreFeatureConfig(rubyOre, 4));
-        register(context, OPAL_KEY, Feature.ORE, new OreFeatureConfig(opalOre, 4));
         register(context, SAPPHIRE_KEY, Feature.ORE, new OreFeatureConfig(sapphireOre, 4));
-        register(context, TOPAZ_KEY, Feature.ORE, new OreFeatureConfig(topazOre, 4));
-        register(context, TITANIUM_KEY, Feature.ORE, new OreFeatureConfig(titaniumOre, 3));
         register(context, HYPHITE_KEY, Feature.ORE, new OreFeatureConfig(hyphiteOre, 4));
+        register(context, MYTHRIL_KEY, Feature.ORE, new OreFeatureConfig(mythrilOre, 4));
+        register(context, TITANIUM_KEY, Feature.ORE, new OreFeatureConfig(titaniumOre, 3));
 
         register(context, PHENON_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                 BlockStateProvider.of(ModBlocks.RUBY_ORE),

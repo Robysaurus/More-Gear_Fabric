@@ -18,6 +18,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_BLOCK);
         blockStateModelGenerator.registerSimpleState(ModBlocks.ANCIENT_ENDIUM);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDIUM_BLOCK);
         blockStateModelGenerator.registerSimpleState(ModBlocks.UNREFINED_PHENON_BLOCK);
@@ -38,6 +40,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_TITANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.TITANIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDIUM_SCRAP, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.PHENON_SCRAP, Models.GENERATED);
@@ -61,6 +65,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TITANIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_HOE, Models.HANDHELD);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_BOOTS);
+        itemModelGenerator.register(ModItems.MYTHRIL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_HOE, Models.HANDHELD);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.ENDIUM_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.ENDIUM_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.ENDIUM_LEGGINGS);

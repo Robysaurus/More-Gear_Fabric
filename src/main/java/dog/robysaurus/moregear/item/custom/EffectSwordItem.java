@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.BlazeEntity;
+import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.item.*;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
@@ -38,6 +39,11 @@ public class EffectSwordItem extends SwordItem {
     private void evaluateEffect(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial, LivingEntity entity) {
         if (armorMaterial == ModArmorMaterials.TITANIUM && toolMaterial == ModToolMaterials.TITANIUM) {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2));
+        } else if (armorMaterial == ModArmorMaterials.MYTHRIL && toolMaterial == ModToolMaterials.MYTHRIL) {
+            if (target instanceof EndermanEntity) {
+                target.onDeath(target.getRecentDamageSource());
+                target.kill();
+            }
         } else if (armorMaterial == ModArmorMaterials.ENDIUM && toolMaterial == ModToolMaterials.ENDIUM) {
             if (target.hasStatusEffect(StatusEffects.REGENERATION)) {
                 entity.addStatusEffect(target.getStatusEffect(StatusEffects.REGENERATION));
@@ -87,6 +93,12 @@ public class EffectSwordItem extends SwordItem {
             tempTooltip.append(Text.literal("Wither III").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("damage to your enemies when full Titanium armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        } else if (this.toolMaterial == ModToolMaterials.MYTHRIL) {
+            MutableText tempTooltip = Text.literal("Instantly ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("kills Endermen").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("when full Mythril armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         } else if (this.toolMaterial == ModToolMaterials.ENDIUM) {
             MutableText tempTooltip = Text.literal("Steals ").formatted(Formatting.AQUA);

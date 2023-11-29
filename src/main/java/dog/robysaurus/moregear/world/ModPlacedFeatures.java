@@ -17,6 +17,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> TITANIUMORE_PLACED_KEY = registerKey("titaniumore_placed_key");
+    public static final RegistryKey<PlacedFeature> MYTHRILORE_PLACED_KEY = registerKey("mythrilore_placed_key");
     public static final RegistryKey<PlacedFeature> ENDIUM_GEODE_PLACED_KEY = registerKey("endium_geode_placed_key");
     public static final RegistryKey<PlacedFeature> PHENON_GEODE_PLACED_KEY = registerKey("phenon_geode_placed_key");
     public static final RegistryKey<PlacedFeature> HYPHITEORE_PLACED_KEY = registerKey("hyphiteore_placed_key");
@@ -29,6 +30,8 @@ public class ModPlacedFeatures {
 
         register(context, TITANIUMORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TITANIUM_KEY),
                 modifiersWithCount(2, HeightRangePlacementModifier.uniform(YOffset.fixed(50), YOffset.fixed(70))));
+        register(context, MYTHRILORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MYTHRIL_KEY),
+                modifiersWithCount(3, HeightRangePlacementModifier.uniform(YOffset.fixed(50), YOffset.fixed(70))));
         register(context, HYPHITEORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.HYPHITE_KEY),
                 modifiersWithCount(2, HeightRangePlacementModifier.uniform(YOffset.fixed(5), YOffset.fixed(35))));
         register(context, OPALORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.OPAL_KEY),

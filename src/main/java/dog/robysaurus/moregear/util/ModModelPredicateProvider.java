@@ -7,9 +7,6 @@ import net.minecraft.util.Identifier;
 
 public class ModModelPredicateProvider {
     public static void registerModModels() {
-
-        //registerBow(ModItems.HYPHITE_BOW);
-
         ModelPredicateProviderRegistry.register(ModItems.COPPER_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.AMETHYST_SHIELD, new Identifier("blocking"),
@@ -31,6 +28,8 @@ public class ModModelPredicateProvider {
         ModelPredicateProviderRegistry.register(ModItems.PHENON_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.ENDIUM_SHIELD, new Identifier("blocking"),
+                (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+        ModelPredicateProviderRegistry.register(ModItems.MYTHRIL_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.TITANIUM_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);

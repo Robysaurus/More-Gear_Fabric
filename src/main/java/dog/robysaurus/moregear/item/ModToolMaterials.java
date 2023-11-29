@@ -16,10 +16,11 @@ public enum ModToolMaterials implements ToolMaterial {
     RUBY(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.RUBY)),
     SAPPHIRE(MiningLevels.NETHERITE, 2031, 9.0f, 4.0f, 15, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
     TOPAZ(MiningLevels.NETHERITE, 2031, 20.0f, 4.0f, 20, () -> Ingredient.ofItems(ModItems.TOPAZ)),
-    HYPHITE(5, 3000, 15.0f, 6.0f, 18, () -> Ingredient.ofItems(ModItems.HYPHITE)),
-    PHENON(5, 4250, 20.0f, 15.0f, 20, () -> Ingredient.ofItems(ModItems.PHENON)),
-    ENDIUM(6, 6000, 35.0f, 20.0f, 27, () -> Ingredient.ofItems(ModItems.ENDIUM)),
-    TITANIUM(10, 10000, 100.0f, 55.0f, 50, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    HYPHITE(5, 3000, 20.0f, 6.0f, 18, () -> Ingredient.ofItems(ModItems.HYPHITE)),
+    PHENON(5, 3500, 30.0f, 15.0f, 20, () -> Ingredient.ofItems(ModItems.PHENON)),
+    ENDIUM(6, 4000, 40.0f, 20.0f, 27, () -> Ingredient.ofItems(ModItems.ENDIUM)),
+    MYTHRIL(7, 6000, 55.0f, 35.0f, 31, () -> Ingredient.ofItems(ModItems.MYTHRIL)),
+    TITANIUM(10, 10000, 80.0f, 55.0f, 40, () -> Ingredient.ofItems(ModItems.TITANIUM));
 
     private final int miningLevel;
     private final int itemDurability;

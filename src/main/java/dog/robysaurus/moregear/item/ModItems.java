@@ -18,6 +18,10 @@ public class ModItems {
             new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item TITANIUM = registerItem("titanium",
             new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item RAW_MYTHRIL = registerItem("rawmythril",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item MYTHRIL = registerItem("mythril",
+            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).fireproof()));
     public static final Item ENDIUM_SCRAP = registerItem("endiumscrap",
             new Item(new FabricItemSettings().fireproof()));
     public static final Item ENDIUM = registerItem("endium",
@@ -65,6 +69,24 @@ public class ModItems {
             new ShovelItem(ModToolMaterials.TITANIUM, 4f, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item TITANIUM_HOE = registerItem("titaniumhoe",
             new HoeItem(ModToolMaterials.TITANIUM, 4, 2.5f, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
+    public static final Item MYTHRIL_HELMET = registerItem("mythrilhelmet",
+            new ModArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item MYTHRIL_CHESTPLATE = registerItem("mythrilchestplate",
+            new ModArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item MYTHRIL_LEGGINGS = registerItem("mythrilleggings",
+            new ModArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item MYTHRIL_BOOTS = registerItem("mythrilboots",
+            new ModArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item MYTHRIL_SWORD = registerItem("mythrilsword",
+            new EffectSwordItem(ModToolMaterials.MYTHRIL, ModArmorMaterials.MYTHRIL, 9, -1f, new FabricItemSettings().fireproof().rarity(Rarity.RARE)));
+    public static final Item MYTHRIL_AXE = registerItem("mythrilaxe",
+            new EffectAxeItem(ModToolMaterials.MYTHRIL, ModArmorMaterials.MYTHRIL, 14f, -1.5f, new FabricItemSettings().fireproof().rarity(Rarity.RARE)));
+    public static final Item MYTHRIL_PICKAXE = registerItem("mythrilpickaxe",
+            new PickaxeItem(ModToolMaterials.MYTHRIL, 1, -1f, new FabricItemSettings().fireproof().rarity(Rarity.RARE)));
+    public static final Item MYTHRIL_SHOVEL = registerItem("mythrilshovel",
+            new ShovelItem(ModToolMaterials.MYTHRIL, 1.5f, -1.5f, new FabricItemSettings().fireproof().rarity(Rarity.RARE)));
+    public static final Item MYTHRIL_HOE = registerItem("mythrilhoe",
+            new HoeItem(ModToolMaterials.MYTHRIL, -2, 0.5f, new FabricItemSettings().fireproof().rarity(Rarity.RARE)));
     public static final Item ENDIUM_HELMET = registerItem("endiumhelmet",
             new ModArmorItem(ModArmorMaterials.ENDIUM, ModArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item ENDIUM_CHESTPLATE = registerItem("endiumchestplate",
@@ -282,8 +304,10 @@ public class ModItems {
     public static final Item HYPHITE_SHIELD = registerItem("hyphiteshield",
             new ShieldItem(new FabricItemSettings().maxDamage(3000)));
     public static final Item PHENON_SHIELD = registerItem("phenonshield",
-            new ShieldItem(new FabricItemSettings().maxDamage(4250).fireproof()));
+            new ShieldItem(new FabricItemSettings().maxDamage(3500).fireproof()));
     public static final Item ENDIUM_SHIELD = registerItem("endiumshield",
+            new ShieldItem(new FabricItemSettings().maxDamage(4000).fireproof()));
+    public static final Item MYTHRIL_SHIELD = registerItem("mythrilshield",
             new ShieldItem(new FabricItemSettings().maxDamage(6000).fireproof()));
     public static final Item TITANIUM_SHIELD = registerItem("titaniumshield",
             new ShieldItem(new FabricItemSettings().maxDamage(10000).fireproof()));
