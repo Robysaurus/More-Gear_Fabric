@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "moregear:titaniumore",
-    "moregear:titaniumblock",
     "moregear:mythrilore",
     "moregear:mythrilblock"
   ]
