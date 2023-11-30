@@ -20,7 +20,8 @@ public enum ModToolMaterials implements ToolMaterial {
     PHENON(5, 3500, 30.0f, 15.0f, 20, () -> Ingredient.ofItems(ModItems.PHENON)),
     ENDIUM(6, 4000, 40.0f, 20.0f, 27, () -> Ingredient.ofItems(ModItems.ENDIUM)),
     MYTHRIL(7, 6000, 55.0f, 35.0f, 31, () -> Ingredient.ofItems(ModItems.MYTHRIL)),
-    TITANIUM(10, 10000, 80.0f, 55.0f, 40, () -> Ingredient.ofItems(ModItems.TITANIUM));
+    REINFORCED_TRIPHITE(8, 8000, 65.0f, 43f, 35, () -> Ingredient.ofItems(ModItems.REINFORCED_TRIPHITE)),
+    TITANIUM(9, 10000, 80.0f, 55.0f, 40, () -> Ingredient.ofItems(ModItems.TITANIUM));
 
     private final int miningLevel;
     private final int itemDurability;

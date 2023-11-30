@@ -19,6 +19,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> TITANIUM_KEY = registerKey("titaniumore_key");
+    public static final RegistryKey<ConfiguredFeature<?,?>> TRIPHITE_GEODE_KEY = registerKey("triphite_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> MYTHRIL_KEY = registerKey("mythrilore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> ENDIUM_GEODE_KEY = registerKey("endium_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> PHENON_GEODE_KEY = registerKey("phenon_geode_key");
@@ -73,6 +74,17 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.SAPPHIRE_ORE),
                 BlockStateProvider.of(Blocks.OBSIDIAN),
                 List.of(ModBlocks.HYPHITE_BLOCK.getDefaultState(), ModBlocks.SAPPHIRE_ORE.getDefaultState(), ModBlocks.ANCIENT_ENDIUM.getDefaultState()),
+                BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                new GeodeLayerThicknessConfig(0.5f, 0.2f, 0.3f, 0.75f),
+                new GeodeCrackConfig(0.0D, 0.0D, 0),
+                1.0D, 1.0D, true, UniformIntProvider.create(1,4), UniformIntProvider.create(1,3), UniformIntProvider.create(1,1),
+                -10, 10, 0.025, 0));
+        register(context, TRIPHITE_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                BlockStateProvider.of(ModBlocks.TRIPHITE_ORE),
+                BlockStateProvider.of(Blocks.NETHERITE_BLOCK),
+                BlockStateProvider.of(ModBlocks.MYTHRIL_ORE),
+                BlockStateProvider.of(Blocks.DIAMOND_BLOCK),
+                List.of(ModBlocks.TRIPHITE_ORE.getDefaultState(), Blocks.NETHERITE_BLOCK.getDefaultState(), ModBlocks.MYTHRIL_ORE.getDefaultState()),
                 BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                 new GeodeLayerThicknessConfig(0.5f, 0.2f, 0.3f, 0.75f),
                 new GeodeCrackConfig(0.0D, 0.0D, 0),

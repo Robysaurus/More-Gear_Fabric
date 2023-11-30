@@ -21,6 +21,10 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(45f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.95f)), Rarity.RARE, true);
     public static final Block TITANIUM_ORE = registerBlock("titaniumore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1200f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(20,20)), Rarity.UNCOMMON, true);
+    public static final Block REINFORCED_TRIPHITE_BLOCK = registerBlock("reinforcedtriphiteblock",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(42f,1300f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
+    public static final Block TRIPHITE_ORE = registerBlock("triphiteore",
+            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1100f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16,19)), Rarity.UNCOMMON, true);
     public static final Block MYTHRIL_BLOCK = registerBlock("mythrilblock",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(39f,1150f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block MYTHRIL_ORE = registerBlock("mythrilore",
@@ -30,11 +34,11 @@ public class ModBlocks {
     public static final Block ANCIENT_ENDIUM = registerBlock("ancientendium",
             new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).requiresTool().strength(27.5f,950f)), Rarity.UNCOMMON, true);
     public static final Block PHENON_BLOCK = registerBlock("phenonblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(34f,975f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(34f,975f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, true);
     public static final Block UNREFINED_PHENON_BLOCK = registerBlock("unrefinedphenonblock",
             new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).requiresTool().strength(25f,850f)), Rarity.COMMON, true);
     public static final Block HYPHITE_BLOCK = registerBlock("hyphiteblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(32.5f,925f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, false);
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(32.5f,925f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, false);
     public static final Block HYPHITE_ORE = registerBlock("hyphiteore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool().strength(22.5f,775f), UniformIntProvider.create(6,12)), Rarity.COMMON, false);
     public static final Block TOPAZ_BLOCK = registerBlock("topazblock",

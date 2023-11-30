@@ -39,6 +39,10 @@ public class EffectSwordItem extends SwordItem {
     private void evaluateEffect(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial, LivingEntity entity) {
         if (armorMaterial == ModArmorMaterials.TITANIUM && toolMaterial == ModToolMaterials.TITANIUM) {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2));
+        } else if (armorMaterial == ModArmorMaterials.REINFORCED_TRIPHITE && toolMaterial == ModToolMaterials.REINFORCED_TRIPHITE) {
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 200, 0, true, false, true));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0, true, false, true));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 100, 1, true, false, true));
         } else if (armorMaterial == ModArmorMaterials.MYTHRIL && toolMaterial == ModToolMaterials.MYTHRIL) {
             if (target instanceof EndermanEntity) {
                 target.onDeath(target.getRecentDamageSource());
@@ -93,6 +97,12 @@ public class EffectSwordItem extends SwordItem {
             tempTooltip.append(Text.literal("Wither III").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("damage to your enemies when full Titanium armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        } else if (this.toolMaterial == ModToolMaterials.REINFORCED_TRIPHITE) {
+            MutableText tempTooltip = Text.literal("Gives ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("Glowing, Nausea, and Weakness II").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("to your enemies when full Reinforced Triphite armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         } else if (this.toolMaterial == ModToolMaterials.MYTHRIL) {
             MutableText tempTooltip = Text.literal("Instantly ").formatted(Formatting.AQUA);

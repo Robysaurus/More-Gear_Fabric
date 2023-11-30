@@ -18,6 +18,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPHITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.REINFORCED_TRIPHITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_BLOCK);
         blockStateModelGenerator.registerSimpleState(ModBlocks.ANCIENT_ENDIUM);
@@ -40,6 +42,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_TITANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.TITANIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TRIPHITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDIUM_SCRAP, Models.GENERATED);
@@ -65,6 +69,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TITANIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_HOE, Models.HANDHELD);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.REINFORCED_TRIPHITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.REINFORCED_TRIPHITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.REINFORCED_TRIPHITE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.REINFORCED_TRIPHITE_BOOTS);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE_HOE, Models.HANDHELD);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.MYTHRIL_LEGGINGS);

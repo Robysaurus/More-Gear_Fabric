@@ -5,6 +5,8 @@ import dog.robysaurus.moregear.item.ModArmorMaterials;
 import dog.robysaurus.moregear.item.ModToolMaterials;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.DrownedEntity;
 import net.minecraft.entity.mob.GuardianEntity;
@@ -41,6 +43,10 @@ public class EffectAxeItem extends AxeItem {
     private void evaluateEffectToDeal(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
         if(armorMaterial==ModArmorMaterials.RUBY && toolMaterial==ModToolMaterials.RUBY){
             target.setOnFireFor(7);
+        }else if(armorMaterial==ModArmorMaterials.REINFORCED_TRIPHITE && toolMaterial==ModToolMaterials.REINFORCED_TRIPHITE){
+            target.removeStatusEffect(StatusEffects.INVISIBILITY);
+            target.removeStatusEffect(StatusEffects.RESISTANCE);
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 200, 0, true, false, true));
         }else if(armorMaterial==ModArmorMaterials.MYTHRIL && toolMaterial==ModToolMaterials.MYTHRIL){
             if(target instanceof ShulkerEntity){
                 target.onDeath(target.getRecentDamageSource());
@@ -87,6 +93,15 @@ public class EffectAxeItem extends AxeItem {
             tempTooltip.append(Text.literal("fire").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("on hits when full Ruby armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        }else if (this.toolMaterial == ModToolMaterials.REINFORCED_TRIPHITE) {
+            MutableText tempTooltip = Text.literal("Gives ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("Glowing").formatted(Formatting.GOLD, Formatting.BOLD));
+            tempTooltip.append(Text.literal(" to and removes ").formatted(Formatting.AQUA));
+            tooltip.add(tempTooltip);
+            tempTooltip.append(Text.literal("Invisibility and Resistance ").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("from your enemies when full Reinforced Triphite armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }else if(this.toolMaterial==ModToolMaterials.MYTHRIL){
             MutableText tempTooltip = Text.literal("Instantly ").formatted(Formatting.AQUA);

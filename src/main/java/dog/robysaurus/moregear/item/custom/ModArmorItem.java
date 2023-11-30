@@ -50,6 +50,10 @@ public class ModArmorItem extends ArmorItem{
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 3, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, false));
+        }else if(hasCorrectArmorOn(ModArmorMaterials.REINFORCED_TRIPHITE, entity)){
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, false));
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, false));
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 0, true, false, false));
         }else if(hasCorrectArmorOn(ModArmorMaterials.MYTHRIL, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 1, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 0, true, false, false));
@@ -130,6 +134,12 @@ public class ModArmorItem extends ArmorItem{
             tempTooltip = Text.literal("Strength II, and Health Boost V").formatted(Formatting.GOLD, Formatting.BOLD);
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("when full set of Titanium armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        }else if(this.material==ModArmorMaterials.REINFORCED_TRIPHITE){
+            MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("Resistance III, Strength II, and Regeneration I").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("when full set of Reinforced Triphite armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }else if(this.material==ModArmorMaterials.MYTHRIL){
             MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);

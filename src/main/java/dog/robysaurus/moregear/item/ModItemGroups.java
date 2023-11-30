@@ -24,6 +24,15 @@ public class ModItemGroups {
                         entries.add(ModItems.TITANIUM_CHESTPLATE);
                         entries.add(ModItems.TITANIUM_LEGGINGS);
                         entries.add(ModItems.TITANIUM_BOOTS);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_SWORD);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_AXE);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_PICKAXE);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_SHOVEL);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_HOE);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_HELMET);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_CHESTPLATE);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_LEGGINGS);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_BOOTS);
                         entries.add(ModItems.MYTHRIL_SWORD);
                         entries.add(ModItems.MYTHRIL_AXE);
                         entries.add(ModItems.MYTHRIL_PICKAXE);
@@ -133,6 +142,7 @@ public class ModItemGroups {
                         entries.add(ModItems.COPPER_LEGGINGS);
                         entries.add(ModItems.COPPER_BOOTS);
                         entries.add(ModItems.TITANIUM_SHIELD);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_SHIELD);
                         entries.add(ModItems.MYTHRIL_SHIELD);
                         entries.add(ModItems.ENDIUM_SHIELD);
                         entries.add(ModItems.PHENON_SHIELD);
@@ -149,6 +159,10 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
                         entries.add(ModBlocks.TITANIUM_BLOCK);
+                        entries.add(ModItems.REINFORCED_TRIPHITE);
+                        entries.add(ModItems.RAW_TRIPHITE);
+                        entries.add(ModBlocks.TRIPHITE_ORE);
+                        entries.add(ModBlocks.REINFORCED_TRIPHITE_BLOCK);
                         entries.add(ModItems.MYTHRIL);
                         entries.add(ModItems.RAW_MYTHRIL);
                         entries.add(ModBlocks.MYTHRIL_ORE);

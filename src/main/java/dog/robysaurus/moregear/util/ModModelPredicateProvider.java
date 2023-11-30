@@ -31,6 +31,8 @@ public class ModModelPredicateProvider {
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.MYTHRIL_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+        ModelPredicateProviderRegistry.register(ModItems.REINFORCED_TRIPHITE_SHIELD, new Identifier("blocking"),
+                (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
         ModelPredicateProviderRegistry.register(ModItems.TITANIUM_SHIELD, new Identifier("blocking"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
     }

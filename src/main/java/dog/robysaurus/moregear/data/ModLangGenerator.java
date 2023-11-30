@@ -14,6 +14,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.TITANIUM, "Titanium Ingot");
         translationBuilder.add(ModItems.RAW_TITANIUM, "Raw Titanium");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE, "Reinforced Triphite");
+        translationBuilder.add(ModItems.RAW_TRIPHITE, "Raw Triphite");
         translationBuilder.add(ModItems.MYTHRIL, "Mythril Ingot");
         translationBuilder.add(ModItems.RAW_MYTHRIL, "Raw Mythril");
         translationBuilder.add(ModItems.ENDIUM, "Endium Ingot");
@@ -40,6 +42,16 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TITANIUM_SHOVEL, "Titanium Shovel");
         translationBuilder.add(ModItems.TITANIUM_HOE, "Titanium Hoe");
         translationBuilder.add(ModItems.TITANIUM_SHIELD, "Titanium Shield");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_HELMET, "Reinforced Triphite Helmet");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_CHESTPLATE, "Reinforced Triphite Chestplate");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_LEGGINGS, "Reinforced Triphite Leggings");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_BOOTS, "Reinforced Triphite Boots");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_SWORD, "Reinforced Triphite Sword");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_AXE, "Reinforced Triphite Axe");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_PICKAXE, "Reinforced Triphite Pickaxe");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_SHOVEL, "Reinforced Triphite Shovel");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_HOE, "Reinforced Triphite Hoe");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_SHIELD, "Reinforced Triphite Shield");
         translationBuilder.add(ModItems.MYTHRIL_HELMET, "Mythril Helmet");
         translationBuilder.add(ModItems.MYTHRIL_CHESTPLATE, "Mythril Chestplate");
         translationBuilder.add(ModItems.MYTHRIL_LEGGINGS, "Mythril Leggings");
@@ -163,6 +175,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
         //Blocks
         translationBuilder.add(ModBlocks.TITANIUM_BLOCK, "Block of Titanium");
         translationBuilder.add(ModBlocks.TITANIUM_ORE, "Titanium Ore");
+        translationBuilder.add(ModBlocks.REINFORCED_TRIPHITE_BLOCK, "Block of Reinforced Triphite");
+        translationBuilder.add(ModBlocks.TRIPHITE_ORE, "Triphite Ore");
         translationBuilder.add(ModBlocks.MYTHRIL_BLOCK, "Block of Mythril");
         translationBuilder.add(ModBlocks.MYTHRIL_ORE, "Mythril Ore");
         translationBuilder.add(ModBlocks.ENDIUM_BLOCK, "Block of Endium");

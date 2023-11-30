@@ -23,6 +23,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     PHENON("phenon", 2500, new int[] {6,11,9,6}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.75f, 0.165f, () -> Ingredient.ofItems(ModItems.PHENON)),
     ENDIUM("endium", 4000, new int[] {9,14,12,6}, 27, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0f, 0.18f, () -> Ingredient.ofItems(ModItems.ENDIUM)),
     MYTHRIL("mythril", 6000, new int[] {14, 19, 17, 14}, 31, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.25f, 0.195f, () -> Ingredient.ofItems(ModItems.MYTHRIL)),
+    REINFORCED_TRIPHITE("reinforcedtriphite", 8000, new int[] {18, 24, 21, 18}, 35, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.6f, 0.21f, () -> Ingredient.ofItems(ModItems.REINFORCED_TRIPHITE)),
     TITANIUM("titanium", 10000, new int[] {22,30,26,22}, 40, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0f, 0.23f, () -> Ingredient.ofItems(ModItems.TITANIUM));
     private final String name;
     private final int durabilityMultiplier;
@@ -48,7 +49,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     @Override
     public int getDurability(ArmorItem.Type type) {
-        if(this==TITANIUM || this==MYTHRIL || this==ENDIUM || this==PHENON || this==HYPHITE){
+        if(this==TITANIUM || this==REINFORCED_TRIPHITE || this==MYTHRIL || this==ENDIUM || this==PHENON || this==HYPHITE){
             return this.durabilityMultiplier;
         }
         return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;
