@@ -45,11 +45,11 @@ public class ModPlacedFeatures {
                 modifiersWithCount(3, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(-15))));
 
         register(context, PHENON_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PHENON_GEODE_KEY),
-                RarityFilterPlacementModifier.of(30), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.fixed(5), YOffset.fixed(35)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.fixed(5), YOffset.fixed(35)), BiomePlacementModifier.of());
         register(context, ENDIUM_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ENDIUM_GEODE_KEY),
                 RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.fixed(45), YOffset.fixed(60)), BiomePlacementModifier.of());
         register(context, TRIPHITE_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TRIPHITE_GEODE_KEY),
-                RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.fixed(40), YOffset.fixed(50)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.fixed(40), YOffset.fixed(50)), BiomePlacementModifier.of());
     }
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MoreGear.MOD_ID, name));

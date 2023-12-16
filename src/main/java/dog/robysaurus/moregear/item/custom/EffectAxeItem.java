@@ -99,7 +99,7 @@ public class EffectAxeItem extends AxeItem {
             tempTooltip.append(Text.literal("Glowing").formatted(Formatting.GOLD, Formatting.BOLD));
             tempTooltip.append(Text.literal(" to and removes ").formatted(Formatting.AQUA));
             tooltip.add(tempTooltip);
-            tempTooltip.append(Text.literal("Invisibility and Resistance ").formatted(Formatting.GOLD, Formatting.BOLD));
+            tempTooltip = Text.literal("Invisibility and Resistance ").formatted(Formatting.GOLD, Formatting.BOLD);
             tooltip.add(tempTooltip);
             tempTooltip = Text.literal("from your enemies when full Reinforced Triphite armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
