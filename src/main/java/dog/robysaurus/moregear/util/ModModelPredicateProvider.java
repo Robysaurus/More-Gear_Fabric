@@ -39,7 +39,7 @@ public class ModModelPredicateProvider {
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
     }
 
-    private static void registerBow(Item bow) {
+    /*private static void registerBow(Item bow) {
         ModelPredicateProviderRegistry.register(bow, new Identifier("pull"), (stack, world, entity, seed) -> {
             if (entity == null) {
                 return 0.0f;
@@ -51,5 +51,5 @@ public class ModModelPredicateProvider {
         });
         ModelPredicateProviderRegistry.register(bow, new Identifier("pulling"),
                 (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
-    }
+    }*/
 }

@@ -5,7 +5,6 @@ import dog.robysaurus.moregear.block.ModBlocks;
 import dog.robysaurus.moregear.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
