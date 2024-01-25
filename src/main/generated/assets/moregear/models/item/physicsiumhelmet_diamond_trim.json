@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "moregear:item/physicsiumhelmet",
+    "layer1": "minecraft:trims/items/helmet_trim_diamond"
+  }
+}

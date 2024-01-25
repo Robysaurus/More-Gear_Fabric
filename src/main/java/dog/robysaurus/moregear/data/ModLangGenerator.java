@@ -1,6 +1,8 @@
 package dog.robysaurus.moregear.data;
 
 import dog.robysaurus.moregear.block.ModBlocks;
+import dog.robysaurus.moregear.entity.ModEntities;
+import dog.robysaurus.moregear.event.KeyInputHandler;
 import dog.robysaurus.moregear.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -12,6 +14,8 @@ public class ModLangGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
+        translationBuilder.add(ModItems.PHYSICSIUM, "Physicsium Ingot");
+        translationBuilder.add(ModItems.PHYSICSIUM_NUGGET, "Physicsium Nugget");
         translationBuilder.add(ModItems.TITANIUM, "Titanium Ingot");
         translationBuilder.add(ModItems.RAW_TITANIUM, "Raw Titanium");
         translationBuilder.add(ModItems.REINFORCED_TRIPHITE, "Reinforced Triphite");
@@ -32,6 +36,16 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAW_TOPAZ, "Raw Topaz");
         translationBuilder.add(ModItems.OPAL, "Opal");
         translationBuilder.add(ModItems.RAW_OPAL, "Raw Opal");
+        translationBuilder.add(ModItems.PHYSICSIUM_HELMET, "Physicsium Helmet");
+        translationBuilder.add(ModItems.PHYSICSIUM_CHESTPLATE, "Physicsium Chestplate");
+        translationBuilder.add(ModItems.PHYSICSIUM_LEGGINGS, "Physicsium Leggings");
+        translationBuilder.add(ModItems.PHYSICSIUM_BOOTS, "Physicsium Boots");
+        translationBuilder.add(ModItems.PHYSICSIUM_SWORD, "Physicsium Sword");
+        translationBuilder.add(ModItems.PHYSICSIUM_AXE, "Physicsium Axe");
+        translationBuilder.add(ModItems.PHYSICSIUM_PICKAXE, "Physicsium Pickaxe");
+        translationBuilder.add(ModItems.PHYSICSIUM_SHOVEL, "Physicsium Shovel");
+        translationBuilder.add(ModItems.PHYSICSIUM_HOE, "Physicsium Hoe");
+        translationBuilder.add(ModItems.PHYSICSIUM_SHIELD, "Physicsium Shield");
         translationBuilder.add(ModItems.TITANIUM_HELMET, "Titanium Helmet");
         translationBuilder.add(ModItems.TITANIUM_CHESTPLATE, "Titanium Chestplate");
         translationBuilder.add(ModItems.TITANIUM_LEGGINGS, "Titanium Leggings");
@@ -172,7 +186,26 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.COPPER_SHOVEL, "Copper Shovel");
         translationBuilder.add(ModItems.COPPER_HOE, "Copper Hoe");
         translationBuilder.add(ModItems.COPPER_SHIELD, "Copper Shield");
+        translationBuilder.add(ModItems.PHYSICS_IS_THE_BEST, "§6§l§kPHYSICS§r");
+        translationBuilder.add(ModItems.PHYSICSIUM_ELYTRA_CHESTPLATE, "Physicsium Elytra-Chestplate");
+        //Upgrade Templates
+        translationBuilder.add(ModItems.ELYTRA_CHESTPLATE_UPGRADE, "Physicsium Elytra-Chestplate Upgrade");
+        translationBuilder.add(ModItems.PHYSICSIUM_UPGRADE, "Physicsium Upgrade");
+        translationBuilder.add(ModItems.TITANIUM_UPGRADE, "Titanium Upgrade");
+        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_UPGRADE, "Reinforced Triphite Upgrade");
+        translationBuilder.add(ModItems.MYTHRIL_UPGRADE, "Mythril Upgrade");
+        translationBuilder.add(ModItems.ENDIUM_UPGRADE, "Endium Upgrade");
+        translationBuilder.add(ModItems.PHENON_UPGRADE, "Phenon Upgrade");
+        translationBuilder.add(ModItems.SAPPHIRE_UPGRADE, "Sapphire Upgrade");
+        translationBuilder.add(ModItems.RUBY_UPGRADE, "Ruby Upgrade");
+        translationBuilder.add(ModItems.TOPAZ_UPGRADE, "Topaz Upgrade");
+        translationBuilder.add(ModItems.OPAL_UPGRADE, "Opal Upgrade");
+        translationBuilder.add(ModItems.HYPHITE_UPGRADE, "Hyphite Upgrade");
+        //Spawn Egg
+        translationBuilder.add(ModItems.SHRIKE_SPAWN_EGG, "Shrike Spawn Egg");
         //Blocks
+        translationBuilder.add(ModBlocks.PHYSICSIUM_BLOCK, "Block of Physicsium");
+        translationBuilder.add(ModBlocks.PHYSICSIUM_ORE, "Physicsium Ore");
         translationBuilder.add(ModBlocks.TITANIUM_BLOCK, "Block of Titanium");
         translationBuilder.add(ModBlocks.TITANIUM_ORE, "Titanium Ore");
         translationBuilder.add(ModBlocks.REINFORCED_TRIPHITE_BLOCK, "Block of Reinforced Triphite");
@@ -193,5 +226,10 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.TOPAZ_ORE, "Topaz Ore");
         translationBuilder.add(ModBlocks.OPAL_BLOCK, "Block of Opal");
         translationBuilder.add(ModBlocks.OPAL_ORE, "Opal Ore");
+        //Keybinding Stuff
+        translationBuilder.add(KeyInputHandler.LEVITATE_KEY, "Levitate Key");
+        translationBuilder.add(KeyInputHandler.KEY_CATEGORY, "More Gear Keybindings");
+        //Shrike
+        translationBuilder.add(ModEntities.SHRIKE, "Shrike");
     }
 }

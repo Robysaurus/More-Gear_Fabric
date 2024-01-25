@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:sapphire"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "item": "moregear:sapphireaxe"
+  },
+  "template": {
+    "item": "moregear:sapphireupgrade"
+  }
+}

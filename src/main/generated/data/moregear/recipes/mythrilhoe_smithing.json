@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:mythril"
+  },
+  "base": {
+    "item": "moregear:endiumhoe"
+  },
+  "result": {
+    "item": "moregear:mythrilhoe"
+  },
+  "template": {
+    "item": "moregear:mythrilupgrade"
+  }
+}

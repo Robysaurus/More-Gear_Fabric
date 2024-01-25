@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_physicsiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moregear:physicsiumblock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:physicsium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_physicsiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:physicsium"
+    ]
+  }
+}

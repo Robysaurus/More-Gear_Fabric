@@ -37,7 +37,11 @@ public class EffectSwordItem extends SwordItem {
     }
 
     private void evaluateEffect(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial, LivingEntity entity) {
-        if (armorMaterial == ModArmorMaterials.TITANIUM && toolMaterial == ModToolMaterials.TITANIUM) {
+        if (armorMaterial == ModArmorMaterials.PHYSICSIUM && toolMaterial == ModToolMaterials.PHYSICSIUM) {
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200, 2));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 4));
+        } else if (armorMaterial == ModArmorMaterials.TITANIUM && toolMaterial == ModToolMaterials.TITANIUM) {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2));
         } else if (armorMaterial == ModArmorMaterials.REINFORCED_TRIPHITE && toolMaterial == ModToolMaterials.REINFORCED_TRIPHITE) {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 200, 0, true, false, true));
@@ -92,7 +96,13 @@ public class EffectSwordItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if (this.toolMaterial == ModToolMaterials.TITANIUM) {
+        if (this.toolMaterial == ModToolMaterials.PHYSICSIUM) {
+            MutableText tempTooltip = Text.literal("Deals ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("big skull emoji lol").formatted(Formatting.GOLD, Formatting.BOLD, Formatting.OBFUSCATED));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("to your enemies when full Titanium armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        } else if (this.toolMaterial == ModToolMaterials.TITANIUM) {
             MutableText tempTooltip = Text.literal("Deals ").formatted(Formatting.AQUA);
             tempTooltip.append(Text.literal("Wither III").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);

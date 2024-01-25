@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 3.5,
+  "group": "titanium",
+  "ingredient": {
+    "item": "moregear:rawtitanium"
+  },
+  "result": "moregear:titanium"
+}

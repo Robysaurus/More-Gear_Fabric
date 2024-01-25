@@ -22,5 +22,7 @@ public class ModOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.MYTHRILORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_BARRENS),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.TITANIUMORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS, BiomeKeys.END_BARRENS),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.PHYSICSIUMORE_PLACED_KEY);
     }
 }

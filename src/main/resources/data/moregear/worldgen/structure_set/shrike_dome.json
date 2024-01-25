@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "moregear:shrike_dome",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 635425179,
+    "spacing": 17,
+    "separation": 10,
+    "type": "minecraft:random_spread"
+  }
+}

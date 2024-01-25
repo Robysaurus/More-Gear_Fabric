@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:titanium"
+  },
+  "base": {
+    "item": "moregear:reinforcedtriphiteboots"
+  },
+  "result": {
+    "item": "moregear:titaniumboots"
+  },
+  "template": {
+    "item": "moregear:titaniumupgrade"
+  }
+}

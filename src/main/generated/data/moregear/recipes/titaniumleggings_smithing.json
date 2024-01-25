@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:titanium"
+  },
+  "base": {
+    "item": "moregear:reinforcedtriphiteleggings"
+  },
+  "result": {
+    "item": "moregear:titaniumleggings"
+  },
+  "template": {
+    "item": "moregear:titaniumupgrade"
+  }
+}

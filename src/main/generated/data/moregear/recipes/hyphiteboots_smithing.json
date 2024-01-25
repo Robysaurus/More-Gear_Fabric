@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:hyphite"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "item": "moregear:hyphiteboots"
+  },
+  "template": {
+    "item": "moregear:hyphiteupgrade"
+  }
+}

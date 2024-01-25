@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:reinforcedtriphite"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

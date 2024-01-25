@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:phenon"
+  },
+  "base": {
+    "item": "moregear:hyphitehelmet"
+  },
+  "result": {
+    "item": "moregear:phenonhelmet"
+  },
+  "template": {
+    "item": "moregear:phenonupgrade"
+  }
+}

@@ -25,7 +25,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             method = "damageShield"
     )
     protected boolean damageShield(ItemStack itemStack, Item item) {
-        if (itemStack.getItem() instanceof ShieldItem && item == Items.SHIELD) {
+        if (itemStack.getItem() instanceof ShieldItem || item == Items.SHIELD) {
             return true;
         }
         return itemStack.isOf(item);

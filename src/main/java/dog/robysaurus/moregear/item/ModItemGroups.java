@@ -15,6 +15,15 @@ public class ModItemGroups {
             new Identifier(MoreGear.MOD_ID),
             FabricItemGroup.builder().displayName(Text.literal("More Gear"))
                     .icon(() -> new ItemStack(ModItems.TITANIUM_HELMET)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.PHYSICSIUM_SWORD);
+                        entries.add(ModItems.PHYSICSIUM_AXE);
+                        entries.add(ModItems.PHYSICSIUM_PICKAXE);
+                        entries.add(ModItems.PHYSICSIUM_SHOVEL);
+                        entries.add(ModItems.PHYSICSIUM_HOE);
+                        entries.add(ModItems.PHYSICSIUM_HELMET);
+                        entries.add(ModItems.PHYSICSIUM_CHESTPLATE);
+                        entries.add(ModItems.PHYSICSIUM_LEGGINGS);
+                        entries.add(ModItems.PHYSICSIUM_BOOTS);
                         entries.add(ModItems.TITANIUM_SWORD);
                         entries.add(ModItems.TITANIUM_AXE);
                         entries.add(ModItems.TITANIUM_PICKAXE);
@@ -141,6 +150,7 @@ public class ModItemGroups {
                         entries.add(ModItems.COPPER_CHESTPLATE);
                         entries.add(ModItems.COPPER_LEGGINGS);
                         entries.add(ModItems.COPPER_BOOTS);
+                        entries.add(ModItems.PHYSICSIUM_SHIELD);
                         entries.add(ModItems.TITANIUM_SHIELD);
                         entries.add(ModItems.REINFORCED_TRIPHITE_SHIELD);
                         entries.add(ModItems.MYTHRIL_SHIELD);
@@ -155,6 +165,25 @@ public class ModItemGroups {
                         entries.add(ModItems.EMERALD_SHIELD);
                         entries.add(ModItems.AMETHYST_SHIELD);
                         entries.add(ModItems.COPPER_SHIELD);
+                        entries.add(ModItems.ELYTRA_CHESTPLATE_UPGRADE);
+                        entries.add(ModItems.PHYSICSIUM_UPGRADE);
+                        entries.add(ModItems.TITANIUM_UPGRADE);
+                        entries.add(ModItems.REINFORCED_TRIPHITE_UPGRADE);
+                        entries.add(ModItems.MYTHRIL_UPGRADE);
+                        entries.add(ModItems.ENDIUM_UPGRADE);
+                        entries.add(ModItems.PHENON_UPGRADE);
+                        entries.add(ModItems.SAPPHIRE_UPGRADE);
+                        entries.add(ModItems.RUBY_UPGRADE);
+                        entries.add(ModItems.TOPAZ_UPGRADE);
+                        entries.add(ModItems.OPAL_UPGRADE);
+                        entries.add(ModItems.HYPHITE_UPGRADE);
+                        entries.add(ModItems.PHYSICS_IS_THE_BEST);
+                        entries.add(ModItems.PHYSICSIUM_ELYTRA_CHESTPLATE);
+                        entries.add(ModItems.SHRIKE_SPAWN_EGG);
+                        entries.add(ModItems.PHYSICSIUM);
+                        entries.add(ModItems.PHYSICSIUM_NUGGET);
+                        entries.add(ModBlocks.PHYSICSIUM_ORE);
+                        entries.add(ModBlocks.PHYSICSIUM_BLOCK);
                         entries.add(ModItems.TITANIUM);
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moregear:topazupgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_topazupgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moregear:topazupgrade"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_topazupgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moregear:topazupgrade"
+    ]
+  }
+}

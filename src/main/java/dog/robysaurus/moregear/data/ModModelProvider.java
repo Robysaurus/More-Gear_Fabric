@@ -6,8 +6,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -16,6 +20,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PHYSICSIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PHYSICSIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPHITE_ORE);
@@ -40,6 +46,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.PHYSICSIUM_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PHYSICSIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_TITANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.TITANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_TRIPHITE, Models.GENERATED);
@@ -60,6 +68,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TOPAZ, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_OPAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.OPAL, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.PHYSICSIUM_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.PHYSICSIUM_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.PHYSICSIUM_ELYTRA_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.PHYSICSIUM_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.PHYSICSIUM_BOOTS);
+        itemModelGenerator.register(ModItems.PHYSICSIUM_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHYSICSIUM_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHYSICSIUM_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHYSICSIUM_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHYSICSIUM_HOE, Models.HANDHELD);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.TITANIUM_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.TITANIUM_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.TITANIUM_LEGGINGS);
@@ -186,5 +204,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHYSICS_IS_THE_BEST, Models.HANDHELD);
+        //Upgrade Templates
+        itemModelGenerator.register(ModItems.ELYTRA_CHESTPLATE_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PHYSICSIUM_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TITANIUM_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.REINFORCED_TRIPHITE_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MYTHRIL_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENDIUM_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PHENON_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAPPHIRE_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOPAZ_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OPAL_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HYPHITE_UPGRADE, Models.GENERATED);
+        //Spawn Egg
+        itemModelGenerator.register(ModItems.SHRIKE_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
 }

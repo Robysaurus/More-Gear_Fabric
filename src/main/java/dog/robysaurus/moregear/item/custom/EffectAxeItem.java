@@ -4,6 +4,8 @@ import com.google.common.collect.Iterables;
 import dog.robysaurus.moregear.item.ModArmorMaterials;
 import dog.robysaurus.moregear.item.ModToolMaterials;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -13,6 +15,7 @@ import net.minecraft.entity.mob.GuardianEntity;
 import net.minecraft.entity.mob.ShulkerEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.item.*;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -41,8 +44,15 @@ public class EffectAxeItem extends AxeItem {
 
 
     private void evaluateEffectToDeal(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
-        if(armorMaterial==ModArmorMaterials.RUBY && toolMaterial==ModToolMaterials.RUBY){
-            target.setOnFireFor(7);
+        if(armorMaterial==ModArmorMaterials.PHYSICSIUM && toolMaterial==ModToolMaterials.PHYSICSIUM){
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 4, true, false, true));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2, true, false, true));
+        }else if(armorMaterial==ModArmorMaterials.RUBY && toolMaterial==ModToolMaterials.RUBY){
+            LightningEntity l = new LightningEntity(EntityType.LIGHTNING_BOLT, target.getWorld());
+            l.setChanneler((ServerPlayerEntity)target.getAttacker());
+            l.setCosmetic(false);
+            l.setPosition(target.getX(), target.getY(), target.getZ());
+            target.getWorld().spawnEntity(l);
         }else if(armorMaterial==ModArmorMaterials.REINFORCED_TRIPHITE && toolMaterial==ModToolMaterials.REINFORCED_TRIPHITE){
             target.removeStatusEffect(StatusEffects.INVISIBILITY);
             target.removeStatusEffect(StatusEffects.RESISTANCE);
@@ -88,13 +98,19 @@ public class EffectAxeItem extends AxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(this.toolMaterial==ModToolMaterials.RUBY){
-            MutableText tempTooltip = Text.literal("Sets enemies on ").formatted(Formatting.AQUA);
-            tempTooltip.append(Text.literal("fire").formatted(Formatting.GOLD, Formatting.BOLD));
+        if(this.toolMaterial == ModToolMaterials.PHYSICSIUM){
+            MutableText tempTooltip = Text.literal("Deals ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("big skull emoji lol").formatted(Formatting.GOLD, Formatting.BOLD, Formatting.OBFUSCATED));
             tooltip.add(tempTooltip);
-            tempTooltip = Text.literal("on hits when full Ruby armor is worn.").formatted(Formatting.AQUA);
+            tempTooltip = Text.literal("to your enemies when full Titanium armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
-        }else if (this.toolMaterial == ModToolMaterials.REINFORCED_TRIPHITE) {
+        }else if(this.toolMaterial==ModToolMaterials.RUBY){
+            MutableText tempTooltip = Text.literal("When you attack, summons ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("lightning").formatted(Formatting.GOLD, Formatting.BOLD));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("when full Ruby armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        }else if(this.toolMaterial == ModToolMaterials.REINFORCED_TRIPHITE){
             MutableText tempTooltip = Text.literal("Gives ").formatted(Formatting.AQUA);
             tempTooltip.append(Text.literal("Glowing").formatted(Formatting.GOLD, Formatting.BOLD));
             tempTooltip.append(Text.literal(" to and removes ").formatted(Formatting.AQUA));

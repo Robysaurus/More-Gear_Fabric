@@ -1,13 +1,34 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
+  "group": "phenon",
   "ingredients": [
     {
-      "item": "moregear:phenonblock"
+      "item": "moregear:phenonscrap"
+    },
+    {
+      "item": "moregear:phenonscrap"
+    },
+    {
+      "item": "moregear:phenonscrap"
+    },
+    {
+      "item": "moregear:phenonscrap"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
     }
   ],
   "result": {
-    "count": 9,
     "item": "moregear:phenon"
   }
 }

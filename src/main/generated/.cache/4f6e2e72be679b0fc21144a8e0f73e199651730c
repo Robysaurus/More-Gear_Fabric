@@ -1,4 +1,4 @@
-// 1.20.2	2023-11-29T22:38:59.4274658	More Gear/Block Loot Tables
+// 1.20.4	2024-01-25T01:26:59.8340548	More Gear/Block Loot Tables
 b626aaac8274760916815ce20e52cd78e1c4fb4c data\moregear\loot_tables\blocks\hyphiteblock.json
 1464acf35a28440a6e5a61ba3b3a6a2b7b497677 data\moregear\loot_tables\blocks\hyphiteore.json
 95ae1ea4e88d9338219b3072fbae7cacfde1b753 data\moregear\loot_tables\blocks\triphiteore.json
@@ -10,7 +10,9 @@ a3e180186308cbd3d3bbd16c78f1aa4b3598bfe0 data\moregear\loot_tables\blocks\sapphi
 fc86638ae15ce54e20186e93319cdfe609e868c0 data\moregear\loot_tables\blocks\topazore.json
 b0e7b33e4ba8a625bf7a05434168681557ae6d9b data\moregear\loot_tables\blocks\titaniumblock.json
 981c8c1a3f204330a51800eb169c0f82d6ce30e5 data\moregear\loot_tables\blocks\phenonblock.json
+301f5ea9b721fb04b64c0ca140cda3046eb25286 data\moregear\loot_tables\blocks\physicsiumore.json
 d85e64233de46434502dd30ea0e06365a905214f data\moregear\loot_tables\blocks\ancientendium.json
+ec54ab886438c4650db7bb1ae0c312978ac93871 data\moregear\loot_tables\blocks\physicsiumblock.json
 0caa0f5701271a1fa8c7f8bb444e948dfd670132 data\moregear\loot_tables\blocks\mythrilblock.json
 fe249136e77ffd3cf8c0931796becbe7e1ffb87d data\moregear\loot_tables\blocks\sapphireblock.json
 eb8d4eb16f818d744da5e2ac4c56fbcc14234b0d data\moregear\loot_tables\blocks\rubyblock.json

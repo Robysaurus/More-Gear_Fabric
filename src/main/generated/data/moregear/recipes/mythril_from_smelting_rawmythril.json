@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 2.25,
+  "group": "mythril",
+  "ingredient": {
+    "item": "moregear:rawmythril"
+  },
+  "result": "moregear:mythril"
+}

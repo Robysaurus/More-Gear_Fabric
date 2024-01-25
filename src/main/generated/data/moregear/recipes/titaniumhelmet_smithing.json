@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:titanium"
+  },
+  "base": {
+    "item": "moregear:reinforcedtriphitehelmet"
+  },
+  "result": {
+    "item": "moregear:titaniumhelmet"
+  },
+  "template": {
+    "item": "moregear:titaniumupgrade"
+  }
+}

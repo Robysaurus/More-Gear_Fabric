@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:physicsium"
+  },
+  "base": {
+    "item": "moregear:titaniumhelmet"
+  },
+  "result": {
+    "item": "moregear:physicsiumhelmet"
+  },
+  "template": {
+    "item": "moregear:physicsiumupgrade"
+  }
+}

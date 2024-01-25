@@ -18,6 +18,7 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+    public static final RegistryKey<ConfiguredFeature<?,?>> PHYSICSIUM_KEY = registerKey("physicsiumore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> TITANIUM_KEY = registerKey("titaniumore_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> TRIPHITE_GEODE_KEY = registerKey("triphite_geode_key");
     public static final RegistryKey<ConfiguredFeature<?,?>> MYTHRIL_KEY = registerKey("mythrilore_key");
@@ -33,7 +34,10 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplacables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest endStoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
         RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+        RuleTest voidReplaceables = new BlockMatchRuleTest(Blocks.AIR);
 
+        List<OreFeatureConfig.Target> physicsiumOre =
+                List.of(OreFeatureConfig.createTarget(voidReplaceables, ModBlocks.PHYSICSIUM_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> titaniumOre =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, ModBlocks.TITANIUM_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> mythrilOre =
@@ -56,6 +60,7 @@ public class ModConfiguredFeatures {
         register(context, HYPHITE_KEY, Feature.ORE, new OreFeatureConfig(hyphiteOre, 4));
         register(context, MYTHRIL_KEY, Feature.ORE, new OreFeatureConfig(mythrilOre, 4));
         register(context, TITANIUM_KEY, Feature.ORE, new OreFeatureConfig(titaniumOre, 3));
+        register(context, PHYSICSIUM_KEY, Feature.ORE, new OreFeatureConfig(physicsiumOre, 3));
 
         register(context, PHENON_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                 BlockStateProvider.of(ModBlocks.RUBY_ORE),

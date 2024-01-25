@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "moregear:sapphireblock",
+    "moregear:sapphireore",
+    "moregear:rubyblock",
+    "moregear:rubyore",
+    "moregear:topazblock",
+    "moregear:topazore",
+    "moregear:opalblock",
+    "moregear:opalore"
+  ]
+}

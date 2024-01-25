@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "group": "hyphite",
+  "ingredient": {
+    "item": "moregear:hyphiteore"
+  },
+  "result": "moregear:hyphite"
+}

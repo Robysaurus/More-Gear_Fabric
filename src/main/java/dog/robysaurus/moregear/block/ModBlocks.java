@@ -17,18 +17,22 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
+    public static final Block PHYSICSIUM_BLOCK = registerBlock("physicsiumblock",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.DIDGERIDOO).requiresTool().strength(50f,2000f).sounds(BlockSoundGroup.METAL).slipperiness(0.9f).luminance(15)), Rarity.EPIC, true);
+    public static final Block PHYSICSIUM_ORE = registerBlock("physicsiumore",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).requiresTool().strength(45f,2000f).sounds(BlockSoundGroup.ANCIENT_DEBRIS).luminance(15)), Rarity.RARE, true);
     public static final Block TITANIUM_BLOCK = registerBlock("titaniumblock",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(45f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.95f)), Rarity.RARE, true);
     public static final Block TITANIUM_ORE = registerBlock("titaniumore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1200f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(20,20)), Rarity.UNCOMMON, true);
+            new ExperienceDroppingBlock(UniformIntProvider.create(20,20), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1200f).sounds(BlockSoundGroup.DEEPSLATE)), Rarity.UNCOMMON, true);
     public static final Block REINFORCED_TRIPHITE_BLOCK = registerBlock("reinforcedtriphiteblock",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(42f,1300f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block TRIPHITE_ORE = registerBlock("triphiteore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1100f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16,19)), Rarity.UNCOMMON, true);
+            new ExperienceDroppingBlock(UniformIntProvider.create(16,19), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1100f).sounds(BlockSoundGroup.DEEPSLATE)), Rarity.UNCOMMON, true);
     public static final Block MYTHRIL_BLOCK = registerBlock("mythrilblock",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(39f,1150f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block MYTHRIL_ORE = registerBlock("mythrilore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(30f,1050f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(12,17)), Rarity.UNCOMMON, true);
+            new ExperienceDroppingBlock(UniformIntProvider.create(12,17), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(30f,1050f).sounds(BlockSoundGroup.DEEPSLATE)), Rarity.UNCOMMON, true);
     public static final Block ENDIUM_BLOCK = registerBlock("endiumblock",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).requiresTool().strength(36f,1050f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block ANCIENT_ENDIUM = registerBlock("ancientendium",
@@ -40,23 +44,23 @@ public class ModBlocks {
     public static final Block HYPHITE_BLOCK = registerBlock("hyphiteblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(32.5f,925f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, false);
     public static final Block HYPHITE_ORE = registerBlock("hyphiteore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool().strength(22.5f,775f), UniformIntProvider.create(6,12)), Rarity.COMMON, false);
+            new ExperienceDroppingBlock(UniformIntProvider.create(6,12), FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool().strength(22.5f,775f)), Rarity.COMMON, false);
     public static final Block TOPAZ_BLOCK = registerBlock("topazblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(30f,900f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, false);
     public static final Block TOPAZ_ORE = registerBlock("topazore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool().strength(20f,750f), UniformIntProvider.create(5,10)), Rarity.COMMON, false);
+            new ExperienceDroppingBlock(UniformIntProvider.create(5,10), FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool().strength(20f,750f)), Rarity.COMMON, false);
     public static final Block SAPPHIRE_BLOCK = registerBlock("sapphireblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(30f,900f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, false);
     public static final Block SAPPHIRE_ORE = registerBlock("sapphireore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(20f,750f), UniformIntProvider.create(5,10)), Rarity.COMMON, false);
+            new ExperienceDroppingBlock(UniformIntProvider.create(5,10), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(20f,750f)), Rarity.COMMON, false);
     public static final Block RUBY_BLOCK = registerBlock("rubyblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(30f,900f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, true);
     public static final Block RUBY_ORE = registerBlock("rubyore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool().strength(20f,750f), UniformIntProvider.create(5,10)), Rarity.COMMON, true);
+            new ExperienceDroppingBlock(UniformIntProvider.create(5,10), FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool().strength(20f,750f)), Rarity.COMMON, true);
     public static final Block OPAL_BLOCK = registerBlock("opalblock",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(30f,900f).sounds(BlockSoundGroup.METAL)), Rarity.COMMON, false);
     public static final Block OPAL_ORE = registerBlock("opalore",
-            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(20f,750f), UniformIntProvider.create(5,10)), Rarity.COMMON, false);
+            new ExperienceDroppingBlock(UniformIntProvider.create(5,10), FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(20f,750f)), Rarity.COMMON, false);
     private static Block registerBlock(String name, Block block, Rarity rarity, boolean fireproof){
         registerBlockItem(name, block, rarity, fireproof);
         return Registry.register(Registries.BLOCK, new Identifier(MoreGear.MOD_ID, name), block);

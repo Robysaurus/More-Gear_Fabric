@@ -1,0 +1,9 @@
+// 1.20.4	2024-01-25T01:26:59.8240814	More Gear/Tags for minecraft:block
+f45228477d92b2e81b0a36fec0c88039e3a19d15 data\fabric\tags\blocks\needs_tool_level_6.json
+e407189ef2677e2277f17d9bba8f933e6ca51441 data\fabric\tags\blocks\needs_tool_level_9.json
+6ce2194b8cc535ff085fdde9fe8f906bf5902cd3 data\minecraft\tags\blocks\mineable\pickaxe.json
+71e3e1325f16f29eea03c67131414d3a2d7ab009 data\fabric\tags\blocks\needs_tool_level_5.json
+e1d27419033767d79b9743e689c00a343500da35 data\fabric\tags\blocks\needs_tool_level_7.json
+dfbbbbb6f44ba785f04a16060e67b32171081653 data\fabric\tags\blocks\needs_tool_level_4.json
+4a843815244da3dda71bc4a1f95b1edcc8c1a40f data\minecraft\tags\blocks\needs_diamond_tool.json
+e2e1302fa2dc2024e86ed137b3959025554c0a3c data\fabric\tags\blocks\needs_tool_level_8.json

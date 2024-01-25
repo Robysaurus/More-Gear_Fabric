@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawopal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moregear:rawopal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:opal_from_smelting_rawopal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawopal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:opal_from_smelting_rawopal"
+    ]
+  }
+}

@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:rubyblock"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

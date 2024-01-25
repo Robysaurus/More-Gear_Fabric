@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_phenonblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moregear:phenonblock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:phenon_decompacting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_phenonblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:phenon_decompacting"
+    ]
+  }
+}

@@ -16,6 +16,7 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
+    public static final RegistryKey<PlacedFeature> PHYSICSIUMORE_PLACED_KEY = registerKey("physicsiumore_placed_key");
     public static final RegistryKey<PlacedFeature> TITANIUMORE_PLACED_KEY = registerKey("titaniumore_placed_key");
     public static final RegistryKey<PlacedFeature> TRIPHITE_GEODE_PLACED_KEY = registerKey("triphite_geode_placed_key");
     public static final RegistryKey<PlacedFeature> MYTHRILORE_PLACED_KEY = registerKey("mythrilore_placed_key");
@@ -29,6 +30,8 @@ public class ModPlacedFeatures {
     public static void bootstrap(Registerable<PlacedFeature> context){
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
+        register(context, PHYSICSIUMORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PHYSICSIUM_KEY),
+                modifiersWithCount(2, HeightRangePlacementModifier.uniform(YOffset.fixed(5), YOffset.fixed(10))));
         register(context, TITANIUMORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TITANIUM_KEY),
                 modifiersWithCount(2, HeightRangePlacementModifier.uniform(YOffset.fixed(50), YOffset.fixed(70))));
         register(context, MYTHRILORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MYTHRIL_KEY),

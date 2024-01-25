@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_endiumblock": {
+    "has_endiumscrap": {
       "conditions": {
         "items": [
           {
             "items": [
-              "moregear:endiumblock"
+              "moregear:endiumscrap"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:endium"
+        "recipe": "moregear:endium"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,13 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_endiumblock"
+      "has_endiumscrap"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:endium"
+      "moregear:endium"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

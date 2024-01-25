@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:endium"
+  },
+  "base": {
+    "item": "moregear:phenonleggings"
+  },
+  "result": {
+    "item": "moregear:endiumleggings"
+  },
+  "template": {
+    "item": "moregear:endiumupgrade"
+  }
+}

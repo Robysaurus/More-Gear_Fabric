@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_phenonblock": {
+    "has_phenonscrap": {
       "conditions": {
         "items": [
           {
             "items": [
-              "moregear:phenonblock"
+              "moregear:phenonscrap"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:phenon"
+        "recipe": "moregear:phenon"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,13 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_phenonblock"
+      "has_phenonscrap"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:phenon"
+      "moregear:phenon"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -37,7 +37,9 @@ public class EffectPickaxeItem extends PickaxeItem {
     }
 
     private void evaluateEffectToGrant(LivingEntity entity, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
-        if(armorMaterial==ModArmorMaterials.TOPAZ && toolMaterial==ModToolMaterials.TOPAZ){
+        if(armorMaterial==ModArmorMaterials.PHYSICSIUM && toolMaterial==ModToolMaterials.PHYSICSIUM){
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 99, true, false, false));
+        }else if(armorMaterial==ModArmorMaterials.TOPAZ && toolMaterial==ModToolMaterials.TOPAZ){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 3, true, false, false));
         }else if(armorMaterial==ModArmorMaterials.REINFORCED_TRIPHITE && toolMaterial==ModToolMaterials.REINFORCED_TRIPHITE){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 4, true, false, false));
@@ -67,7 +69,13 @@ public class EffectPickaxeItem extends PickaxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(this.toolMaterial==ModToolMaterials.TOPAZ){
+        if(this.toolMaterial==ModToolMaterials.PHYSICSIUM){
+            MutableText tempTooltip = Text.literal("Grants you ").formatted(Formatting.AQUA);
+            tempTooltip.append(Text.literal("Haste C because funny").formatted(Formatting.GOLD, Formatting.BOLD, Formatting.OBFUSCATED));
+            tooltip.add(tempTooltip);
+            tempTooltip = Text.literal("when full Topaz armor is worn.").formatted(Formatting.AQUA);
+            tooltip.add(tempTooltip);
+        }else if(this.toolMaterial==ModToolMaterials.TOPAZ){
             MutableText tempTooltip = Text.literal("Grants you ").formatted(Formatting.AQUA);
             tempTooltip.append(Text.literal("Haste IV").formatted(Formatting.GOLD, Formatting.BOLD));
             tooltip.add(tempTooltip);
