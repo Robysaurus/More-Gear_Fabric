@@ -74,8 +74,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TITANIUM_SHIELD).input('W', ItemTags.PLANKS).input('o', ModItems.TITANIUM).pattern("WoW").pattern("WWW").pattern(" W ").criterion("has_titanium", VanillaRecipeProvider.conditionsFromItem(ModItems.TITANIUM)).offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PHYSICSIUM_SHIELD).input('W', ItemTags.PLANKS).input('o', ModItems.PHYSICSIUM).pattern("WoW").pattern("WWW").pattern(" W ").criterion("has_physicsium", VanillaRecipeProvider.conditionsFromItem(ModItems.PHYSICSIUM)).offerTo(exporter);
         //Refined/Ingot Ore Recipes
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PHENON).input(ModItems.PHENON_SCRAP, 4).input(Items.DIAMOND, 4).group("phenon").criterion("has_phenonscrap", VanillaRecipeProvider.conditionsFromItem(ModItems.PHENON_SCRAP)).offerTo(exporter);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.PHYSICSIUM_NUGGET, RecipeCategory.MISC, ModItems.PHYSICSIUM, "physicsium_ingot", "physicsium_ingot", "physicsium_nugget", "physicsium_nugget");
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDIUM).input(ModItems.ENDIUM_SCRAP, 4).input(Items.NETHERITE_SCRAP, 4).group("endium").criterion("has_endiumscrap", VanillaRecipeProvider.conditionsFromItem(ModItems.ENDIUM_SCRAP)).offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PHENON).input(ModItems.PHENON_SCRAP, 4).input(Items.DIAMOND, 4).group("phenon").criterion("has_phenonscrap", VanillaRecipeProvider.conditionsFromItem(ModItems.PHENON_SCRAP)).offerTo(exporter);
         //Raw Ore Smelting Recipes
         offerSmelting(exporter, ImmutableList.of(ModItems.UNREFINED_HYPHITE), RecipeCategory.MISC, ModItems.HYPHITE, 1.5f, 200, "hyphite");
         offerSmelting(exporter, ImmutableList.of(ModItems.RAW_OPAL), RecipeCategory.MISC, ModItems.OPAL, 1.5f, 200, "opal");
@@ -85,6 +86,14 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerSmelting(exporter, ImmutableList.of(ModItems.RAW_MYTHRIL), RecipeCategory.MISC, ModItems.MYTHRIL, 2.25f, 200, "mythril");
         offerSmelting(exporter, ImmutableList.of(ModItems.RAW_TRIPHITE), RecipeCategory.MISC, ModItems.REINFORCED_TRIPHITE, 2.75f, 200, "reinforced_triphite");
         offerSmelting(exporter, ImmutableList.of(ModItems.RAW_TITANIUM), RecipeCategory.MISC, ModItems.TITANIUM, 3.5f, 200, "titanium");
+        offerBlasting(exporter, ImmutableList.of(ModItems.UNREFINED_HYPHITE), RecipeCategory.MISC, ModItems.HYPHITE, 1.5f, 100, "hyphite");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_OPAL), RecipeCategory.MISC, ModItems.OPAL, 1.5f, 100, "opal");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_TOPAZ), RecipeCategory.MISC, ModItems.TOPAZ, 1.f, 100, "topaz");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_RUBY), RecipeCategory.MISC, ModItems.RUBY, 1.5f, 100, "ruby");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_SAPPHIRE), RecipeCategory.MISC, ModItems.SAPPHIRE, 1.5f, 100, "sapphire");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_MYTHRIL), RecipeCategory.MISC, ModItems.MYTHRIL, 2.25f, 100, "mythril");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_TRIPHITE), RecipeCategory.MISC, ModItems.REINFORCED_TRIPHITE, 2.75f, 100, "reinforced_triphite");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_TITANIUM), RecipeCategory.MISC, ModItems.TITANIUM, 3.5f, 100, "titanium");
         //Ore Extraction Recipes
         offerSmelting(exporter, ImmutableList.of(ModBlocks.HYPHITE_ORE), RecipeCategory.MISC, ModItems.HYPHITE, 1.5f, 200, "hyphite");
         offerSmelting(exporter, ImmutableList.of(ModBlocks.OPAL_ORE), RecipeCategory.MISC, ModItems.OPAL, 1.5f, 200, "opal");

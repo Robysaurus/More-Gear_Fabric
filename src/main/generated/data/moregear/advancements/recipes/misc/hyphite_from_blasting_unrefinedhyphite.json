@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:hyphite_from_blasting_unrefinedhyphite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unrefinedhyphite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moregear:unrefinedhyphite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unrefinedhyphite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:hyphite_from_blasting_unrefinedhyphite"
+    ]
+  }
+}

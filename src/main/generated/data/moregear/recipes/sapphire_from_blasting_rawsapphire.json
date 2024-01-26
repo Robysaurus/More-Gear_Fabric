@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.5,
+  "group": "sapphire",
+  "ingredient": {
+    "item": "moregear:rawsapphire"
+  },
+  "result": "moregear:sapphire"
+}

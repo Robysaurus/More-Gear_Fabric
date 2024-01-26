@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "physicsium_nugget",
+  "ingredients": [
+    {
+      "item": "moregear:physicsium"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "moregear:physicsiumnugget"
+  }
+}
