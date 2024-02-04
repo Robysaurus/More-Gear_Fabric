@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_elytra_chestplate"
+      "has_elytra_chestplate",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:physicsiumelytrachestplate_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_hyphiteupgrade"
+      "has_hyphiteupgrade",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:hyphiteupgrade"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

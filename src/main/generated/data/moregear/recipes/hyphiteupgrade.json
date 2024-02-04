@@ -20,5 +20,6 @@
   "result": {
     "count": 2,
     "item": "moregear:hyphiteupgrade"
-  }
+  },
+  "show_notification": true
 }

@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_topazore"
+      "has_topazore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:topaz_from_smelting_topazore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

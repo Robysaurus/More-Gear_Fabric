@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_rubyore"
+      "has_rubyore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:ruby_from_smelting_rubyore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

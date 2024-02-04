@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_endiumscrap"
+      "has_endiumscrap",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:endium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_hyphiteore"
+      "has_hyphiteore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:hyphite_from_blasting_hyphiteore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

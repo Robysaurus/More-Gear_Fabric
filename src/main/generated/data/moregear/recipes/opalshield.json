@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:opalshield"
-  }
+  },
+  "show_notification": true
 }

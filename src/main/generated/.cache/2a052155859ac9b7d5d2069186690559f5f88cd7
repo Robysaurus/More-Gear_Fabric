@@ -1,4 +1,4 @@
-// 1.20.4	2024-01-25T21:11:09.2977051	More Gear/Model Definitions
+// 1.20.1	2024-02-04T01:07:14.4165222	More Gear/Model Definitions
 977fa535cbc6f5bc60aaa9ad9f323e286a0fc421 assets\moregear\models\item\sapphirechestplate_quartz_trim.json
 d780b8d5cb16753793fc8cc8bec5556400f95681 assets\moregear\models\item\amethystpickaxe.json
 c034cfbe84112714b651ba04f74c7f215803b53d assets\moregear\models\item\mythrilleggings_quartz_trim.json
@@ -785,8 +785,8 @@ c183d6af9e854b15c47ddd9720a444b0bb12df26 assets\moregear\models\item\mythrilhelm
 20a4db2d0affec150a3c69d61ec4718fc4c10f67 assets\moregear\models\item\copperchestplate_gold_trim.json
 af20c81aff332a164b3e8424364d4d7f5aaf185d assets\moregear\models\item\copperchestplate_quartz_trim.json
 f871b3a7e1487898b2b9a67fce7c08754776c577 assets\moregear\models\item\copperchestplate_lapis_trim.json
-9889354beaed004e416a333a192f939267a2682b assets\moregear\models\item\mythrilboots_amethyst_trim.json
 d0a61d4b436ac199fe7c096c9bda9fdcb0a1a41d assets\moregear\models\item\amethystchestplate_lapis_trim.json
+9889354beaed004e416a333a192f939267a2682b assets\moregear\models\item\mythrilboots_amethyst_trim.json
 df17239d0193624e2f30f77c1dbf49bc23289ea7 assets\moregear\models\item\phenonhelmet_emerald_trim.json
 779778a2b2af5b5bbe9bacc4be0806295f2f2e8e assets\moregear\models\item\phenonscrap.json
 e637ad41cc1336daac17f41865bdc8b1f305bafd assets\moregear\models\item\phenonhoe.json

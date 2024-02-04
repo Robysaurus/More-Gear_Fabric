@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_unrefinedhyphite"
+      "has_unrefinedhyphite",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:hyphite_from_blasting_unrefinedhyphite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

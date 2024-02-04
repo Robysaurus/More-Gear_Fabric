@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_hyphiteblock"
+      "has_hyphiteblock",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:hyphite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

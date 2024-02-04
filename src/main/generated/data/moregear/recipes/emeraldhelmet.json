@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "moregear:emeraldhelmet"
-  }
+  },
+  "show_notification": true
 }

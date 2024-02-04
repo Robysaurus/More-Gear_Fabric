@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "moregear:copperboots"
-  }
+  },
+  "show_notification": true
 }

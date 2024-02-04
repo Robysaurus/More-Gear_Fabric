@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:amethystshovel"
-  }
+  },
+  "show_notification": true
 }

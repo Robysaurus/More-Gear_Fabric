@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_phenonscrap"
+      "has_phenonscrap",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:phenon"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

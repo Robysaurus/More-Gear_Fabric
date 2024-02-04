@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:hyphiteshield"
-  }
+  },
+  "show_notification": true
 }

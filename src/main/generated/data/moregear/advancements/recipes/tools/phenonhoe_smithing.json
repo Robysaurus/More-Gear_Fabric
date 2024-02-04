@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_phenon"
+      "has_phenon",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:phenonhoe_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

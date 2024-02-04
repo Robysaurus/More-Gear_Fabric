@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:phenonblock"
-  }
+  },
+  "show_notification": true
 }

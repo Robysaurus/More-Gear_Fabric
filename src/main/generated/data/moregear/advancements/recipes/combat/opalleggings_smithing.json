@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_opal"
+      "has_opal",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:opalleggings_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

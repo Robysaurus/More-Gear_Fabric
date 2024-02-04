@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_unrefinedphenonblock"
+      "has_unrefinedphenonblock",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:phenonscrap_from_blasting_unrefinedphenonblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

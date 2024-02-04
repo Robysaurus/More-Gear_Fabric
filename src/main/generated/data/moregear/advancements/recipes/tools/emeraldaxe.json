@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_emerald"
+      "has_emerald",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:emeraldaxe"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

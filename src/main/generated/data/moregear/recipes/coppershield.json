@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:coppershield"
-  }
+  },
+  "show_notification": true
 }

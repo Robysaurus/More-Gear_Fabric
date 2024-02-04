@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:amethystsword"
-  }
+  },
+  "show_notification": true
 }

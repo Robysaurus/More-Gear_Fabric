@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:endiumblock"
-  }
+  },
+  "show_notification": true
 }

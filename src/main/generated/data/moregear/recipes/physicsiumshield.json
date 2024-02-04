@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:physicsiumshield"
-  }
+  },
+  "show_notification": true
 }

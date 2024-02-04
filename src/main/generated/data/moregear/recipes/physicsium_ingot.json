@@ -14,5 +14,6 @@
   ],
   "result": {
     "item": "moregear:physicsium"
-  }
+  },
+  "show_notification": true
 }

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:emeraldshield"
-  }
+  },
+  "show_notification": true
 }

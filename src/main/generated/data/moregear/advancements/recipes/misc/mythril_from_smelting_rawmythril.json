@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_rawmythril"
+      "has_rawmythril",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mythril_from_smelting_rawmythril"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_titaniumblock"
+      "has_titaniumblock",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:titanium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

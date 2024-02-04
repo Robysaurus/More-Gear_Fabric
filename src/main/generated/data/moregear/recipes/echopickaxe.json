@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:echopickaxe"
-  }
+  },
+  "show_notification": true
 }

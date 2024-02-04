@@ -23,7 +23,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
 
 public class ShrikeEntity extends HostileEntity {
@@ -124,7 +123,7 @@ public class ShrikeEntity extends HostileEntity {
     }
 
     @Override
-    public boolean isImmuneToExplosion(Explosion explosion) {
+    public boolean isImmuneToExplosion() {
         return true;
     }
 

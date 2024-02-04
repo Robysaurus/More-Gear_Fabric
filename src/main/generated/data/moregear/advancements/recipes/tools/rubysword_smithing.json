@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_ruby"
+      "has_ruby",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:rubysword_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

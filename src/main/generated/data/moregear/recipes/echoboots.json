@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "moregear:echoboots"
-  }
+  },
+  "show_notification": true
 }

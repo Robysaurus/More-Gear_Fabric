@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_mythril"
+      "has_mythril",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mythrilleggings_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

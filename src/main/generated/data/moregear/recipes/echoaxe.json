@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:echoaxe"
-  }
+  },
+  "show_notification": true
 }

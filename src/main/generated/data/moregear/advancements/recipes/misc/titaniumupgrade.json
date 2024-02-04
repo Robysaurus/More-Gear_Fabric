@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_titaniumupgrade"
+      "has_titaniumupgrade",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:titaniumupgrade"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

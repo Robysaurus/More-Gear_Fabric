@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "moregear:emeraldboots"
-  }
+  },
+  "show_notification": true
 }

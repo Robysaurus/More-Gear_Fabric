@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:copperaxe"
-  }
+  },
+  "show_notification": true
 }

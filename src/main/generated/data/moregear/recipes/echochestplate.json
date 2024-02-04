@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:echochestplate"
-  }
+  },
+  "show_notification": true
 }

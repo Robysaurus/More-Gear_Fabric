@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:physicsiumblock"
-  }
+  },
+  "show_notification": true
 }

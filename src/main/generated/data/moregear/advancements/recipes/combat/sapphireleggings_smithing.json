@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_sapphire"
+      "has_sapphire",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:sapphireleggings_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
