@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:copperhoe"
-  }
+  },
+  "show_notification": true
 }

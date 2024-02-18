@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:echosword"
-  }
+  },
+  "show_notification": true
 }

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:emeraldshovel"
-  }
+  },
+  "show_notification": true
 }

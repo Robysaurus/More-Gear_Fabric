@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_sapphireupgrade"
+      "has_sapphireupgrade",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:sapphireupgrade"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

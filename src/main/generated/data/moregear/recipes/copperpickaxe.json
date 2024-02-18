@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:copperpickaxe"
-  }
+  },
+  "show_notification": true
 }

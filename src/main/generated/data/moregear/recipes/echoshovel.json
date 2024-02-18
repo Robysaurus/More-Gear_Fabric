@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:echoshovel"
-  }
+  },
+  "show_notification": true
 }

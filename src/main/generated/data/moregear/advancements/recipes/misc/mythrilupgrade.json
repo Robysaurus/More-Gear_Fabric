@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_mythrilupgrade"
+      "has_mythrilupgrade",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:mythrilupgrade"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

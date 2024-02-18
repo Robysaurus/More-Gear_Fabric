@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_rawtriphite"
+      "has_rawtriphite",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:reinforcedtriphite_from_blasting_rawtriphite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

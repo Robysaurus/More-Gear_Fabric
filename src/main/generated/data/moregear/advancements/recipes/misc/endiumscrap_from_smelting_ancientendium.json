@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_ancientendium"
+      "has_ancientendium",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:endiumscrap_from_smelting_ancientendium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

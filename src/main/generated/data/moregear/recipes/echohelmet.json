@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "moregear:echohelmet"
-  }
+  },
+  "show_notification": true
 }

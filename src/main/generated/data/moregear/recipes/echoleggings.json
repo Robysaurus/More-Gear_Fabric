@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:echoleggings"
-  }
+  },
+  "show_notification": true
 }

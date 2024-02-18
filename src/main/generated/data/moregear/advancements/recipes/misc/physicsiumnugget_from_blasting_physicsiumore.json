@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_physicsiumore"
+      "has_physicsiumore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:physicsiumnugget_from_blasting_physicsiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

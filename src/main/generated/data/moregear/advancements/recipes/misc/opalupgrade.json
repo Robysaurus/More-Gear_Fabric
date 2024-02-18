@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_opalupgrade"
+      "has_opalupgrade",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:opalupgrade"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

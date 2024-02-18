@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_opalore"
+      "has_opalore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:opal_from_smelting_opalore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

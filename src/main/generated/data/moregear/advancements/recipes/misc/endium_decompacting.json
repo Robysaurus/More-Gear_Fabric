@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_endiumblock"
+      "has_endiumblock",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:endium_decompacting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

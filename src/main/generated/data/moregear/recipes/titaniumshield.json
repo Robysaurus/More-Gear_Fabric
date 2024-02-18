@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:titaniumshield"
-  }
+  },
+  "show_notification": true
 }

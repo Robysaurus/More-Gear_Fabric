@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "moregear:amethystboots"
-  }
+  },
+  "show_notification": true
 }

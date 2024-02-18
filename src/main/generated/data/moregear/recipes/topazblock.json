@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:topazblock"
-  }
+  },
+  "show_notification": true
 }

@@ -20,5 +20,6 @@
   "result": {
     "count": 2,
     "item": "moregear:endiumupgrade"
-  }
+  },
+  "show_notification": true
 }

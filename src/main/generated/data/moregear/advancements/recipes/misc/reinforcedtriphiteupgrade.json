@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_reinforcedtriphiteupgrade"
+      "has_reinforcedtriphiteupgrade",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "moregear:reinforcedtriphiteupgrade"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

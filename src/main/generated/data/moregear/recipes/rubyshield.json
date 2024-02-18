@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:rubyshield"
-  }
+  },
+  "show_notification": true
 }

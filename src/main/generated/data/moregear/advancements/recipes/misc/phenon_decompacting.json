@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_phenonblock"
+      "has_phenonblock",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:phenon_decompacting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

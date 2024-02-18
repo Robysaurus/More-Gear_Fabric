@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_rawruby"
+      "has_rawruby",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:ruby_from_smelting_rawruby"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:emeraldsword"
-  }
+  },
+  "show_notification": true
 }

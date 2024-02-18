@@ -189,18 +189,18 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PHYSICS_IS_THE_BEST, "§6§l§kPHYSICS§r");
         translationBuilder.add(ModItems.PHYSICSIUM_ELYTRA_CHESTPLATE, "Physicsium Elytra-Chestplate");
         //Upgrade Templates
-        translationBuilder.add(ModItems.ELYTRA_CHESTPLATE_UPGRADE, "Physicsium Elytra-Chestplate Upgrade");
-        translationBuilder.add(ModItems.PHYSICSIUM_UPGRADE, "Physicsium Upgrade");
-        translationBuilder.add(ModItems.TITANIUM_UPGRADE, "Titanium Upgrade");
-        translationBuilder.add(ModItems.REINFORCED_TRIPHITE_UPGRADE, "Reinforced Triphite Upgrade");
-        translationBuilder.add(ModItems.MYTHRIL_UPGRADE, "Mythril Upgrade");
-        translationBuilder.add(ModItems.ENDIUM_UPGRADE, "Endium Upgrade");
-        translationBuilder.add(ModItems.PHENON_UPGRADE, "Phenon Upgrade");
-        translationBuilder.add(ModItems.SAPPHIRE_UPGRADE, "Sapphire Upgrade");
-        translationBuilder.add(ModItems.RUBY_UPGRADE, "Ruby Upgrade");
-        translationBuilder.add(ModItems.TOPAZ_UPGRADE, "Topaz Upgrade");
-        translationBuilder.add(ModItems.OPAL_UPGRADE, "Opal Upgrade");
-        translationBuilder.add(ModItems.HYPHITE_UPGRADE, "Hyphite Upgrade");
+        translationBuilder.add("item.moregear.elytrachestplateupgrade", "Physicsium Elytra-Chestplate Upgrade");
+        translationBuilder.add("item.moregear.physicsiumupgrade", "Physicsium Upgrade");
+        translationBuilder.add("item.moregear.titaniumupgrade", "Titanium Upgrade");
+        translationBuilder.add("item.moregear.reinforcedtriphiteupgrade", "Reinforced Triphite Upgrade");
+        translationBuilder.add("item.moregear.mythrilupgrade", "Mythril Upgrade");
+        translationBuilder.add("item.moregear.endiumupgrade", "Endium Upgrade");
+        translationBuilder.add("item.moregear.phenonupgrade", "Phenon Upgrade");
+        translationBuilder.add("item.moregear.sapphireupgrade", "Sapphire Upgrade");
+        translationBuilder.add("item.moregear.rubyupgrade", "Ruby Upgrade");
+        translationBuilder.add("item.moregear.topazupgrade", "Topaz Upgrade");
+        translationBuilder.add("item.moregear.opalupgrade", "Opal Upgrade");
+        translationBuilder.add("item.moregear.hyphiteupgrade", "Hyphite Upgrade");
         //Spawn Egg
         translationBuilder.add(ModItems.SHRIKE_SPAWN_EGG, "Shrike Spawn Egg");
         //Blocks

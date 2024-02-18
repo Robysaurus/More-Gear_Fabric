@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_physicsiumblock"
+      "has_physicsiumblock",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:physicsium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

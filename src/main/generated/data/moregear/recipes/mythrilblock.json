@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "moregear:mythrilblock"
-  }
+  },
+  "show_notification": true
 }

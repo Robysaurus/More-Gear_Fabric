@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "moregear:amethystshield"
-  }
+  },
+  "show_notification": true
 }

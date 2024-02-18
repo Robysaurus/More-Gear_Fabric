@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_rawsapphire"
+      "has_rawsapphire",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:sapphire_from_blasting_rawsapphire"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -1,6 +1,7 @@
 package dog.robysaurus.moregear.entity.custom;
 
 import dog.robysaurus.moregear.entity.ai.ShrikeAttackGoal;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityPose;
@@ -21,6 +22,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
@@ -131,6 +133,30 @@ public class ShrikeEntity extends HostileEntity {
     @Override
     public boolean isFireImmune() {
         return true;
+    }
+
+    @Override
+    public boolean canBeHitByProjectile() {
+        return false;
+    }
+
+    @Override
+    protected int computeFallDamage(float fallDistance, float damageMultiplier) {
+        return 0;
+    }
+
+    @Override
+    protected void fall(double heightDifference, boolean onGround, BlockState state, BlockPos landedPosition) {
+    }
+
+    @Override
+    public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
+        return false;
+    }
+
+    @Override
+    public int getSafeFallDistance() {
+        return Integer.MAX_VALUE;
     }
 
     @Override

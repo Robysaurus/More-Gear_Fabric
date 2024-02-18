@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_physicsiumnugget"
+      "has_physicsiumnugget",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:physicsium_ingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
