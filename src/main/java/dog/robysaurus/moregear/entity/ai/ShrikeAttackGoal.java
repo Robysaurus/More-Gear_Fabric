@@ -17,7 +17,7 @@ public class ShrikeAttackGoal extends MeleeAttackGoal {
     }
 
     @Override
-    protected void attack(LivingEntity pEnemy, double squaredDistance) {
+    protected void attack(LivingEntity pEnemy) {
         if (isEnemyWithinAttackDistance(pEnemy)) {
             shouldCountTillNextAttack = true;
 
@@ -37,7 +37,7 @@ public class ShrikeAttackGoal extends MeleeAttackGoal {
         }
     }
     private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy) {
-        return this.entity.distanceTo(pEnemy) <= 4f;
+        return this.entity.isInRange(pEnemy, 4f, 5f);
     }
 
     protected void resetAttackCooldown() {
