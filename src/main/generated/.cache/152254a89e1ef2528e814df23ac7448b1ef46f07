@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-04T01:07:14.4494341	More Gear/Recipes
+// 1.20.1	2024-02-17T20:03:29.6036284	More Gear/Recipes
 47a77c135e3c1945f4176a878c9a5deb8303263c data\moregear\advancements\recipes\combat\hyphiteleggings_smithing.json
 6eb20fee9a6bcef23ec4eb6c47780cb2554da2a4 data\moregear\recipes\reinforcedtriphitechestplate_smithing.json
 e2cdbaa5062c00c1d7093f4bff632c97d8f8ea75 data\moregear\advancements\recipes\combat\hyphitechestplate_smithing.json
@@ -116,8 +116,8 @@ d9b65884aa84ee9fa5965f8cf728734bd1fd15d7 data\moregear\advancements\recipes\misc
 79f73a86859111b4e75820ef75ba0c30c2ef1128 data\moregear\advancements\recipes\misc\physicsium_ingot.json
 c8474b62d6f30ef9f451eed5a3e3200ff4a14d2b data\moregear\recipes\physicsium.json
 61c02fb7d3e5af500453fc8c7097ff4b1860661e data\moregear\recipes\titaniumhelmet_smithing.json
-eeae70b4042e7f34f233c2d007be37cbe314cde9 data\moregear\advancements\recipes\misc\sapphire_from_smelting_sapphireore.json
 8588d1e5cbafe24d3e8b44f76eb33f88554e272b data\moregear\recipes\copperhelmet.json
+eeae70b4042e7f34f233c2d007be37cbe314cde9 data\moregear\advancements\recipes\misc\sapphire_from_smelting_sapphireore.json
 308de7f2446442bc513856c371cf9c8b75329b9e data\moregear\advancements\recipes\combat\mythrilleggings_smithing.json
 ab84136cc8c87ed76c533d991fa252fbc94f4790 data\moregear\recipes\mythril_from_blasting_rawmythril.json
 ba2b76b6c6b2dfd15ad59b54130ac6b51a909922 data\moregear\recipes\endiumhoe_smithing.json
@@ -305,8 +305,8 @@ bea6f148e5f1ec7bfef0709b0f1837bdbbeb1f42 data\moregear\recipes\opal_from_blastin
 ad6d976b145c3db0b9f24d72bc0a02b2d72f20a9 data\moregear\recipes\emeraldhelmet.json
 f573acdd9258a0c673ce15df9816f5990741be5f data\moregear\advancements\recipes\misc\mythril.json
 c67ef568e32a1755ce5f8cd96abe99d93b69cb5c data\moregear\recipes\rubyhoe_smithing.json
-e2f6dbaba07ececc2de3444cb05c1545a6ca6631 data\moregear\advancements\recipes\combat\sapphireshield.json
 bff5eece8e496eaf34a9bf3e2e49f43131411c74 data\moregear\advancements\recipes\tools\copperhoe.json
+e2f6dbaba07ececc2de3444cb05c1545a6ca6631 data\moregear\advancements\recipes\combat\sapphireshield.json
 e28a456cf7dd1beea83171bd3543de729dcc2e28 data\moregear\recipes\titaniumchestplate_smithing.json
 35da09cc138454478650d669cef380bd962047f6 data\moregear\advancements\recipes\combat\phenonboots_smithing.json
 35b8a8c70fbc2b862881a310fdfda9d8e063c839 data\moregear\recipes\hyphite_from_smelting_hyphiteore.json

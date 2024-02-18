@@ -17,7 +17,7 @@ public class ShrikeAttackGoal extends MeleeAttackGoal {
     }
 
     @Override
-    protected void attack(LivingEntity pEnemy) {
+    protected void attack(LivingEntity pEnemy, double squaredDistance) {
         if (isEnemyWithinAttackDistance(pEnemy)) {
             shouldCountTillNextAttack = true;
 

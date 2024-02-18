@@ -13,12 +13,14 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 
+import java.util.function.Consumer;
+
 public class ModRecipeGenerator extends FabricRecipeProvider {
     public ModRecipeGenerator(FabricDataOutput output) {
         super(output);
     }
     @Override
-    public void generate(RecipeExporter exporter) {
+    public void generate(Consumer<RecipeJsonProvider> exporter) {
         //Tool Crafting Recipes
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_SWORD).input('#', Items.STICK).input('X', Items.COPPER_INGOT).pattern("X").pattern("X").pattern("#").criterion("has_copper_ingot", VanillaRecipeProvider.conditionsFromItem(Items.COPPER_INGOT)).offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_AXE).input('#', Items.STICK).input('X', Items.COPPER_INGOT).pattern("XX").pattern("X#").pattern(" #").criterion("has_copper_ingot", VanillaRecipeProvider.conditionsFromItem(Items.COPPER_INGOT)).offerTo(exporter);
@@ -244,7 +246,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerUpgradeRecipe(exporter, ModItems.HYPHITE_UPGRADE, Items.NETHERITE_HOE, ModItems.HYPHITE, ModItems.HYPHITE_HOE, "hyphite");
     }
 
-    public static void offerUpgradeRecipe(RecipeExporter exporter, Item template, Item input, Item material, Item result, String name) {
+    public static void offerUpgradeRecipe(Consumer<RecipeJsonProvider> exporter, Item template, Item input, Item material, Item result, String name) {
         if(input instanceof ArmorItem){
             SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(template), Ingredient.ofItems(input), Ingredient.ofItems(material), RecipeCategory.COMBAT, result).criterion("has_"+name, RecipeProvider.conditionsFromItem(material)).offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
         }else{
