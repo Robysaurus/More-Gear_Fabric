@@ -6,14 +6,17 @@ import dog.robysaurus.moregear.event.KeyInputHandler;
 import dog.robysaurus.moregear.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 public class ModLangGenerator extends FabricLanguageProvider {
-    public ModLangGenerator(FabricDataOutput dataOutput) {
-        super(dataOutput, "en_us");
+    public ModLangGenerator(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataGenerator, "en_us", registryLookup);
     }
 
     @Override
-    public void generateTranslations(TranslationBuilder translationBuilder) {
+    public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.PHYSICSIUM, "Physicsium Ingot");
         translationBuilder.add(ModItems.PHYSICSIUM_NUGGET, "Physicsium Nugget");
         translationBuilder.add(ModItems.TITANIUM, "Titanium Ingot");
@@ -186,7 +189,7 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.COPPER_SHOVEL, "Copper Shovel");
         translationBuilder.add(ModItems.COPPER_HOE, "Copper Hoe");
         translationBuilder.add(ModItems.COPPER_SHIELD, "Copper Shield");
-        translationBuilder.add(ModItems.PHYSICS_IS_THE_BEST, "§6§l§kPHYSICS§r");
+        translationBuilder.add(ModItems.PHYSICS, "§6§l§kPHYSICS§r");
         translationBuilder.add(ModItems.PHYSICSIUM_ELYTRA_CHESTPLATE, "Physicsium Elytra-Chestplate");
         //Upgrade Templates
         translationBuilder.add("item.moregear.elytrachestplateupgrade", "Physicsium Elytra-Chestplate Upgrade");

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 5.0,
+  "group": "physicsium",
+  "ingredient": {
+    "item": "moregear:physicsiumore"
+  },
+  "result": {
+    "id": "moregear:physicsiumnugget"
+  }
+}

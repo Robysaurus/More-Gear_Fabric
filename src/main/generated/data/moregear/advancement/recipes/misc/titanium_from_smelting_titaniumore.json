@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:titanium_from_smelting_titaniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_titaniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:titaniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_titaniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:titanium_from_smelting_titaniumore"
+    ]
+  }
+}

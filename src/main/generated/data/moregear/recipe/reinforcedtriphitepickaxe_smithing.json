@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:reinforcedtriphite"
+  },
+  "base": {
+    "item": "moregear:mythrilpickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:reinforcedtriphitepickaxe"
+  },
+  "template": {
+    "item": "moregear:reinforcedtriphiteupgrade"
+  }
+}

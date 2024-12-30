@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mythrilupgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:mythrilupgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moregear:mythrilupgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mythrilupgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moregear:mythrilupgrade"
+    ]
+  }
+}

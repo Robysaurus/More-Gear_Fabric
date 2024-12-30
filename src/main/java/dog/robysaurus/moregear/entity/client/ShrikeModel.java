@@ -59,8 +59,8 @@ public class ShrikeModel<T extends ShrikeEntity> extends SinglePartEntityModel<T
 		this.head.pitch = headPitch * 0.017453292F;
 	}
 	@Override
-	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		Shrike.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
+		Shrike.render(matrices, vertexConsumer, light, overlay, color);
 	}
 
 	@Override

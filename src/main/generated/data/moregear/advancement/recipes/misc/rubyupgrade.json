@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rubyupgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:rubyupgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moregear:rubyupgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rubyupgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moregear:rubyupgrade"
+    ]
+  }
+}

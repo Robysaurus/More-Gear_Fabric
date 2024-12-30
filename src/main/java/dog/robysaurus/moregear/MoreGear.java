@@ -8,8 +8,8 @@ import dog.robysaurus.moregear.item.ModItems;
 import dog.robysaurus.moregear.networking.ModPackets;
 import dog.robysaurus.moregear.util.ModLootTableModifiers;
 import dog.robysaurus.moregear.world.gen.ModWorldGeneration;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

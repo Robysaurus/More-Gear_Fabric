@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_physicsiumupgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:physicsiumupgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moregear:physicsiumupgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_physicsiumupgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moregear:physicsiumupgrade"
+    ]
+  }
+}

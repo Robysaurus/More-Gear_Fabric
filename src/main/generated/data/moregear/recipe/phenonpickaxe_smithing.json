@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:phenon"
+  },
+  "base": {
+    "item": "moregear:hyphitepickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:phenonpickaxe"
+  },
+  "template": {
+    "item": "moregear:phenonupgrade"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_endium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:endium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:endium_compacting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_endium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:endium_compacting"
+    ]
+  }
+}

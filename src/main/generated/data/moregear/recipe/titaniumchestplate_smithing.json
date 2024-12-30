@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:titanium"
+  },
+  "base": {
+    "item": "moregear:reinforcedtriphitechestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:titaniumchestplate"
+  },
+  "template": {
+    "item": "moregear:titaniumupgrade"
+  }
+}

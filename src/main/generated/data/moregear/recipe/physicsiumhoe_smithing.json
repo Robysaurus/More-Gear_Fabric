@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:physicsium"
+  },
+  "base": {
+    "item": "moregear:titaniumhoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:physicsiumhoe"
+  },
+  "template": {
+    "item": "moregear:physicsiumupgrade"
+  }
+}

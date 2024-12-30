@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mythrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:mythrilore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mythril_from_smelting_mythrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mythrilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mythril_from_smelting_mythrilore"
+    ]
+  }
+}

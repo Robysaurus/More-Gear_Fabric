@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "moregear:triphiteore"
+    },
+    "S": {
+      "item": "moregear:reinforcedtriphiteupgrade"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "moregear:reinforcedtriphiteupgrade"
+  }
+}

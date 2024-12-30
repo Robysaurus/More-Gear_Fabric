@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:opal"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:opalboots"
+  },
+  "template": {
+    "item": "moregear:opalupgrade"
+  }
+}

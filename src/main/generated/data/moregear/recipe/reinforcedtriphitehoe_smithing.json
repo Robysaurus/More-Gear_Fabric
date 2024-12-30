@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:reinforcedtriphite"
+  },
+  "base": {
+    "item": "moregear:mythrilhoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:reinforcedtriphitehoe"
+  },
+  "template": {
+    "item": "moregear:reinforcedtriphiteupgrade"
+  }
+}

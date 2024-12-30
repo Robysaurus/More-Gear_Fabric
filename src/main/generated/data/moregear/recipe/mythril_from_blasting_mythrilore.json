@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.25,
+  "group": "mythril",
+  "ingredient": {
+    "item": "moregear:mythrilore"
+  },
+  "result": {
+    "id": "moregear:mythril"
+  }
+}

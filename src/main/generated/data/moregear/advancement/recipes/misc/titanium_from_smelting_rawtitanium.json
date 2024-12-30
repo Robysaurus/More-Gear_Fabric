@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawtitanium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:rawtitanium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:titanium_from_smelting_rawtitanium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawtitanium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:titanium_from_smelting_rawtitanium"
+    ]
+  }
+}

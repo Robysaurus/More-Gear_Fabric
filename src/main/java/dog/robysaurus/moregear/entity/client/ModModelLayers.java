@@ -5,5 +5,5 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
 public class ModModelLayers {
-    public static final EntityModelLayer SHRIKE = new EntityModelLayer(new Identifier(MoreGear.MOD_ID, "shrike"), "main");
+    public static final EntityModelLayer SHRIKE = new EntityModelLayer(Identifier.of(MoreGear.MOD_ID, "shrike"), "main");
 }

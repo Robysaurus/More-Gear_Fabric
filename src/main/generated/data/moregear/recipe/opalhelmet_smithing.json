@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:opal"
+  },
+  "base": {
+    "item": "minecraft:netherite_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:opalhelmet"
+  },
+  "template": {
+    "item": "moregear:opalupgrade"
+  }
+}

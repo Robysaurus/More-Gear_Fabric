@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:sapphire"
+  },
+  "base": {
+    "item": "minecraft:netherite_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:sapphireshovel"
+  },
+  "template": {
+    "item": "moregear:sapphireupgrade"
+  }
+}

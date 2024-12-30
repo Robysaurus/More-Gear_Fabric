@@ -97,7 +97,7 @@ public class ModConfiguredFeatures {
                 -10, 10, 0.025, 0));
     }
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name){
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MoreGear.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MoreGear.MOD_ID, name));
     }
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?,?>> context,
                                                                                    RegistryKey<ConfiguredFeature<?,?>> key, F feature, FC configuration){

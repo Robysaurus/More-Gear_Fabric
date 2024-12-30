@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:ruby"
+  },
+  "base": {
+    "item": "minecraft:netherite_hoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:rubyhoe"
+  },
+  "template": {
+    "item": "moregear:rubyupgrade"
+  }
+}

@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModEntities {
     public static final EntityType<ShrikeEntity> SHRIKE = Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(MoreGear.MOD_ID, "shrike"),
+            Identifier.of(MoreGear.MOD_ID, "shrike"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ShrikeEntity::new).dimensions(EntityDimensions.fixed(1.5f, 3f)).build());
     public static void registerModEntities() {
         MoreGear.LOGGER.info("Registering Mod Entities for " + MoreGear.MOD_ID);

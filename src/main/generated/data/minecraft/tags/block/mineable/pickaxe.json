@@ -1,0 +1,26 @@
+{
+  "values": [
+    "moregear:physicsiumblock",
+    "moregear:physicsiumore",
+    "moregear:titaniumblock",
+    "moregear:titaniumore",
+    "moregear:reinforcedtriphiteblock",
+    "moregear:triphiteore",
+    "moregear:mythrilblock",
+    "moregear:mythrilore",
+    "moregear:endiumblock",
+    "moregear:ancientendium",
+    "moregear:phenonblock",
+    "moregear:unrefinedphenonblock",
+    "moregear:sapphireblock",
+    "moregear:sapphireore",
+    "moregear:rubyblock",
+    "moregear:rubyore",
+    "moregear:topazblock",
+    "moregear:topazore",
+    "moregear:opalblock",
+    "moregear:opalore",
+    "moregear:hyphiteblock",
+    "moregear:hyphiteore"
+  ]
+}

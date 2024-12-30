@@ -1,0 +1,8 @@
+{
+  "values": [
+    "#moregear:needs_physicsium_tool"
+  ],
+  "remove": [
+    "#moregear:needs_titanium_tool"
+  ]
+}

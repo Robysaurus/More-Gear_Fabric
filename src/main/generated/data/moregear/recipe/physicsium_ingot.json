@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "physicsium_ingot",
+  "key": {
+    "#": {
+      "item": "moregear:physicsiumnugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "moregear:physicsium"
+  }
+}

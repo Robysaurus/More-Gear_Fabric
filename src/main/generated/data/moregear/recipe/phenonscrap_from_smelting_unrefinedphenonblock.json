@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.75,
+  "group": "phenon",
+  "ingredient": {
+    "item": "moregear:unrefinedphenonblock"
+  },
+  "result": {
+    "id": "moregear:phenonscrap"
+  }
+}

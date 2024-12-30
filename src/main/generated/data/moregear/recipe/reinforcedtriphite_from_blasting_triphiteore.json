@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.75,
+  "group": "reinforced_triphite",
+  "ingredient": {
+    "item": "moregear:triphiteore"
+  },
+  "result": {
+    "id": "moregear:reinforcedtriphite"
+  }
+}

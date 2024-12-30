@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:elytra"
+  },
+  "base": {
+    "item": "moregear:physicsiumchestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:physicsiumelytrachestplate"
+  },
+  "template": {
+    "item": "moregear:elytrachestplateupgrade"
+  }
+}

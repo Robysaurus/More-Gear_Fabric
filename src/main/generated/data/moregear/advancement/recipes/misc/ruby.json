@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rubyblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:rubyblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ruby"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rubyblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ruby"
+    ]
+  }
+}

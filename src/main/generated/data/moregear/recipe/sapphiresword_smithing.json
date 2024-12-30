@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:sapphire"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:sapphiresword"
+  },
+  "template": {
+    "item": "moregear:sapphireupgrade"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "o": {
+      "item": "moregear:phenon"
+    }
+  },
+  "pattern": [
+    "WoW",
+    "WWW",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "moregear:phenonshield"
+  }
+}

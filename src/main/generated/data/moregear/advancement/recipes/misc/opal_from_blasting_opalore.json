@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_opalore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:opalore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:opal_from_blasting_opalore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_opalore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:opal_from_blasting_opalore"
+    ]
+  }
+}

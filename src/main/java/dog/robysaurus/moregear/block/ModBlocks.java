@@ -1,12 +1,11 @@
 package dog.robysaurus.moregear.block;
 
 import dog.robysaurus.moregear.MoreGear;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -18,19 +17,19 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
     public static final Block PHYSICSIUM_BLOCK = registerBlock("physicsiumblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.DIDGERIDOO).requiresTool().strength(50f,2000f).sounds(BlockSoundGroup.METAL).slipperiness(0.9f).luminance(15)), Rarity.EPIC, true);
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(NoteBlockInstrument.DIDGERIDOO).requiresTool().strength(50f,2000f).sounds(BlockSoundGroup.METAL).slipperiness(0.9f).luminance(15)), Rarity.EPIC, true);
     public static final Block PHYSICSIUM_ORE = registerBlock("physicsiumore",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).requiresTool().strength(45f,2000f).sounds(BlockSoundGroup.ANCIENT_DEBRIS).luminance(15)), Rarity.RARE, true);
     public static final Block TITANIUM_BLOCK = registerBlock("titaniumblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(45f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.95f)), Rarity.RARE, true);
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresTool().strength(45f,1500f).sounds(BlockSoundGroup.METAL).slipperiness(0.95f)), Rarity.RARE, true);
     public static final Block TITANIUM_ORE = registerBlock("titaniumore",
             new ExperienceDroppingBlock(UniformIntProvider.create(20,20), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1200f).sounds(BlockSoundGroup.DEEPSLATE)), Rarity.UNCOMMON, true);
     public static final Block REINFORCED_TRIPHITE_BLOCK = registerBlock("reinforcedtriphiteblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(42f,1300f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresTool().strength(42f,1300f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block TRIPHITE_ORE = registerBlock("triphiteore",
             new ExperienceDroppingBlock(UniformIntProvider.create(16,19), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(35f,1100f).sounds(BlockSoundGroup.DEEPSLATE)), Rarity.UNCOMMON, true);
     public static final Block MYTHRIL_BLOCK = registerBlock("mythrilblock",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(Instrument.IRON_XYLOPHONE).requiresTool().strength(39f,1150f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresTool().strength(39f,1150f).sounds(BlockSoundGroup.METAL)), Rarity.UNCOMMON, true);
     public static final Block MYTHRIL_ORE = registerBlock("mythrilore",
             new ExperienceDroppingBlock(UniformIntProvider.create(12,17), FabricBlockSettings.copyOf(Blocks.END_STONE).requiresTool().strength(30f,1050f).sounds(BlockSoundGroup.DEEPSLATE)), Rarity.UNCOMMON, true);
     public static final Block ENDIUM_BLOCK = registerBlock("endiumblock",
@@ -63,15 +62,15 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(5,10), FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(20f,750f)), Rarity.COMMON, false);
     private static Block registerBlock(String name, Block block, Rarity rarity, boolean fireproof){
         registerBlockItem(name, block, rarity, fireproof);
-        return Registry.register(Registries.BLOCK, new Identifier(MoreGear.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(MoreGear.MOD_ID, name), block);
     }
     private static Item registerBlockItem(String name, Block block, Rarity rarity, boolean fireproof){
         if(fireproof) {
-            return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name),
-                    new BlockItem(block, new FabricItemSettings().rarity(rarity).fireproof()));
+            return Registry.register(Registries.ITEM, Identifier.of(MoreGear.MOD_ID, name),
+                    new BlockItem(block, new Item.Settings().rarity(rarity).fireproof()));
         }
-        return Registry.register(Registries.ITEM, new Identifier(MoreGear.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().rarity(rarity)));
+        return Registry.register(Registries.ITEM, Identifier.of(MoreGear.MOD_ID, name),
+                new BlockItem(block, new Item.Settings().rarity(rarity)));
     }
     public static void registerModBlocks(){
         MoreGear.LOGGER.info("Registering Mod Blocks for "+MoreGear.MOD_ID);

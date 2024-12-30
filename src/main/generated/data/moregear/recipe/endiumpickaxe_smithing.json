@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:endium"
+  },
+  "base": {
+    "item": "moregear:phenonpickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:endiumpickaxe"
+  },
+  "template": {
+    "item": "moregear:endiumupgrade"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:phenon"
+  },
+  "base": {
+    "item": "moregear:hyphitesword"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:phenonsword"
+  },
+  "template": {
+    "item": "moregear:phenonupgrade"
+  }
+}

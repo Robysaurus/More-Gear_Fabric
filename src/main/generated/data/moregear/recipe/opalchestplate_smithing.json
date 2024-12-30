@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:opal"
+  },
+  "base": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:opalchestplate"
+  },
+  "template": {
+    "item": "moregear:opalupgrade"
+  }
+}

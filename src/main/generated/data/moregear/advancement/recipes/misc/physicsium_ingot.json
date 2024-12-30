@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_physicsiumnugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:physicsiumnugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:physicsium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_physicsiumnugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:physicsium_ingot"
+    ]
+  }
+}

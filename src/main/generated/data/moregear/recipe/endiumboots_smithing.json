@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:endium"
+  },
+  "base": {
+    "item": "moregear:phenonboots"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:endiumboots"
+  },
+  "template": {
+    "item": "moregear:endiumupgrade"
+  }
+}

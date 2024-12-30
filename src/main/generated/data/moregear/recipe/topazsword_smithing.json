@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:topaz"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:topazsword"
+  },
+  "template": {
+    "item": "moregear:topazupgrade"
+  }
+}

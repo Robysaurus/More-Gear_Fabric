@@ -1,0 +1,8 @@
+{
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ],
+  "remove": [
+    "#moregear:needs_amethyst_tool"
+  ]
+}

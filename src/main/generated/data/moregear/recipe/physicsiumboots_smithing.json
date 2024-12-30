@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:physicsium"
+  },
+  "base": {
+    "item": "moregear:titaniumboots"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:physicsiumboots"
+  },
+  "template": {
+    "item": "moregear:physicsiumupgrade"
+  }
+}

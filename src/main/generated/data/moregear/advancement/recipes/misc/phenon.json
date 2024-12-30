@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_phenonscrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moregear:phenonscrap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moregear:phenon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_phenonscrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moregear:phenon"
+    ]
+  }
+}

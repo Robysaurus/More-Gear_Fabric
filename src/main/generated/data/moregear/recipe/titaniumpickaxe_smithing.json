@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:titanium"
+  },
+  "base": {
+    "item": "moregear:reinforcedtriphitepickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:titaniumpickaxe"
+  },
+  "template": {
+    "item": "moregear:titaniumupgrade"
+  }
+}

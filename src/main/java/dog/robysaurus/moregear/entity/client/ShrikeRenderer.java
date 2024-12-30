@@ -7,7 +7,7 @@ import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.util.Identifier;
 
 public class ShrikeRenderer extends MobEntityRenderer<ShrikeEntity, ShrikeModel<ShrikeEntity>> {
-    private static final Identifier TEXTURE = new Identifier(MoreGear.MOD_ID, "textures/entity/shrike.png");
+    private static final Identifier TEXTURE = Identifier.of(MoreGear.MOD_ID, "textures/entity/shrike.png");
     public ShrikeRenderer(EntityRendererFactory.Context context) {
         super(context, new ShrikeModel<>(context.getPart(ModModelLayers.SHRIKE)), 0.75f);
     }

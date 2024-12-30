@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:mythril"
+  },
+  "base": {
+    "item": "moregear:endiumhelmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:mythrilhelmet"
+  },
+  "template": {
+    "item": "moregear:mythrilupgrade"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:physicsium"
+  },
+  "base": {
+    "item": "moregear:titaniumsword"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:physicsiumsword"
+  },
+  "template": {
+    "item": "moregear:physicsiumupgrade"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:hyphite"
+  },
+  "base": {
+    "item": "minecraft:netherite_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:hyphitehelmet"
+  },
+  "template": {
+    "item": "moregear:hyphiteupgrade"
+  }
+}

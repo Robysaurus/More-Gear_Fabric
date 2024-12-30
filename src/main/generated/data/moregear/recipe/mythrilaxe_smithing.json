@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "moregear:mythril"
+  },
+  "base": {
+    "item": "moregear:endiumaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "moregear:mythrilaxe"
+  },
+  "template": {
+    "item": "moregear:mythrilupgrade"
+  }
+}
