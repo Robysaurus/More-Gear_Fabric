@@ -1,7 +1,7 @@
 package dog.robysaurus.moregear.util;
 
 import dog.robysaurus.moregear.item.ModItems;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -11,28 +11,29 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
-    private static final Identifier RUINED_PORTAL_ID = new Identifier("minecraft", "chests/ruined_portal");//HYPHITE
-    private static final Identifier BURIED_TREASURE_ID = new Identifier("minecraft", "chests/buried_treasure");//OPAL
-    private static final Identifier DUNGEON_ID = new Identifier("minecraft", "chests/simple_dungeon");//TOPAZ
-    private static final Identifier NETHER_FORTRESS_ID = new Identifier("minecraft", "chests/nether_bridge");//RUBY
-    private static final Identifier BASTION_TREASURE_ID = new Identifier("minecraft", "chests/bastion_treasure");//SAPPHIRE
-    private static final Identifier BASTION_BRIDGE_ID = new Identifier("minecraft", "chests/bastion_bridge");//PHENON
-    private static final Identifier STRONGHOLD_CROSSING_ID = new Identifier("minecraft", "chests/stronghold_crossing");//ENDIUM
-    private static final Identifier ANCIENT_CITY_ID = new Identifier("minecraft", "chests/ancient_city");//MYTHRIL
-    private static final Identifier END_CITY_ID = new Identifier("minecraft", "chests/end_city_treasure");//TRIPHITE
-    private static final Identifier MANSION_ID = new Identifier("minecraft", "chests/woodland_mansion");//TITANIUM
-    private static final Identifier DRAGON_ID = new Identifier("minecraft", "entities/ender_dragon");//ELYTRA-CHESTPLATE
+    private static final Identifier RUINED_PORTAL_ID = Identifier.of("minecraft", "chests/ruined_portal");//HYPHITE
+    private static final Identifier BURIED_TREASURE_ID = Identifier.of("minecraft", "chests/buried_treasure");//OPAL
+    private static final Identifier DUNGEON_ID = Identifier.of("minecraft", "chests/simple_dungeon");//TOPAZ
+    private static final Identifier NETHER_FORTRESS_ID = Identifier.of("minecraft", "chests/nether_bridge");//RUBY
+    private static final Identifier BASTION_TREASURE_ID = Identifier.of("minecraft", "chests/bastion_treasure");//SAPPHIRE
+    private static final Identifier BASTION_BRIDGE_ID = Identifier.of("minecraft", "chests/bastion_bridge");//PHENON
+    private static final Identifier STRONGHOLD_CROSSING_ID = Identifier.of("minecraft", "chests/stronghold_crossing");//ENDIUM
+    private static final Identifier ANCIENT_CITY_ID = Identifier.of("minecraft", "chests/ancient_city");//MYTHRIL
+    private static final Identifier END_CITY_ID = Identifier.of("minecraft", "chests/end_city_treasure");//TRIPHITE
+    private static final Identifier MANSION_ID = Identifier.of("minecraft", "chests/woodland_mansion");//TITANIUM
+    private static final Identifier DRAGON_ID = Identifier.of("minecraft", "entities/ender_dragon");//ELYTRA-CHESTPLATE
+
     public static void modifyLootTables(){
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if(RUINED_PORTAL_ID.equals(id)){
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            if(RUINED_PORTAL_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
                         .with(ItemEntry.builder(ModItems.HYPHITE_UPGRADE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)));
+                tableBuilder.pool(poolBuilder);
             }
-            if(BURIED_TREASURE_ID.equals(id)){
+            if(BURIED_TREASURE_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
@@ -40,7 +41,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(DUNGEON_ID.equals(id)){
+            if(DUNGEON_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
@@ -48,7 +49,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(NETHER_FORTRESS_ID.equals(id)){
+            if(NETHER_FORTRESS_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
@@ -56,7 +57,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(BASTION_TREASURE_ID.equals(id)){
+            if(BASTION_TREASURE_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
@@ -64,7 +65,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(BASTION_BRIDGE_ID.equals(id)){
+            if(BASTION_BRIDGE_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.175f))
@@ -72,7 +73,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(STRONGHOLD_CROSSING_ID.equals(id)){
+            if(STRONGHOLD_CROSSING_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.15f))
@@ -80,7 +81,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(ANCIENT_CITY_ID.equals(id)){
+            if(ANCIENT_CITY_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.05f))
@@ -88,7 +89,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(END_CITY_ID.equals(id)){
+            if(END_CITY_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
@@ -96,7 +97,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(MANSION_ID.equals(id)){
+            if(MANSION_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.125f))
@@ -104,7 +105,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f,1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(DRAGON_ID.equals(id)){
+            if(DRAGON_ID.equals(key.getValue())){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.5f))

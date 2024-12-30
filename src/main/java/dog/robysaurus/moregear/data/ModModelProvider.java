@@ -204,7 +204,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.PHYSICS_IS_THE_BEST, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHYSICS, Models.HANDHELD);
         //Upgrade Templates
         itemModelGenerator.register(ModItems.ELYTRA_CHESTPLATE_UPGRADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PHYSICSIUM_UPGRADE, Models.GENERATED);
@@ -219,6 +219,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.OPAL_UPGRADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYPHITE_UPGRADE, Models.GENERATED);
         //Spawn Egg
-        itemModelGenerator.register(ModItems.SHRIKE_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.SHRIKE_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

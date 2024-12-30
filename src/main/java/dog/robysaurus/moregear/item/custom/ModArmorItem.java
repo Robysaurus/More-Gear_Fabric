@@ -2,7 +2,7 @@ package dog.robysaurus.moregear.item.custom;
 
 import com.google.common.collect.Iterables;
 import dog.robysaurus.moregear.item.ModArmorMaterials;
-import net.minecraft.client.item.TooltipContext;
+import dog.robysaurus.moregear.util.MiscModUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -10,19 +10,19 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class ModArmorItem extends ArmorItem{
-    private final ArmorMaterial material;
+    private final RegistryEntry<ArmorMaterial> material;
 
-    public ModArmorItem(ArmorMaterial material, Type type, Settings settings) {
+    public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);
         this.material=material;
     }
@@ -43,7 +43,7 @@ public class ModArmorItem extends ArmorItem{
     }
 
     private void evaluateArmorEffects(LivingEntity entity) {
-        if(hasCorrectArmorOn(ModArmorMaterials.PHYSICSIUM, entity)){
+        if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.PHYSICSIUM, entity)){
             if(!entity.hasStatusEffect(StatusEffects.HEALTH_BOOST)){
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, -1, 14, true, false, false));
             }
@@ -62,7 +62,7 @@ public class ModArmorItem extends ArmorItem{
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 100, 4, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 100, 4, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100, 4, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.TITANIUM, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.TITANIUM, entity)){
             if(!entity.hasStatusEffect(StatusEffects.HEALTH_BOOST)){
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, -1, 4, true, false, false));
             }
@@ -72,50 +72,50 @@ public class ModArmorItem extends ArmorItem{
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.REINFORCED_TRIPHITE, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.REINFORCED_TRIPHITE, entity)){
             if(!entity.hasStatusEffect(StatusEffects.REGENERATION)){
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0, true, false, false));
             }
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 1, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.MYTHRIL, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.MYTHRIL, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 1, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 100, 2, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.ENDIUM, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.ENDIUM, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 100, 0, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.PHENON, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.PHENON, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 0, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.TOPAZ, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.TOPAZ, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 100, 2, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 0, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.SAPPHIRE, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.SAPPHIRE, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 2, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 0, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.RUBY, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.RUBY, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 0, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.OPAL, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.OPAL, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 100, 0, true, false, false));
             if(!entity.hasStatusEffect(StatusEffects.NIGHT_VISION)){
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, -1, 0, true, false, false));
             }
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 100, 2, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 100, 2, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.ECHO, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.ECHO, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 0, true, false, false));
             if(!entity.hasStatusEffect(StatusEffects.NIGHT_VISION)){
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, -1, 0, true, false, false));
             }
-        }else if(hasCorrectArmorOn(ModArmorMaterials.EMERALD, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.EMERALD, entity)){
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 100, 2, true, false, false));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 100, 1, true, false, false));
-        }else if(hasCorrectArmorOn(ModArmorMaterials.AMETHYST, entity)){
+        }else if(MiscModUtil.hasCorrectArmorOn(ModArmorMaterials.AMETHYST, entity)){
             if(!entity.hasStatusEffect(StatusEffects.REGENERATION)){
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0, true, false, false));
             }
@@ -133,24 +133,13 @@ public class ModArmorItem extends ArmorItem{
         }
         ItemStack boots = stacks[3];
         ItemStack leggings = stacks[2];
-        ItemStack breastplate = stacks[1];
+        ItemStack chestplate = stacks[1];
         ItemStack helmet = stacks[0];
-        boolean wearingElytra = breastplate.getItem()==Items.ELYTRA;
-        return !helmet.isEmpty() && !breastplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty() && !wearingElytra;
-    }
-
-    private boolean hasCorrectArmorOn(ArmorMaterial material, LivingEntity entity) {
-        ItemStack[] stacks = Iterables.toArray(entity.getArmorItems(), ItemStack.class);
-        ArmorItem Boots = ((ArmorItem) stacks[3].getItem());
-        ArmorItem Leggings = ((ArmorItem) stacks[2].getItem());
-        ArmorItem Breastplate = ((ArmorItem) stacks[1].getItem());
-        ArmorItem Helmet = ((ArmorItem) stacks[0].getItem());
-        return Helmet.getMaterial() == material && Breastplate.getMaterial() == material &&
-                Leggings.getMaterial() == material && Boots.getMaterial() == material;
+        return (helmet.getItem() instanceof ArmorItem) && (chestplate.getItem() instanceof ArmorItem) && (leggings.getItem() instanceof ArmorItem) && (boots.getItem() instanceof ArmorItem);
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         if(this.material==ModArmorMaterials.PHYSICSIUM){
             MutableText tempTooltip = Text.literal("Grants ").formatted(Formatting.AQUA);
             tempTooltip.append(Text.literal("skull emoji lol").formatted(Formatting.GOLD, Formatting.BOLD, Formatting.OBFUSCATED));
@@ -236,6 +225,6 @@ public class ModArmorItem extends ArmorItem{
             tempTooltip = Text.literal("when full set of Amethyst armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }
-        super.appendTooltip(stack, world, tooltip, context);
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

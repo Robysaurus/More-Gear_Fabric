@@ -1,9 +1,8 @@
 package dog.robysaurus.moregear.item.custom;
 
-import com.google.common.collect.Iterables;
 import dog.robysaurus.moregear.item.ModArmorMaterials;
 import dog.robysaurus.moregear.item.ModToolMaterials;
-import net.minecraft.client.item.TooltipContext;
+import dog.robysaurus.moregear.util.MiscModUtil;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
@@ -15,27 +14,27 @@ import net.minecraft.entity.mob.GuardianEntity;
 import net.minecraft.entity.mob.ShulkerEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.item.*;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class EffectAxeItem extends AxeItem {
     private final ToolMaterial toolMaterial;
-    private final ArmorMaterial armorMaterial;
-    public EffectAxeItem(ToolMaterial toolMaterial, ArmorMaterial armorMaterial, float attackDamage, float attackSpeed, Settings settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
+    private final RegistryEntry<ArmorMaterial> armorMaterial;
+    public EffectAxeItem(ToolMaterial toolMaterial, RegistryEntry<ArmorMaterial> armorMaterial, float attackDamage, float attackSpeed, Item.Settings settings) {
+        super(toolMaterial, settings.attributeModifiers(AxeItem.createAttributeModifiers(toolMaterial, attackDamage, attackSpeed)));
         this.toolMaterial=toolMaterial;
         this.armorMaterial=armorMaterial;
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if(hasCorrectArmorOn(armorMaterial, attacker)) {
+        if(MiscModUtil.hasCorrectArmorOn(armorMaterial, attacker)) {
             evaluateEffectToDeal(target, toolMaterial, armorMaterial);
         }
         return super.postHit(stack, target, attacker);
@@ -43,7 +42,7 @@ public class EffectAxeItem extends AxeItem {
 
 
 
-    private void evaluateEffectToDeal(LivingEntity target, ToolMaterial toolMaterial, ArmorMaterial armorMaterial) {
+    private void evaluateEffectToDeal(LivingEntity target, ToolMaterial toolMaterial, RegistryEntry<ArmorMaterial> armorMaterial) {
         if(armorMaterial==ModArmorMaterials.PHYSICSIUM && toolMaterial==ModToolMaterials.PHYSICSIUM){
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 4, true, false, true));
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2, true, false, true));
@@ -75,34 +74,13 @@ public class EffectAxeItem extends AxeItem {
         }
     }
 
-    private boolean hasCorrectArmorOn(ArmorMaterial material, LivingEntity entity) {
-        ItemStack[] stacks = Iterables.toArray(entity.getArmorItems(), ItemStack.class);
-        if(stacks.length!=4) {
-            return false;
-        }
-        ItemStack boots = stacks[3];
-        ItemStack leggings = stacks[2];
-        ItemStack breastplate = stacks[1];
-        ItemStack helmet = stacks[0];
-        boolean wearingElytra = breastplate.getItem()==Items.ELYTRA;
-        if (!helmet.isEmpty() && !breastplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty() && !wearingElytra) {
-            ArmorItem Boots = ((ArmorItem) boots.getItem());
-            ArmorItem Leggings = ((ArmorItem) leggings.getItem());
-            ArmorItem Breastplate = ((ArmorItem) breastplate.getItem());
-            ArmorItem Helmet = ((ArmorItem) helmet.getItem());
-            return Helmet.getMaterial() == material && Breastplate.getMaterial() == material &&
-                    Leggings.getMaterial() == material && Boots.getMaterial() == material;
-        }
-        return false;
-    }
-
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         if(this.toolMaterial == ModToolMaterials.PHYSICSIUM){
             MutableText tempTooltip = Text.literal("Deals ").formatted(Formatting.AQUA);
             tempTooltip.append(Text.literal("big skull emoji lol").formatted(Formatting.GOLD, Formatting.BOLD, Formatting.OBFUSCATED));
             tooltip.add(tempTooltip);
-            tempTooltip = Text.literal("to your enemies when full Titanium armor is worn.").formatted(Formatting.AQUA);
+            tempTooltip = Text.literal("to your enemies when full Physicsium armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }else if(this.toolMaterial==ModToolMaterials.RUBY){
             MutableText tempTooltip = Text.literal("When you attack, summons ").formatted(Formatting.AQUA);
@@ -138,6 +116,6 @@ public class EffectAxeItem extends AxeItem {
             tempTooltip = Text.literal("when full Phenon armor is worn.").formatted(Formatting.AQUA);
             tooltip.add(tempTooltip);
         }
-        super.appendTooltip(stack, world, tooltip, context);
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

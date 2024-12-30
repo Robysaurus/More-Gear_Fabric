@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#moregear:needs_titanium_tool",
+    "#moregear:needs_physicsium_tool"
+  ],
+  "remove": [
+    "#moregear:needs_reinforcedtriphite_tool"
+  ]
+}

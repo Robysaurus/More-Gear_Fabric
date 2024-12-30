@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup GEARGROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(MoreGear.MOD_ID),
+            Identifier.of(MoreGear.MOD_ID),
             FabricItemGroup.builder().displayName(Text.literal("More Gear"))
                     .icon(() -> new ItemStack(ModItems.TITANIUM_HELMET)).entries((displayContext, entries) -> {
                         entries.add(ModItems.PHYSICSIUM_SWORD);
@@ -177,7 +177,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TOPAZ_UPGRADE);
                         entries.add(ModItems.OPAL_UPGRADE);
                         entries.add(ModItems.HYPHITE_UPGRADE);
-                        entries.add(ModItems.PHYSICS_IS_THE_BEST);
+                        entries.add(ModItems.PHYSICS);
                         entries.add(ModItems.PHYSICSIUM_ELYTRA_CHESTPLATE);
                         entries.add(ModItems.SHRIKE_SPAWN_EGG);
                         entries.add(ModItems.PHYSICSIUM);

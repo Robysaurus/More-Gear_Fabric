@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#moregear:needs_endium_tool",
+    "#moregear:needs_mythril_tool",
+    "#moregear:needs_reinforcedtriphite_tool",
+    "#moregear:needs_titanium_tool",
+    "#moregear:needs_physicsium_tool"
+  ],
+  "remove": [
+    "#moregear:needs_hyphite_tool"
+  ]
+}
