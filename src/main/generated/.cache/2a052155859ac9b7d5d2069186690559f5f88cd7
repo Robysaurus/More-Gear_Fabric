@@ -1,4 +1,4 @@
-// 1.21	2024-12-13T21:04:16.0210168	More Gear/Model Definitions
+// 1.21	2024-12-30T17:35:58.8916795	More Gear/Model Definitions
 977fa535cbc6f5bc60aaa9ad9f323e286a0fc421 assets\moregear\models\item\sapphirechestplate_quartz_trim.json
 d780b8d5cb16753793fc8cc8bec5556400f95681 assets\moregear\models\item\amethystpickaxe.json
 c034cfbe84112714b651ba04f74c7f215803b53d assets\moregear\models\item\mythrilleggings_quartz_trim.json
@@ -391,8 +391,8 @@ b95a16ab572e883ecc57cfa2e104fbe099783f8d assets\moregear\models\item\emeraldches
 7ba2cb59c99de3e4c416a39edb536552640a9215 assets\moregear\models\item\echohelmet_redstone_trim.json
 dbc0cb8b4acdb65b0c3070928f59ea0186351bb4 assets\moregear\models\item\rubychestplate_netherite_trim.json
 7e20e70e6b79b475241f0c2f96a0ef4f30c05eb7 assets\moregear\models\item\endiumboots_emerald_trim.json
-19219bc207f500038983b50bb07b73c169369e77 assets\moregear\models\item\rubyhelmet_netherite_trim.json
 bdbdc95ddca7f6443f190f3d9fc6b36c4eb4949c assets\moregear\models\item\rubyboots_iron_trim.json
+19219bc207f500038983b50bb07b73c169369e77 assets\moregear\models\item\rubyhelmet_netherite_trim.json
 ddbed082d5e70f05ab25e8365a12f71a5f6c48fd assets\moregear\models\item\titaniumleggings_amethyst_trim.json
 52d446269fa1342f7a17d0ab3fc88b28579b596a assets\moregear\models\item\hyphiteblock.json
 d6dffc40806dbfabd4334adbd09b22dd653022db assets\moregear\models\item\echochestplate_gold_trim.json

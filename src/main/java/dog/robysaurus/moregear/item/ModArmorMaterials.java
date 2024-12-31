@@ -16,7 +16,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class ModArmorMaterials {
+public class ModArmorMaterials{
     public static final RegistryEntry<ArmorMaterial> COPPER = registerArmorMaterial("copper",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
                 map.put(ArmorItem.Type.HELMET, 2);

@@ -1,2 +1,11 @@
-// 1.21	2024-12-13T21:04:16.0105338	More Gear/Tags for minecraft:item
+// 1.21	2024-12-30T17:35:58.8727302	More Gear/Tags for minecraft:item
+715e94afdc25da497e7f06960a5c67de1a652b19 data\minecraft\tags\item\hoes.json
+8780d75234ba2007a60f341deb9ffc10d1390923 data\minecraft\tags\item\head_armor.json
+3bfa18109a6bd40c8152c8d2ae5863a05afd67bd data\minecraft\tags\item\shovels.json
+0b3f46c1fc508ebda5bf4076c27b6c1130e0f175 data\minecraft\tags\item\axes.json
+44dc3ff5eac0b45c8004bf364abda71da863d602 data\minecraft\tags\item\chest_armor.json
+41c00d3e57fe9e96c4331ff5728aff831d3f3c64 data\minecraft\tags\item\swords.json
+2b69ee4e57ec61155f999ca3d680714f8a022a63 data\minecraft\tags\item\pickaxes.json
+82d03d0d155f7a02a53b128a15146de9053d3beb data\minecraft\tags\item\leg_armor.json
 031206b9885595d1cd98f50cb23d93937e825e43 data\minecraft\tags\item\trimmable_armor.json
+2b0f15df5d7e303d96f498e7a54b9a8b10e34049 data\minecraft\tags\item\foot_armor.json
